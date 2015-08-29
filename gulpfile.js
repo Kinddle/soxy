@@ -17,6 +17,7 @@ var express_root = __dirname + '/app';
 var paths = {
     sass: 'app/stylesheets/sass/', // Stylesheets folder for SASS
     css: 'app/stylesheets/css/', // Stylesheets folder for CSS
+    html: 'app/',
     script: 'app/scripts/' // Scripts folder for JS files
 };
 
@@ -52,11 +53,18 @@ gulp.task('scripts', function() {
         .pipe(livereload({ start: true })); // Reloading Gulp each time a change has been made
 });
 
+gulp.task('html', function() {
+    return gulp.src(paths.html + '*.html')
+        .pipe(plumber())
+        .pipe(livereload({ start: true }));
+});
+
 // Watching Folders and Files for Changes
 gulp.task('watch', function() {
     var server = livereload({ start: true }); // Livereload is loaded
     gulp.watch(paths.script + '**/*.js', ['scripts']); // Watching Scripts folder
     gulp.watch(paths.sass + '**/*.sass', ['styles']); // Watching Stylesheets folder
+    gulp.watch(paths.html + '*.html', ['html']);
 });
 
 
