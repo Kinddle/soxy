@@ -1,0 +1,24 @@
+.m-features
+  +fill-parent()
+  +row(table)
+
+.m-feature
+  +span-columns(4 of 12, table)
+  +reset-display()
+  position: relative
+  text-align: center
+  cursor: pointer
+  &:hover
+    opacity: 0.9
+
+.m-feature--caption
+  @extend %brandon-sans
+  display: inline-block
+  position: absolute
+  color: white
+  top: 35%
+  left: 0
+  right: 0
+  width: 100%
+  font-size: em(34)
+  padding-top: 50px
