@@ -795,3 +795,8 @@ html {
 
 .m-footer {
   background-color: #252428; }
+  .m-footer .badge {
+    background-image: url("../../images/badge.png");
+    background-position: center center;
+    width: 179px;
+    height: 176px; }
