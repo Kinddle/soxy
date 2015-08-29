@@ -1,0 +1,26 @@
+.m-products
+  +fill-parent()
+
+.m-product--item
+  +span-columns(4 of 12, table)
+  border-right: 1px solid white
+  padding: 50px 0
+  +media($tablet)
+    +span-columns(12 of 12)
+    border-bottom: 1px solid white
+    border-right-width: 0
+  &:last-child
+    border-right-width: 0
+  p
+    @extend %brandon-sans
+    font-size: em(30)
+    margin-bottom: 0
+
+  .m-product--customer-status
+    @extend %adriane-serif
+    font-size: em(14)
+
+  .m-product--price
+    @extend %brandon-black-sans
+    color: $brand-color
+    font-size: em(36)
