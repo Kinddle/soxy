@@ -1,3 +1,73 @@
+<<<<<<< HEAD
+/*
+Error: Invalid mixin "======".
+        on line 5 of app/stylesheets/sass/base/_colors.sass
+        from line 22 of app/stylesheets/sass/main.sass
+
+1: $brand-color: #0f92eb
+2: $navigation-color: #212225
+3: <<<<<<< HEAD
+4: $footer-bg-color: #252428
+5: =======
+6: $red: #f53d3d
+7: >>>>>>> 4073ea6e1f54e544cae5d37d447383432798ea1c
+
+Backtrace:
+app/stylesheets/sass/base/_colors.sass:5
+app/stylesheets/sass/main.sass:22
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:1080:in `parse_mixin_definition'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:649:in `parse_line'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:535:in `build_tree'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:554:in `block in append_children'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:553:in `each'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:553:in `append_children'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:406:in `_to_tree'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:309:in `to_tree'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/stack.rb:88:in `block in with_import'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/stack.rb:88:in `with_import'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/tree/root_node.rb:20:in `render'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/engine.rb:278:in `render'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:364:in `watch_or_update'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/exec/base.rb:52:in `parse'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/lib/sass/exec/base.rb:19:in `parse!'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/gems/sass-3.4.18/bin/sass:13:in `<top (required)>'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/bin/sass:23:in `load'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/bin/sass:23:in `<main>'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/bin/ruby_executable_hooks:15:in `eval'
+/Users/gipsy/.rvm/gems/ruby-2.1.3/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid mixin \"======\".\A         on line 5 of app/stylesheets/sass/base/_colors.sass\A         from line 22 of app/stylesheets/sass/main.sass\A \A 1: $brand-color: #0f92eb\A 2: $navigation-color: #212225\A 3: <<<<<<< HEAD\A 4: $footer-bg-color: #252428\A 5: =======\A 6: $red: #f53d3d\A 7: >>>>>>> 4073ea6e1f54e544cae5d37d447383432798ea1c"; }
+=======
 @charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -933,3 +1003,4 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-button, .m-product--item .m-product
   .m-product--item .m-product--price {
     color: #0f92eb;
     font-size: 2.25em; }
+>>>>>>> d236a209a41b2bebef738270989bdb1d5dec9bdd
