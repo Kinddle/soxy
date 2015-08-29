@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     plumber = require('gulp-plumber'),
     neat = require('node-neat').includePaths,
+    refills = require('node-refills').includePaths;
     myApp = require('./server/server.js');
 // No need to load Bourbon here since Neat is included.
 // I received errors when trying to load Bourbon by itself.
@@ -14,7 +15,7 @@ var express_port = 9000;
 var express_root = __dirname + '/app';
 
 var paths = {
-    scss: 'app/stylesheets/scss/', // Stylesheets folder for SASS
+    sass: 'app/stylesheets/sass/', // Stylesheets folder for SASS
     css: 'app/stylesheets/css/', // Stylesheets folder for CSS
     script: 'app/scripts/' // Scripts folder for JS files
 };
@@ -30,7 +31,7 @@ gulp.task('express', function() {
 // Gulp Task to SASS - Bourbon and Neat are Working
 // Plumber Checks for Errors
 gulp.task('styles', function() {
-    return sass(paths.scss, {loadPath: [paths.scss].concat(neat)}) // Path to Stylesheets folder and files
+    return sass(paths.sass, {loadPath: [paths.sass].concat(neat, refills)}) // Path to Stylesheets folder and files
         // Loading Bourbon and Neat
         // loadPath when using gulp-ruby-sass must be used
         .on('error', function(err) {
@@ -38,7 +39,7 @@ gulp.task('styles', function() {
         })
         .pipe(plumber()) // Checks for any errors and notifies if there are
         .pipe(gulp.dest(paths.css)) // CSS destination where it is expanded
-        .pipe(livereload()); // Reloading Gulp each time a change has been made
+        .pipe(livereload({ start: true })); // Reloading Gulp each time a change has been made
 });
 
 // Gulp Task to Check and Uglify Scripts
@@ -48,14 +49,14 @@ gulp.task('scripts', function() {
         .pipe(plumber()) // Checks for any errors and notifies if there are
         .pipe(uglify()) // Makes all scripts into a single line for minimizing file size
         .pipe(gulp.dest('../app/scripts/minjs')) // Puts files into and creates new Minjs folder
-        .pipe(livereload()); // Reloading Gulp each time a change has been made
+        .pipe(livereload({ start: true })); // Reloading Gulp each time a change has been made
 });
 
 // Watching Folders and Files for Changes
 gulp.task('watch', function() {
-    var server = livereload(); // Livereload is loaded
+    var server = livereload({ start: true }); // Livereload is loaded
     gulp.watch(paths.script + '**/*.js', ['scripts']); // Watching Scripts folder
-    gulp.watch(paths.sass + '*.scss', ['styles']); // Watching Stylesheets folder
+    gulp.watch(paths.sass + '*.sass', ['styles']); // Watching Stylesheets folder
 });
 
 
