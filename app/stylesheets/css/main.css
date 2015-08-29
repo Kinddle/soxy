@@ -233,81 +233,81 @@ html {
   font-family: "Brandon-regular";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_regular.woff2") format("woff2"), url("/fonts/Brandon/brandon_regular.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_regular.woff2") format("woff2"), url("/fonts/Brandon/brandon_regular.woff") format("woff"), url("/fonts/Brandon/brandon_regular.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-regular-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_regular_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_regular_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_regular_italic.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_regular_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_regular_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_regular_italic.woff") format("woff"), url("/fonts/Brandon/brandon_regular_italic.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-thin";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_thin.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_thin.woff2") format("woff2"), url("/fonts/Brandon/brandon_thin.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_thin.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_thin.woff2") format("woff2"), url("/fonts/Brandon/brandon_thin.woff") format("woff"), url("/fonts/Brandon/brandon_thin.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-thin-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_thin_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_thin_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_thin_italic.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_thin_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_thin_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_thin_italic.woff") format("woff"), url("/fonts/Brandon/brandon_thin_italic.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-light";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_light.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_light.woff2") format("woff2"), url("/fonts/Brandon/brandon_light.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_light.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_light.woff2") format("woff2"), url("/fonts/Brandon/brandon_light.woff") format("woff"), url("/fonts/Brandon/brandon_light.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-light-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_light_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_light_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_light_italic.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_light_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_light_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_light_italic.woff") format("woff"), url("/fonts/Brandon/brandon_light_italic.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-medium";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_medium.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_medium.woff2") format("woff2"), url("/fonts/Brandon/brandon_medium.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_medium.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_medium.woff2") format("woff2"), url("/fonts/Brandon/brandon_medium.woff") format("woff"), url("/fonts/Brandon/brandon_medium.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-medium-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_medium_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_medium_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_medium_italic.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_medium_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_medium_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_medium_italic.woff") format("woff"), url("/fonts/Brandon/brandon_medium_italic.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-bold";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_bold.woff2") format("woff2"), url("/fonts/Brandon/brandon_bold.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_bold.woff2") format("woff2"), url("/fonts/Brandon/brandon_bold.woff") format("woff"), url("/fonts/Brandon/brandon_bold.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-bold-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_bold_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_bold_italic.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_bold_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_bold_italic.woff") format("woff"), url("/fonts/Brandon/brandon_bold_italic.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-black";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_black.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_black.woff2") format("woff2"), url("/fonts/Brandon/brandon_black.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_black.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_black.woff2") format("woff2"), url("/fonts/Brandon/brandon_black.woff") format("woff"), url("/fonts/Brandon/brandon_black.ttf") format("truetype"); }
 @font-face {
   font-family: "Brandon-black-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Brandon/brandon_black_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_black_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_black_italic.woff") format("woff"); }
+  src: url("/fonts/Brandon/brandon_black_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Brandon/brandon_black_italic.woff2") format("woff2"), url("/fonts/Brandon/brandon_black_italic.woff") format("woff"), url("/fonts/Brandon/brandon_black_italic.ttf") format("truetype"); }
 @font-face {
   font-family: "Adriane-regular";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Adriane/adriane_regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_regular.woff2") format("woff2"), url("/fonts/Adriane/adriane_regular.woff") format("woff"); }
+  src: url("/fonts/Adriane/adriane_regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_regular.woff2") format("woff2"), url("/fonts/Adriane/adriane_regular.woff") format("woff"), url("/fonts/Adriane/adriane_regular.ttf") format("truetype"); }
 @font-face {
   font-family: "Adriane-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Adriane/adriane_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_italic.woff") format("woff"); }
+  src: url("/fonts/Adriane/adriane_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_italic.woff") format("woff"), url("/fonts/Adriane/adriane_italic.ttf") format("truetype"); }
 @font-face {
   font-family: "Adriane-bold";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Adriane/adriane_bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold.woff") format("woff"); }
+  src: url("/fonts/Adriane/adriane_bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold.woff") format("woff"), url("/fonts/Adriane/adriane_bold.ttf") format("truetype"); }
 @font-face {
   font-family: "Adriane-bold-italic";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"); }
+  src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
 .m-navigation {
-  font-family: "Adriane-regular"; }
+  font-family: "Adriane-regular", serif; }
