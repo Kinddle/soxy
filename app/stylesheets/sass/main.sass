@@ -1,6 +1,9 @@
 @import "bourbon"
 
-//to include Bitters. Install Bitters in your SCSS file. */
+// reset
+@import "normalize"
+
+// to include Bitters. Install Bitters in your SCSS file. */
 @import "base/base"
 
 // Override default settings
@@ -11,14 +14,20 @@
 
 /* Added Bourbon and Neat */
 
-//@import all other sass files here to link to this page.
-//Bourbon and Neat are already installed and put into your application via Gulp. It's fabulous!
+// @import all other sass files here to link to this page.
+// Bourbon and Neat are already installed and put into your application via Gulp. It's fabulous!
 
 // BASE
 @import "base/fonts"
 @import "base/colors"
+@import "base/helpers"
+
+// LAYOUTS
+@import "layout/l-layout"
 
 // MODULES
 @import "modules/m-navigation"
-
-
+@import "modules/m-logo"
+@import "modules/m-dropdown"
+@import "modules/m-badges"
+@import "modules/m-header"
