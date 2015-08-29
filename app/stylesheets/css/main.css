@@ -792,3 +792,6 @@ html {
 .m-header--slogan {
   top: 50%;
   position: relative; }
+
+.m-footer {
+  background-color: #252428; }
