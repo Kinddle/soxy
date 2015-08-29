@@ -876,7 +876,8 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-button, .m-product--item .m-product
   .m-feature--item:hover {
     opacity: 0.9; }
   .m-feature--item img {
-    display: inherit; }
+    display: inherit;
+    width: 100%; }
 
 .m-feature--caption {
   display: inline-block;
