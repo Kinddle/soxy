@@ -745,6 +745,9 @@ html {
       .l-one-fourth:last-child {
         margin-right: 0; } }
 
+.l-content {
+  padding: 50px 0; }
+
 .m-navigation {
   background-color: white;
   height: 75px;
@@ -796,7 +799,8 @@ html {
   background-size: cover;
   width: 100%;
   min-height: 620px;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 20px; }
 
 .m-header--slogan {
   margin-top: 15%;
@@ -846,8 +850,18 @@ html {
   position: relative;
   text-align: center;
   cursor: pointer; }
+  @media screen and (max-width: 30em) {
+    .m-feature {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 100%; }
+      .m-feature:last-child {
+        margin-right: 0; } }
   .m-feature:hover {
     opacity: 0.9; }
+  .m-feature img {
+    display: inherit; }
 
 .m-feature--caption {
   display: inline-block;
