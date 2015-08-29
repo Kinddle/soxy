@@ -310,4 +310,12 @@ html {
   font-weight: normal;
   src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
 .m-navigation {
-  font-family: "Adriane-regular", serif; }
+  font-family: "Brandon-medium", sans-serif; }
+
+.m-navigation {
+  background-color: white;
+  height: 75px; }
+  .m-navigation .m-navigation--item {
+    float: left; }
+    .m-navigation .m-navigation--item a {
+      color: #212225; }
