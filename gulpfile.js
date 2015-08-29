@@ -56,7 +56,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
     var server = livereload({ start: true }); // Livereload is loaded
     gulp.watch(paths.script + '**/*.js', ['scripts']); // Watching Scripts folder
-    gulp.watch(paths.sass + '*.sass', ['styles']); // Watching Stylesheets folder
+    gulp.watch(paths.sass + '**/*.sass', ['styles']); // Watching Stylesheets folder
 });
 
 
