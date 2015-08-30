@@ -665,19 +665,26 @@ html {
   font-style: normal;
   font-weight: normal;
   src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
-.m-product--item .m-product--customer-status {
+.m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status {
   font-family: "Adriane-regular", serif; }
 
+<<<<<<< HEAD
+.m-header--slogan h3, .m-footer .m-footer--contact-block .email {
+=======
 .subheading, .m-header--slogan h3 {
+>>>>>>> 5917fdf7a7ea1df4ede70680ba1b308e46bce150
   font-family: "Adriane-italic", serif; }
 
-.m-feature--caption, .m-product--item p {
+.m-footer .m-footer--text-block .m-footer--description span {
+  font-family: "Adriane-bold", serif; }
+
+.m-footer .m-footer--contact-block p, .m-feature--caption, .m-product--item p {
   font-family: "Brandon-regular", serif; }
 
 .m-navigation {
   font-family: "Brandon-medium", sans-serif; }
 
-h1, h2, h3, h4, h5, .m-header--slogan h1, .m-button, .m-product--item .m-product--price {
+h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-footer--title, .m-button, .m-product--item .m-product--price {
   font-family: "Brandon-black", sans-serif; }
 
 .text-center {
@@ -986,13 +993,112 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-button, .m-product--item .m-product
 
 .m-footer {
   background-color: #252428;
-  height: 439px;
+  min-height: 439px;
   padding-top: 74px; }
   .m-footer .badge {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 14.89362%;
     background-image: url("../../images/badge.png");
     background-position: center center;
+    background-repeat: no-repeat;
     width: 179px;
     height: 176px; }
+    .m-footer .badge:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 30em) {
+      .m-footer .badge {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%; }
+        .m-footer .badge:last-child {
+          margin-right: 0; } }
+  .m-footer .m-footer--text-block {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 48.93617%; }
+    .m-footer .m-footer--text-block:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 30em) {
+      .m-footer .m-footer--text-block {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%;
+        padding: 0 35px; }
+        .m-footer .m-footer--text-block:last-child {
+          margin-right: 0; } }
+    .m-footer .m-footer--text-block .m-footer--title {
+      color: white; }
+      @media screen and (max-width: 30em) {
+        .m-footer .m-footer--text-block .m-footer--title {
+          display: none; } }
+    .m-footer .m-footer--text-block .m-footer--description {
+      color: white;
+      font-size: 14px;
+      color: #bcbfcc;
+      line-height: 25px; }
+      @media screen and (max-width: 30em) {
+        .m-footer .m-footer--text-block .m-footer--description {
+          margin-top: 37px;
+          letter-spacing: 1.5px; } }
+      .m-footer .m-footer--text-block .m-footer--description span {
+        color: white; }
+        @media screen and (max-width: 30em) {
+          .m-footer .m-footer--text-block .m-footer--description span {
+            float: left;
+            display: block;
+            margin-right: 2.12766%;
+            width: 100%; }
+            .m-footer .m-footer--text-block .m-footer--description span:last-child {
+              margin-right: 0; }
+            .m-footer .m-footer--text-block .m-footer--description span.hide-text {
+              display: none; } }
+  .m-footer .m-footer--contact-block {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 23.40426%;
+    float: right; }
+    .m-footer .m-footer--contact-block:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 30em) {
+      .m-footer .m-footer--contact-block {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%; }
+        .m-footer .m-footer--contact-block:last-child {
+          margin-right: 0; } }
+    .m-footer .m-footer--contact-block p {
+      color: white;
+      text-align: center; }
+    .m-footer .m-footer--contact-block .email {
+      font-size: 26px;
+      text-align: center;
+      display: block;
+      margin-bottom: 25px; }
+    .m-footer .m-footer--contact-block .m-footer--socials a {
+      margin: 0 9px; }
+  .m-footer .m-footer--payment-methods {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 100%;
+    margin-top: 11px; }
+    .m-footer .m-footer--payment-methods:last-child {
+      margin-right: 0; }
+    .m-footer .m-footer--payment-methods .copyright {
+      font-size: 12px;
+      color: #4c4a52; }
+    .m-footer .m-footer--payment-methods p {
+      line-height: 18px;
+      margin-bottom: 0;
+      font-size: 13px;
+      color: #77767c; }
 
 .m-actions {
   display: inline-block; }

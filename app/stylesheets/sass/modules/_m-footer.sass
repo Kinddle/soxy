@@ -1,9 +1,72 @@
 .m-footer
   background-color: $footer-bg-color
-  height: 439px
+  min-height: 439px
   padding-top: 74px
   .badge
+    +span-columns(2)
+    +media($mobile)
+      +span-columns(12 of 12)
     background-image: url('../../images/badge.png')
     background-position: center center
+    background-repeat: no-repeat
     width: 179px
     height: 176px
+  .m-footer--text-block
+    +span-columns(6)
+    +media($mobile)
+      +span-columns(12 of 12)
+      padding: 0 35px
+    .m-footer--title    
+      @extend %brandon-black-sans        
+      color: white 
+      +media($mobile)
+        display: none
+    .m-footer--description   
+      +media($mobile)
+        margin-top: 37px  
+        letter-spacing: 1.5px
+      color: white
+      font-size: 14px
+      color: $footer-description-color
+      line-height: 25px
+      @extend %adriane-serif
+      span
+        color: white
+        @extend %adriane-bold
+        +media($mobile)
+          +span-columns(12 of 12)
+          &.hide-text
+            display: none
+  .m-footer--contact-block
+    +span-columns(3)
+    +media($mobile)
+      +span-columns(12 of 12)
+    float: right
+    p
+      color: white
+      text-align: center
+      @extend %brandon-sans
+    .email
+      @extend %adriane-italic-serif
+      font-size: 26px
+      text-align: center
+      display: block 
+      margin-bottom: 25px  
+    .m-footer--socials
+      a
+        margin: 0 9px
+  .m-footer--payment-methods
+    +span-columns(12)
+    margin-top: 11px 
+    .copyright 
+      font-size: 12px
+      color: $copyright-color
+    p
+      line-height: 18px
+      margin-bottom: 0
+      font-size: 13px
+      @extend %adriane-serif
+      color: $terms-privacy-color
+
+      
+      
