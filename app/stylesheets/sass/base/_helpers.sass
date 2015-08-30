@@ -7,9 +7,31 @@
 .uppercase
   text-transform: uppercase
 
-.bg-snow
-  background-color: $snow
-
 .title
   color: $title-color
   letter-spacing: 1px
+
+.heading
+  text-transform: uppercase
+  letter-spacing: 0.4px
+  line-height: 42px
+
+.subheading
+  @extend %adriane-italic-serif
+  font-size: em(18)
+  color: $subheading-color
+  letter-spacing: 0.4px
+  line-height: 42px
+
+.hashtag
+  color: white
+
+// Backgrounds
+.bg-snow
+  background-color: $snow
+
+.bg-blue
+  background-color: $brand-color
+
+
+
