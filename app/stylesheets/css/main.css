@@ -668,11 +668,7 @@ html {
 .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status {
   font-family: "Adriane-regular", serif; }
 
-<<<<<<< HEAD
-.m-header--slogan h3, .m-footer .m-footer--contact-block .email {
-=======
-.subheading, .m-header--slogan h3 {
->>>>>>> 5917fdf7a7ea1df4ede70680ba1b308e46bce150
+.subheading, .m-header--slogan h3, .m-footer .m-footer--contact-block .email {
   font-family: "Adriane-italic", serif; }
 
 .m-footer .m-footer--text-block .m-footer--description span {
@@ -931,6 +927,14 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
     height: 176px; }
     .m-footer .badge:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 48em) {
+      .m-footer .badge {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 40.42553%; }
+        .m-footer .badge:last-child {
+          margin-right: 0; } }
     @media screen and (max-width: 30em) {
       .m-footer .badge {
         float: left;
@@ -946,6 +950,14 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
     width: 48.93617%; }
     .m-footer .m-footer--text-block:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 48em) {
+      .m-footer .m-footer--text-block {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 48.93617%; }
+        .m-footer .m-footer--text-block:last-child {
+          margin-right: 0; } }
     @media screen and (max-width: 30em) {
       .m-footer .m-footer--text-block {
         float: left;
@@ -982,21 +994,54 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
             .m-footer .m-footer--text-block .m-footer--description span.hide-text {
               display: none; } }
   .m-footer .m-footer--contact-block {
-    float: left;
-    display: block;
-    margin-right: 2.12766%;
-    width: 23.40426%;
     float: right; }
-    .m-footer .m-footer--contact-block:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 30em) {
+    @media screen and (max-width: 48em) {
       .m-footer .m-footer--contact-block {
+        margin-top: 75px;
+        text-align: left;
         float: left;
         display: block;
         margin-right: 2.12766%;
         width: 100%; }
         .m-footer .m-footer--contact-block:last-child {
-          margin-right: 0; } }
+          margin-right: 0; }
+        .m-footer .m-footer--contact-block .left-tablet-column {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 48.93617%; }
+          .m-footer .m-footer--contact-block .left-tablet-column:last-child {
+            margin-right: 0; }
+        .m-footer .m-footer--contact-block .right-tablet-column {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 48.93617%; }
+          .m-footer .m-footer--contact-block .right-tablet-column:last-child {
+            margin-right: 0; } }
+    @media screen and (max-width: 30em) {
+      .m-footer .m-footer--contact-block {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%;
+        margin-top: 50px; }
+        .m-footer .m-footer--contact-block:last-child {
+          margin-right: 0; }
+        .m-footer .m-footer--contact-block .left-tablet-column {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%; }
+          .m-footer .m-footer--contact-block .left-tablet-column:last-child {
+            margin-right: 0; }
+        .m-footer .m-footer--contact-block .right-tablet-column {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%; }
+          .m-footer .m-footer--contact-block .right-tablet-column:last-child {
+            margin-right: 0; } }
     .m-footer .m-footer--contact-block p {
       color: white;
       text-align: center; }
@@ -1007,6 +1052,22 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
       margin-bottom: 25px; }
     .m-footer .m-footer--contact-block .m-footer--socials a {
       margin: 0 9px; }
+  .m-footer .m-footer--line-block {
+    width: 100%;
+    height: 11px;
+    clear: both; }
+    @media screen and (max-width: 48em) {
+      .m-footer .m-footer--line-block {
+        margin: 32px 0; } }
+    @media screen and (max-width: 30em) {
+      .m-footer .m-footer--line-block {
+        margin: 32px 0; } }
+    .m-footer .m-footer--line-block .m-footer--line {
+      margin: 0 auto;
+      display: none; }
+      @media screen and (max-width: 48em) {
+        .m-footer .m-footer--line-block .m-footer--line {
+          display: block; } }
   .m-footer .m-footer--payment-methods {
     float: left;
     display: block;
@@ -1015,14 +1076,38 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
     margin-top: 11px; }
     .m-footer .m-footer--payment-methods:last-child {
       margin-right: 0; }
+    .m-footer .m-footer--payment-methods .l-content {
+      position: relative; }
+      @media screen and (max-width: 30em) {
+        .m-footer .m-footer--payment-methods .l-content {
+          padding: 23px 0 40px 0; } }
     .m-footer .m-footer--payment-methods .copyright {
       font-size: 12px;
-      color: #4c4a52; }
+      color: #4c4a52;
+      line-height: 18px; }
     .m-footer .m-footer--payment-methods p {
       line-height: 18px;
       margin-bottom: 0;
       font-size: 13px;
       color: #77767c; }
+      @media screen and (max-width: 30em) {
+        .m-footer .m-footer--payment-methods p {
+          line-height: 24px; } }
+    .m-footer .m-footer--payment-methods .m-footer--button-up {
+      position: absolute;
+      content: "";
+      right: 67px;
+      top: 67px;
+      border: 1px solid #3c3a41;
+      border-radius: 2px;
+      width: 42px;
+      height: 42px;
+      display: inline-block;
+      padding: 12px; }
+      @media screen and (max-width: 48em) {
+        .m-footer .m-footer--payment-methods .m-footer--button-up {
+          position: static;
+          margin-top: 38px; } }
 
 .m-actions {
   display: inline-block; }
