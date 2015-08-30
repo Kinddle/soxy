@@ -3,7 +3,15 @@
   height: 439px
   padding-top: 74px
   .badge
+    +span-columns(2)
     background-image: url('../../images/badge.png')
     background-position: center center
     width: 179px
     height: 176px
+  .m-footer--title
+    color: white
+    @extend %brandon-black-sans
+  .m-footer--description 
+    color: white
+    font-size: 14px
+    color: $footer-description-color
