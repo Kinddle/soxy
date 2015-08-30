@@ -1,12 +1,16 @@
 .m-photos
   overflow: hidden
+  background-color: black
 
 .m-photos--inner
   width: 2000px
   a
+    +transition(all 0.25s linear)
     float: left
     width: 200px
     height: 200px
     display: block
+    &:hover
+      opacity: 0.7
     img
       width: 100%

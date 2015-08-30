@@ -1,3 +1,6 @@
+*
+  +box-sizing(border-box)
+
 .text-center
   text-align: center
 
@@ -23,6 +26,17 @@
   letter-spacing: 0.4px
   line-height: 42px
 
+.subheading-normal
+  @extend %adriane-serif
+  font-size: em(17)
+  color: #707070
+
+.text-serif
+  @extend %adriane-serif
+
+.text-shadow
+  text-shadow: 1px 1px 1px black
+
 .hashtag
   color: white
 
@@ -32,6 +46,15 @@
 
 .bg-blue
   background-color: $brand-color
+
+.bg-our-socks
+  background-image: url('../../images/content/bg-our-socks.jpg')
+  background-position: center center
+  background-size: cover
+  min-height: 600px
+  overflow: hidden
+  .heading
+    margin-top: 150px
 
 // Responsive helpers
 .hidden-tablet-mobile

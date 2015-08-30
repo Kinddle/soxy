@@ -1,5 +1,6 @@
 .m-button
   @extend %brandon-black-sans
+  +transition(all .25s linear)
   font-size: em(18)
   display: inline-block
   border-radius: 3px
@@ -8,7 +9,17 @@
   &.red
     color: white
     background-color: $red
+    &:hover
+      background-color: darken($red, 10%)
+  &.blue
+    color: white
+    background-color: $brand-color
+    &:hover
+      background-color: darken($brand-color, 10%)
 
   // Size
   &.small
     font-size: em(14)
+  &.full-width
+    width: 100%
+    text-align: center

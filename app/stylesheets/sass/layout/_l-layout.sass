@@ -17,6 +17,14 @@
   +media($mobile)
     +span-columns(12 of 12)
 
+.l-one-third-break-one-half
+  +span-columns(4)
+  +media($tablet)
+    width: 50%
+    +omega
+  +media($mobile)
+    +span-columns(12 of 12)
+
 .l-one-fourth
   +span-columns(3)
   +media($tablet)
@@ -31,13 +39,6 @@
   +media($mobile)
     +span-columns(12)
 
-.l-six
-  +span-columns(6)
-  +media($tablet)
-    +span-columns(12 of 12)
-  +media($mobile)
-    +span-columns(12 of 12)
-
 .l-eight
   +span-columns(8)
   +media($tablet)
@@ -46,6 +47,10 @@
     +span-columns(12 of 12)
 
 // Vertical
+.l-content--small
+  +clearfix
+  padding: 30px 0
+
 .l-content
   +clearfix
   padding: 60px 0
