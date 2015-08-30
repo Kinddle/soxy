@@ -33,5 +33,14 @@
 .bg-blue
   background-color: $brand-color
 
+// Responsive helpers
+.hidden-tablet-mobile
+  +media($tablet)
+    display: none !important
+
+.visible-tablet-mobile
+  display: none !important
+  +media($tablet)
+    display: block !important
 
 

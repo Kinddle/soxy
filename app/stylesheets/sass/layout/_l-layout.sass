@@ -5,40 +5,59 @@
 
 .l-half
   +span-columns(6)
+  +media($tablet)
+    +span-columns(12 of 12)
   +media($mobile)
-    +span-columns(12)
+    +span-columns(12 of 12)
 
 .l-one-third
   +span-columns(4)
+  +media($tablet)
+    +span-columns(12 of 12)
   +media($mobile)
-    +span-columns(12)
+    +span-columns(12 of 12)
 
 .l-one-fourth
   +span-columns(3)
+  +media($tablet)
+    +span-columns(12 of 12)
   +media($mobile)
-    +span-columns(12)
+    +span-columns(12 of 12)
 
 .l-one-sixth
   +span-columns(2)
+  +media($tablet)
+    +span-columns(12)
   +media($mobile)
     +span-columns(12)
 
 .l-six
   +span-columns(6)
+  +media($tablet)
+    +span-columns(12 of 12)
   +media($mobile)
-    +span-columns(12)
+    +span-columns(12 of 12)
 
 .l-eight
   +span-columns(8)
+  +media($tablet)
+    +span-columns(12 of 12)
   +media($mobile)
-    +span-columns(12)
+    +span-columns(12 of 12)
 
 // Vertical
 .l-content
+  +clearfix
   padding: 60px 0
 
 .l-content--medium
+  +clearfix
   padding: 70px 0
 
 .l-content--big
+  +clearfix
   padding: 100px 0
+  +media($tablet)
+    padding: 50px 0
+  +media($mobile)
+    padding: 20px 0
