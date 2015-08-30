@@ -1,5 +1,4 @@
 .m-products
-  +fill-parent()
 
 .m-product--item
   +clearfix
@@ -8,28 +7,68 @@
   border-bottom: 1px solid white
   &.l-one-third
     border-right: 1px solid white
+    +media($tablet)
+      border-right-width: 0
   &.l-half
     border-right: 1px solid white
     border-bottom-width: 0
+    +media($tablet)
+      border-bottom-width: 1px
+      border-right-width: 0
+    +media($mobile)
+      border-bottom-width: 1px
   &:last-child
     border-right-width: 0
+    border-bottom-width: 0
   +media($tablet)
-    +span-columns(12 of 12)
     border-bottom: 1px solid white
     border-right-width: 0
+    .l-one-fourth
+      padding: 0
+    .l-content--big
+      padding: 0
+    .l-content
+      padding: 0
+    .m-product--info
+      float: none
+      margin-top: 40px
+      width: auto
+    .m-product--price-wrapper
+      display: inline-block
+      float: left
+      margin-right: 25px
+    .m-button
+      float: right
+  +media($mobile)
+    .m-product--price-wrapper
+      float: none
+      display: block
+      margin: 0
+    .m-button
+      float: none
   .m-product--image
     float: left
+  .m-product--info
+    display: inline-block
   p
     @extend %brandon-sans
     font-size: em(30)
     margin-bottom: 0
 
+  .title
+    margin-bottom: 20px
+
+  .m-product--price-wrapper
+    margin-bottom: 10px
+
   .m-product--customer-status
     @extend %adriane-serif
     font-size: em(14)
+    line-height: em(16)
     color: $text-weak-color
 
   .m-product--price
     @extend %brandon-black-sans
     color: $brand-color
     font-size: em(36)
+    line-height: em(20)
