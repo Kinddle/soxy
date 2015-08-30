@@ -668,11 +668,7 @@ html {
 .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status {
   font-family: "Adriane-regular", serif; }
 
-<<<<<<< HEAD
-.m-header--slogan h3, .m-footer .m-footer--contact-block .email {
-=======
-.subheading, .m-header--slogan h3 {
->>>>>>> 5917fdf7a7ea1df4ede70680ba1b308e46bce150
+.subheading, .m-header--slogan h3, .m-footer .m-footer--contact-block .email {
   font-family: "Adriane-italic", serif; }
 
 .m-footer .m-footer--text-block .m-footer--description span {
@@ -952,7 +948,16 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   padding-right: 15px;
   color: white;
   float: right;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 75px; }
+  @media screen and (max-width: 48em) {
+    .m-dropdown {
+      text-align: center;
+      padding: 15px; }
+      .m-dropdown span {
+        display: block;
+        clear: both;
+        line-height: normal; } }
 
 .m-badges {
   border-radius: 15px;
@@ -1175,6 +1180,9 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
     display: table; }
   .m-product--item.l-one-third {
     border-right: 1px solid white; }
+    @media screen and (max-width: 48em) {
+      .m-product--item.l-one-third {
+        border-right-width: 0; } }
   .m-product--item.l-half {
     border-right: 1px solid white;
     border-bottom-width: 0; }
