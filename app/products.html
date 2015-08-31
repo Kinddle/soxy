@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 <head>
 
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="stylesheets/css/main.css" />
 
 </head>
-<body>
+<body ng-controller="MainCtrl">
 
 <section class="m-header">
   <nav class="m-navigation">
@@ -147,6 +147,25 @@
 <section class="l-content text-center">
   <h1 class="heading">What people think</h1>
   <p class="subheading-normal">We‘re commited to your 100% happiness.</p>
+  <div class="container slider">
+    <p ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+         ng-hide="!isCurrentSlideIndex($index)">
+      {{slide.quote}}
+    </p>
+
+    <a class="arrow prev" href="" ng-click="nextSlide()"></a>
+    <a class="arrow next" href="" ng-click="prevSlide()"></a>
+    <nav class="nav">
+        <div class="wrapper">
+            <ul class="dots">
+                <li class="dot" ng-repeat="slide in slides">
+                    <a href="" ng-class="{'active':isCurrentSlideIndex($index)}"
+                       ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+            </ul>
+        </div>
+    </nav>
+  </div>
 </section>
 
 <section class="l-content--big bg-blue text-center text-white">
@@ -224,35 +243,41 @@
     <div class="l-single">
       <div class="badge"></div>
       <div class="m-footer--text-block">
-      <p class="m-footer--title">SOXY GUARANTEE</p>
-      <p class="m-footer--description">Your happiness is our #1priority. Which means we stand by our product 100%, no matter what, no questions asked. If you have a problem, we will solve it. Exchange it for free. Refund it. Send you new socks. Whatever it takes. Simply send us a message, you're family now.<span> We’re always here for you. Happiness.</span> <span class="hide-text">Guaranteed.</span>
-          </p>
+        <p class="m-footer--title">SOXY GUARANTEE</p>
+        <p class="m-footer--description">Your happiness is our #1priority. Which means we stand by our product 100%, no matter what, no questions asked. If you have a problem, we will solve it. Exchange it for free. Refund it. Send you new socks. Whatever it takes. Simply send us a message, you're family now.<span> We’re always here for you. Happiness.</span> <span class="hide-text">Guaranteed.</span></p>
+      </div>
+      <div class="m-footer--contact-block">
+        <p>E-MAIL</p>
+        <a class="email" href="#">hello@soxy.com</a>
+        <p>STAY IN TOUCH</p>
+        <div class="m-footer--socials text-center">
+          <a class="" href="#"><img src="images/icons/icon-facebook.png"></a>
+          <a class="" href="#"><img src="images/icons/icon-instagram.png"></a>
         </div>
-        <div class="m-footer--contact-block">
-          <p>E-MAIL</p>
-          <a class="email" href="#">hello@soxy.com</a>
-          <p>STAY IN TOUCH</p>
-          <div class="m-footer--socials text-center">
-            <a class="" href="#"><img src="images/icons/icon-facebook.png"></a>
-            <a class="" href="#"><img src="images/icons/icon-instagram.png"></a>
-          </div>
-        </div>
-        <div class="m-footer--payment-methods text-center">
+      </div>
+      <div class="m-footer--payment-methods text-center">
         <img src="images/icons/icon-payment-methods.png">
         <div class="l-content">
           <p class="copyright">Copyright © 2014. All rights reserved.</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-          </div>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
         </div>
+      </div>
     </div>
   </div>
 </footer>
 
 <!------ SCRIPTS ------>
 
+<!-- <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0&#45;rc.2/angular&#45;animate.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-touch.min.js"></script>
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script> -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/controller.js"></script>
 <script src="scripts/directives/directive.js"></script>

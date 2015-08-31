@@ -668,7 +668,7 @@ html {
 .subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status {
   font-family: "Adriane-regular", serif; }
 
-.subheading, .m-header--slogan h3, .m-footer .m-footer--contact-block .email {
+.subheading, .m-header--slogan h3, .m-footer .m-footer--contact-block .email, .slider {
   font-family: "Adriane-italic", serif; }
 
 .m-footer .m-footer--text-block .m-footer--description span {
@@ -739,6 +739,9 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   overflow: hidden; }
   .bg-our-socks .heading {
     margin-top: 150px; }
+    @media screen and (max-width: 48em) {
+      .bg-our-socks .heading {
+        margin-top: 50px; } }
 
 @media screen and (max-width: 48em) {
   .hidden-tablet-mobile {
@@ -1485,3 +1488,100 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
 .m-purchase--price-regular {
   font-size: 1.375em;
   color: #a8aaab; }
+
+.slider {
+  font-size: 2.5em;
+  width: 100%;
+  min-height: 150px;
+  overflow: hidden;
+  position: relative;
+  border: 20px solid #FFF;
+  margin-top: 20px;
+  text-align: center; }
+
+.arrow {
+  position: absolute;
+  z-index: 1002;
+  display: block;
+  top: 50%;
+  margin-top: -35px;
+  width: 36px;
+  height: 71px;
+  outline: none;
+  cursor: pointer;
+  background: url(../../images/icons/slider/blank.gif) no-repeat; }
+  .arrow.prev {
+    opacity: 0.2;
+    left: 20px;
+    background-image: url(../../images/icons/slider/paddle_prev_999.png);
+    transition: 0.2s linear all; }
+  .arrow.next {
+    opacity: 0.2;
+    right: 20px;
+    background-image: url(../../images/icons/slider/paddle_next_999.png);
+    transition: 0.2s linear all; }
+  .arrow.prev:hover {
+    opacity: 1;
+    background-image: url(../../images/icons/slider/paddle_prev_fff.png); }
+  .arrow.next:hover {
+    opacity: 1;
+    background-image: url(../../images/icons/slider/paddle_next_fff.png); }
+
+/*---------------------------------------------------------
+ *NAV
+ *--------------------------------------------------------- */
+.nav {
+  text-align: center;
+  display: block;
+  position: absolute;
+  z-index: 1002;
+  left: 0;
+  bottom: -4px;
+  right: 0;
+  height: 48px; }
+
+.nonDraggableImage {
+  -webkit-user-drag: none; }
+
+.nav .wrapper {
+  margin: 0 auto;
+  width: 100%; }
+.nav ul {
+  margin: 0;
+  width: 100%; }
+.nav .dot {
+  display: inline-block;
+  zoom: 1; }
+  .nav .dot a {
+    display: inline-block;
+    zoom: 1; }
+
+.dots .dot {
+  position: relative;
+  margin: 0 8px;
+  width: 12px;
+  height: 12px; }
+  .dots .dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #FFF;
+    border: 1px solid #d3d6d8;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s; }
+    .dots .dot a.active {
+      border-color: #d3d6d8;
+      background-color: #d3d6d8; }
