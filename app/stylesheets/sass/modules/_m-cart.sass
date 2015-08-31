@@ -1,0 +1,89 @@
+.m-cart
+  position: relative
+  padding-left: 100px
+
+.m-cart--timeline
+  width: 2px
+  height: 100%
+  background-color: $border-color
+  position: absolute
+  left: 21px
+  top: 0
+  bottom: 0
+  z-index: 1
+
+.m-cart--step
+  @extend %brandon-sans
+  font-size: em(40)
+  position: relative
+  z-index: 2
+  margin-left: -100px
+  i
+    @extend %brandon-black-sans
+    font-size: 18px
+    font-style: normal
+    text-align: center
+    line-height: 42px
+    width: 42px
+    height: 42px
+    border-radius: 21px
+    border: 2px solid $brand-color
+    color: $brand-color
+    background-color: white
+    display: inline-block
+    margin-right: 30px
+
+.m-cart--options-box
+  border: 1px solid $border-color
+  margin: 20px
+
+.m-cart--info-card
+  margin-top: 40px
+
+.m-cart--benefits-title
+  @extend %brandon-bold-sans
+  font-size: em(17)
+  color: $title-color
+  margin-bottom: 20px
+
+.m-cart--benefits-list
+  margin: 0
+  padding: 0
+
+.m-cart--benefits-item
+  @extend %adriane-serif
+  font-size: em(14)
+  padding-left: 20px
+  position: relative
+
+.m-cart--details-title
+  @extend %brandon-sans
+  font-size: em(18)
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.m-cart--options-box-title
+  @extend %brandon-bold-sans
+  font-size: em(17)
+  background-color: #e3e7ea
+  color: $brand-color
+  padding: 20px 0
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 1px
+  position: relative
+  cursor: pointer
+  i
+    width: 26px
+    height: 26px
+    display: inline-block
+    position: absolute
+    left: 15px
+    top: 50%
+    margin-top: -13px
+    background-color: white
+    border-radius: 13px
+  &.is-active
+    background-color: $brand-color
+    color: white
