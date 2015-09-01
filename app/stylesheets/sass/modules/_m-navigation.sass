@@ -9,12 +9,20 @@
 .m-navigation--list
   display: inline-block
   float: right
+  +media($mobile)
+    float: left
 
 .m-navigation--item
   float: left
   padding: 0 15px
+  +media($mobile)
+    float: none
   a
     color: $navigation-color
+    +media($mobile)
+      color: white
+      &:hover
+        color: $brand-color !important
     &:hover
       color: lighten($navigation-color, 10%)
 

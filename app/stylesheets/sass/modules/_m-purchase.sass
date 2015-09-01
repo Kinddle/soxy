@@ -11,6 +11,9 @@
 .m-purchase--item-wrapper
   padding-right: 500px
   text-align: center
+  +media($mobile)
+    width: 100%
+    padding-right: 0
 
 .m-purchase--dashboard
   background-color: $snow
@@ -20,6 +23,11 @@
   height: 100%
   top: 0
   right: 0
+  +media($mobile)
+    width: 100%
+    position: relative
+    .l-one-third
+      +span-columns(4 of 12)
 
 .m-purchase--feature
   color: $oil

@@ -950,12 +950,23 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
 .m-navigation--list {
   display: inline-block;
   float: right; }
+  @media screen and (max-width: 30em) {
+    .m-navigation--list {
+      float: left; } }
 
 .m-navigation--item {
   float: left;
   padding: 0 15px; }
+  @media screen and (max-width: 30em) {
+    .m-navigation--item {
+      float: none; } }
   .m-navigation--item a {
     color: #212225; }
+    @media screen and (max-width: 30em) {
+      .m-navigation--item a {
+        color: white; }
+        .m-navigation--item a:hover {
+          color: #0f92eb !important; } }
     .m-navigation--item a:hover {
       color: #393b40; }
 
@@ -969,6 +980,10 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   height: 75px;
   text-indent: -9999px;
   float: left; }
+  @media screen and (max-width: 30em) {
+    .m-logo {
+      float: none;
+      margin-left: 40px; } }
 
 .m-dropdown {
   display: inline-block;
@@ -994,6 +1009,10 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   margin: 0 10px; }
   .m-badges.blue {
     background-color: #003f7a; }
+
+@media screen and (max-width: 30em) {
+  .m-header {
+    text-align: center; } }
 
 .m-header--bg {
   background-image: url("../../images/hero-bg.jpg");
@@ -1460,6 +1479,10 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
 .m-purchase--item-wrapper {
   padding-right: 500px;
   text-align: center; }
+  @media screen and (max-width: 30em) {
+    .m-purchase--item-wrapper {
+      width: 100%;
+      padding-right: 0; } }
 
 .m-purchase--dashboard {
   background-color: #f1f1f1;
@@ -1469,6 +1492,17 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   height: 100%;
   top: 0;
   right: 0; }
+  @media screen and (max-width: 30em) {
+    .m-purchase--dashboard {
+      width: 100%;
+      position: relative; }
+      .m-purchase--dashboard .l-one-third {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 31.91489%; }
+        .m-purchase--dashboard .l-one-third:last-child {
+          margin-right: 0; } }
 
 .m-purchase--feature {
   color: #373737;
@@ -1699,3 +1733,82 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   .m-cart--options-box-title.is-active {
     background-color: #0f92eb;
     color: white; }
+
+@media screen and (max-width: 30em) {
+  .screen {
+    top: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    opacity: 0; }
+
+  .menu {
+    height: 60px;
+    padding: 0px;
+    margin: 0px;
+    left: -5px;
+    position: relative; }
+    .menu a {
+      height: 60px;
+      padding: 0px;
+      margin: 0px;
+      width: auto;
+      opacity: 0;
+      position: relative;
+      left: -18px;
+      margin-left: 10px; }
+    .menu.open a {
+      opacity: 1;
+      left: 0px; }
+
+  .menu-bar {
+    position: fixed;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: all 0.6s ease;
+    opacity: 1;
+    text-align: left;
+    z-index: 2; }
+    .menu-bar.active {
+      opacity: 1;
+      left: 0px;
+      background: #000;
+      pointer-events: auto; }
+      .menu-bar.active .menu {
+        -webkit-transition: all 0.4s ease;
+        padding: 0px;
+        outline: 0px; }
+
+  /* toggles outlines to slide in */
+  .menu.feed {
+    border-left: 4px solid #e02726; }
+  .menu.radio {
+    border-left: 4px solid #58bce2; }
+  .menu.browse {
+    border-left: 4px solid #efe700; }
+  .menu.profile {
+    border-left: 4px solid #ff91fe; }
+
+  .menu-btn {
+    position: absolute;
+    top: 26px;
+    left: 10px;
+    width: 26px;
+    height: 20px;
+    z-index: 10; }
+    .menu-btn span {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #0f92eb;
+      position: absolute;
+      margin-top: 0; }
+      .menu-btn span:nth-child(2) {
+        margin-top: 10px; }
+      .menu-btn span:nth-child(3) {
+        margin-top: 20px; } }

@@ -20,10 +20,16 @@
     <div class="l-single">
       <a href="/" class="m-logo">Soxy.com</a>
       <div class="m-dropdown"><span>Cart</span><span class="m-badges blue">0</span></div>
-      <ul class="m-navigation--list">
-        <li class="m-navigation--item"><a href="#">Shop</a></li>
-        <li class="m-navigation--item"><a href="#">Vip Club</a></li>
-        <li class="m-navigation--item"><a href="#">Vip FAQ</a></li>
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="screen"></div>
+      <ul class="m-navigation--list menu-bar">
+        <li class="m-navigation--item menu feed"><a href="#">Shop</a></li>
+        <li class="m-navigation--item menu radio"><a href="#">Vip Club</a></li>
+        <li class="m-navigation--item menu browse"><a href="#">Vip FAQ</a></li>
         <li class="m-navigation--item hidden-tablet-mobile"><a href="#">MyAccount</a></li>
       </ul>
     </div>
@@ -205,13 +211,18 @@
 
 <!------ SCRIPTS ------>
 
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/controller.js"></script>
 <script src="scripts/directives/directive.js"></script>
 <script src="scripts/filters/filter.js"></script>
 <script src="scripts/services/service.js"></script>
+<script src="scripts/main.js"></script>
 
 
 </body>
