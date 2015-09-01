@@ -916,10 +916,6 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
 
 .l-content {
   padding: 60px 0; }
-  .l-content::after {
-    clear: both;
-    content: "";
-    display: table; }
 
 .l-content--medium {
   padding: 70px 0; }
@@ -1265,11 +1261,11 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
     text-align: center; }
 
 .m-features {
-  width: 100%;
-  display: table;
-  width: 100%;
-  table-layout: fixed;
   background-color: #0f92eb; }
+  .m-features::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .m-feature--item {
   display: table-cell;
@@ -1279,8 +1275,12 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   cursor: pointer; }
   @media screen and (max-width: 30em) {
     .m-feature--item {
-      display: table-cell;
-      width: 100%; } }
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 100%; }
+      .m-feature--item:last-child {
+        margin-right: 0; } }
   .m-feature--item:hover {
     opacity: 0.9; }
   .m-feature--item img {
