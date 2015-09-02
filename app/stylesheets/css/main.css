@@ -674,7 +674,7 @@ html {
 #dropdownCartCounter input.qtyplus, #dropdownCartCounter input.qtyminus, .m-footer .m-footer--text-block .m-footer--description span {
   font-family: "Adriane-bold", serif; }
 
-.m-footer .m-footer--contact-block p, .m-feature--caption, .m-product--item p, .m-purchase h1, .m-cart--step, .m-cart--details-title {
+.text-sans, .m-footer .m-footer--contact-block p, .m-feature--caption, .m-product--item p, .m-purchase h1, .m-cart--step, .m-cart--details-title {
   font-family: "Brandon-regular", serif; }
 
 .m-navigation, .m-cart--dropdown-item-amount, .m-cart--dropdown-promote, #dropdownCartCounter input {
@@ -727,6 +727,9 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
 .bg-snow {
   background-color: #f1f1f1; }
 
+.bg-gray {
+  background-color: #a8aaab; }
+
 .bg-blue {
   background-color: #0f92eb; }
 
@@ -763,6 +766,12 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   display: block; }
   @media screen and (max-width: 48em) {
     .hidden-tablet-mobile {
+      display: none !important; } }
+
+.hidden-mobile {
+  display: block; }
+  @media screen and (max-width: 30em) {
+    .hidden-mobile {
       display: none !important; } }
 
 .hidden-tablet-visible-mobile {
@@ -1219,13 +1228,19 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
   background-position: center bottom;
   background-size: cover;
   width: 100%;
-  min-height: 620px;
   text-align: center;
-  padding-bottom: 20px; }
+  padding-bottom: 100px; }
+  @media screen and (max-width: 30em) {
+    .m-header--bg {
+      min-height: 320px;
+      padding-bottom: 30px; } }
 
 .m-header--slogan {
   margin-top: 15%;
   display: inline-block; }
+  @media screen and (max-width: 30em) {
+    .m-header--slogan {
+      margin-top: 50%; } }
   .m-header--slogan h1 {
     font-size: 3.5em;
     line-height: 50px;

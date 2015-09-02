@@ -37,6 +37,9 @@
 .text-serif
   @extend %adriane-serif
 
+.text-sans
+  @extend %brandon-sans
+
 .text-shadow
   text-shadow: 1px 1px 1px black
 
@@ -46,6 +49,9 @@
 // Backgrounds
 .bg-snow
   background-color: $snow
+
+.bg-gray
+  background-color: $light-gray
 
 .bg-blue
   background-color: $brand-color
@@ -84,12 +90,18 @@
   +media($tablet)
     display: none !important
 
+.hidden-mobile
+  display: block
+  +media($mobile)
+    display: none !important
+
 .hidden-tablet-visible-mobile
   display: block
   +media($tablet)
     display: none
   +media($mobile)
     display: block !important
+
 
 .visible-tablet-mobile
   display: none !important

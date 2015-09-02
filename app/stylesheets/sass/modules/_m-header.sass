@@ -7,13 +7,17 @@
   background-position: center bottom
   background-size: cover
   width: 100%
-  min-height: 620px
   text-align: center
-  padding-bottom: 20px
+  padding-bottom: 100px
+  +media($mobile)
+    min-height: 320px
+    padding-bottom: 30px
 
 .m-header--slogan
   margin-top: 15%
   display: inline-block
+  +media($mobile)
+    margin-top: 50%
   h1
     @extend %brandon-black-sans
     font-size: em(56)
