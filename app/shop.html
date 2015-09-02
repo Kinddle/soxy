@@ -19,7 +19,43 @@
   <nav class="m-navigation">
     <div class="l-single">
       <a href="/" class="m-logo">Soxy.com</a>
-      <div class="m-dropdown"><span>Cart</span><span class="m-badges blue">0</span></div>
+      <div class="m-cart--dropdown">
+        <span>Cart</span>
+        <span class="m-badges blue">0</span>
+        <div class="m-cart--dropdown-box">
+          <span class="m-cart--dropdown-close-btn icon-close"></span>
+          <div class="m-cart--dropdown-item">
+            <img src="images/content/product-set-white-1.jpg" />
+            <div class="m-cart--dropdown-overlay">
+              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+              <p class="m-cart--dropdown-item-amount">
+                Summer x 2
+              </p>
+              <form id='dropdownCartCounter' method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
+          </div>
+          <div class="m-cart--dropdown-item">
+            <img src="images/content/product-set-white-1.jpg" />
+            <div class="m-cart--dropdown-overlay">
+              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+              <p class="m-cart--dropdown-item-amount">
+                Winter x 3
+              </p>
+              <form id='dropdownCartCounter' method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
+          </div>
+          <a href="#" class="m-button red small full-width">Checkout</a>
+          <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+        </div>
+      </div>
       <div class="menu-btn">
         <span></span>
         <span></span>
@@ -40,7 +76,7 @@
   <h1 class="heading text-center">Soxy Collection</h1>
 </section>
 
-<section class="l-content--big bg-snow">
+<section class="bg-snow">
   <div class="l-single">
     <div class="m-product--item">
       <div class="l-one-fourth l-content--big">
@@ -49,7 +85,7 @@
       <div class="l-half">
         <img src="images/content/product-set-1.jpg">
       </div>
-      <div class="l-one-fourth l-content--medium">
+      <div class="l-one-fourth l-content--small">
         <div class="m-product--info">
           <div class="m-product--price-wrapper">
             <p class="m-product--customer-status">VIP:</p>
@@ -66,7 +102,7 @@
       <div class="l-half">
         <img src="images/content/product-set-1.jpg">
       </div>
-      <div class="l-one-fourth l-content--medium">
+      <div class="l-one-fourth l-content--small">
         <div class="m-product--info">
           <div class="m-product--price-wrapper">
             <p class="m-product--customer-status">VIP:</p>
@@ -80,13 +116,13 @@
       <p class="title visible-tablet-mobile">Stripes</p>
       <img src="images/content/product-set-1.jpg">
       <div class="l-content">
-        <div class="l-one-third hidden-tablet-mobile">
+        <div class="l-one-sixth hidden-tablet-mobile">
           <p class="title">Stripes</p>
         </div>
-        <div class="l-one-third hidden-tablet-mobile">
+        <div class="l-eight hidden-tablet-mobile">
           <a href="#" class="m-button small red">Add to Cart</a>
         </div>
-        <div class="m-product--info l-one-third">
+        <div class="m-product--info l-one-sixth">
           <div class="m-product--price-wrapper">
             <p class="m-product--customer-status">VIP:</p>
             <p class="m-product--price">$45</p>
@@ -99,13 +135,13 @@
       <p class="title visible-tablet-mobile">Stripes</p>
       <img src="images/content/product-set-1.jpg">
       <div class="l-content">
-        <div class="l-one-third hidden-tablet-mobile">
+        <div class="l-one-sixth hidden-tablet-mobile">
           <p class="title">Stripes</p>
         </div>
-        <div class="l-one-third hidden-tablet-mobile">
+        <div class="l-eight hidden-tablet-mobile">
           <a href="#" class="m-button small red">Add to Cart</a>
         </div>
-        <div class="m-product--info l-one-third">
+        <div class="m-product--info l-one-sixth">
           <div class="m-product--price-wrapper">
             <p class="m-product--customer-status">VIP:</p>
             <p class="m-product--price">$45</p>
