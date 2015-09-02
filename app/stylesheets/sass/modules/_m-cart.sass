@@ -123,3 +123,43 @@
   p
     margin-bottom: 0
 
+.m-cart--order-box
+  +clearfix
+  box-shadow: 0 0 27px rgba(0,0,0,0.3)
+  position: relative
+  top: -40px
+  padding-top: 40px
+
+.m-cart--order-details-wrapper
+  +clearfix
+
+.m-cart--order-details
+  @extend %adriane-serif
+  font-size: em(15)
+  display: inline-block
+
+.m-cart--order-details-strong
+  @extend %adriane-bold-serif
+  font-size: em(16)
+  display: inline-block
+  color: #292929
+
+.m-cart--order-price
+  @extend %brandon-bold-sans
+  font-size: em(16)
+  display: inline-block
+  color: #292929
+  &.discount
+    color: $green
+
+.m-cart--order-price-strong
+  @extend %brandon-bold-sans
+  font-size: em(26)
+  color: $brand-color
+
+.m-cart--order-details-code
+  @extend %adriane-serif
+  font-size: em(15)
+  color: #818181
+  width: 100%
+  overflow: hidden

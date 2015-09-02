@@ -665,13 +665,13 @@ html {
   font-style: normal;
   font-weight: normal;
   src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
-.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--benefits-item, .m-counter.with-label:before {
+.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before {
   font-family: "Adriane-regular", serif; }
 
 .subheading, .text-italic-serif, .m-header--slogan h3, .m-footer .m-footer--contact-block .email, .slider {
   font-family: "Adriane-italic", serif; }
 
-.m-footer .m-footer--text-block .m-footer--description span, .m-counter input.qtyplus, .m-counter input.qtyminus {
+.m-footer .m-footer--text-block .m-footer--description span, .m-cart--order-details-strong, .m-counter input.qtyplus, .m-counter input.qtyminus {
   font-family: "Adriane-bold", serif; }
 
 .text-sans, .m-footer .m-footer--contact-block p, .m-feature--caption, .m-product--item p, .m-purchase h1, .m-cart--step, .m-cart--details-title, .m-cart--item-title {
@@ -680,7 +680,7 @@ html {
 .m-navigation, .m-cart--dropdown-item-amount, .m-cart--dropdown-promote, .m-counter input {
   font-family: "Brandon-medium", sans-serif; }
 
-.text-bold-sans, .m-cart--dropdown-promote strong, .m-badges.small, .m-purchase--label, .m-purchase--price-regular, .m-cart--benefits-title, .m-cart--options-box-title {
+.text-bold-sans, .m-cart--dropdown-promote strong, .m-badges.small, .m-purchase--label, .m-purchase--price-regular, .m-cart--benefits-title, .m-cart--options-box-title, .m-cart--order-price, .m-cart--order-price-strong {
   font-family: "Brandon-bold", sans-serif; }
 
 h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-footer--title, .m-button, .m-product--item .m-product--price, .m-purchase--price, .m-cart--step i {
@@ -691,6 +691,13 @@ h1, h2, h3, h4, h5 {
 
 h5.text-smaller {
   font-size: 1.0625em; }
+
+h5.text-smallest {
+  font-size: 0.9375em; }
+
+.text-tiny {
+  font-size: 0.75em;
+  color: #aaaaaa; }
 
 .text-center {
   text-align: center; }
@@ -819,6 +826,19 @@ h5.text-smaller {
 
 .left {
   float: left; }
+
+.hr {
+  overflow: hidden;
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
+  margin: 10px 0; }
+  .hr.strong {
+    background-color: #acacac;
+    margin-top: 30px; }
+
+.link {
+  color: #0f92eb; }
 
 .l-single {
   max-width: 71.25em;
@@ -1051,6 +1071,13 @@ h5.text-smaller {
 .l-box--small {
   padding: 25px; }
   .l-box--small::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.l-box--middle {
+  padding: 15px 33px; }
+  .l-box--middle::after {
     clear: both;
     content: "";
     display: table; }
@@ -2068,6 +2095,47 @@ h5.text-smaller {
     color: #737779; }
   .m-cart--item-price-wrapper p {
     margin-bottom: 0; }
+
+.m-cart--order-box {
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: -40px;
+  padding-top: 40px; }
+  .m-cart--order-box::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.m-cart--order-details-wrapper::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.m-cart--order-details {
+  font-size: 0.9375em;
+  display: inline-block; }
+
+.m-cart--order-details-strong {
+  font-size: 1em;
+  display: inline-block;
+  color: #292929; }
+
+.m-cart--order-price {
+  font-size: 1em;
+  display: inline-block;
+  color: #292929; }
+  .m-cart--order-price.discount {
+    color: #36c882; }
+
+.m-cart--order-price-strong {
+  font-size: 1.625em;
+  color: #0f92eb; }
+
+.m-cart--order-details-code {
+  font-size: 0.9375em;
+  color: #818181;
+  width: 100%;
+  overflow: hidden; }
 
 @media screen and (max-width: 30em) {
   .screen {
