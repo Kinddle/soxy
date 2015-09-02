@@ -665,7 +665,7 @@ html {
   font-style: normal;
   font-weight: normal;
   src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
-.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before {
+.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--step.finish span, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before, .m-form label {
   font-family: "Adriane-regular", serif; }
 
 .subheading, .text-italic-serif, .m-header--slogan h3, .m-footer .m-footer--contact-block .email, .slider {
@@ -688,6 +688,9 @@ h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-foo
 
 h1, h2, h3, h4, h5 {
   font-weight: normal; }
+
+h3.text-smaller {
+  font-size: 1.5625em; }
 
 h5.text-smaller {
   font-size: 1.0625em; }
@@ -857,6 +860,13 @@ h5.text-smallest {
     .l-single {
       padding: 0 2%; } }
 
+.l-row {
+  display: block; }
+  .l-row::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 .l-half {
   float: left;
   display: block;
@@ -880,6 +890,8 @@ h5.text-smallest {
       width: 100%; }
       .l-half:last-child {
         margin-right: 0; } }
+  .l-half.gutter {
+    padding-right: 20px; }
 
 .l-one-third {
   float: left;
@@ -1023,6 +1035,16 @@ h5.text-smallest {
       width: 100%; }
       .l-eight:last-child {
         margin-right: 0; } }
+
+.l-nine {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 75%; }
+  .l-nine:last-child {
+    margin-right: 0; }
+  .l-nine.gutter {
+    padding-right: 20px; }
 
 .l-content--small {
   padding: 30px 0; }
@@ -1976,7 +1998,7 @@ h5.text-smallest {
 
 .m-cart {
   position: relative;
-  padding-left: 100px; }
+  padding-left: 70px; }
   .m-cart::after {
     clear: both;
     content: "";
@@ -1996,8 +2018,18 @@ h5.text-smallest {
   font-size: 2.5em;
   position: relative;
   z-index: 2;
-  margin-left: -100px;
-  margin-bottom: 30px; }
+  margin-left: -69px;
+  margin-bottom: 30px;
+  width: 100%;
+  overflow: hidden; }
+  .m-cart--step.finish {
+    float: left;
+    width: auto; }
+    .m-cart--step.finish span {
+      font-size: 14px;
+      display: inline-block;
+      color: #38393c;
+      line-height: 20px; }
   .m-cart--step i {
     font-size: 18px;
     font-style: normal;
@@ -2010,7 +2042,15 @@ h5.text-smallest {
     color: #0f92eb;
     background-color: white;
     display: inline-block;
-    margin-right: 30px; }
+    margin-right: 23px;
+    position: relative; }
+    .m-cart--step i:before {
+      content: "";
+      background-color: white;
+      position: absolute;
+      top: -10px;
+      height: 8px;
+      width: 100%; }
 
 .m-cart--options-box {
   border: 1px solid #ebebeb;
@@ -2137,6 +2177,17 @@ h5.text-smallest {
   width: 100%;
   overflow: hidden; }
 
+.m-cart--frequency {
+  border: 1px solid #ebebeb;
+  padding: 20px;
+  text-align: center;
+  margin: 40px 10px 40px 0; }
+  .m-cart--frequency.is-active {
+    background-color: #0f92eb; }
+  .m-cart--frequency img {
+    height: 135px;
+    display: inline-block; }
+
 @media screen and (max-width: 30em) {
   .screen {
     top: 0;
@@ -2259,3 +2310,18 @@ h5.text-smallest {
       height: 25px;
       background-color: #0f92eb;
       color: white; }
+
+.m-form label {
+  font-size: 0.875em;
+  color: #848589;
+  margin-top: 5px; }
+.m-form input {
+  border: 1px solid #e3e3e3;
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 0;
+  box-shadow: none;
+  display: inline-block;
+  width: 100%; }
+  .m-form input:focus {
+    border-color: #0f92eb; }

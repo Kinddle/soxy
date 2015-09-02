@@ -1,7 +1,7 @@
 .m-cart
   +clearfix
   position: relative
-  padding-left: 100px
+  padding-left: 70px
 
 .m-cart--timeline
   width: 2px
@@ -18,8 +18,19 @@
   font-size: em(40)
   position: relative
   z-index: 2
-  margin-left: -100px
+  margin-left: -69px
   margin-bottom: 30px
+  width: 100%
+  overflow: hidden
+  &.finish
+    float: left
+    width: auto
+    span
+      @extend %adriane-serif
+      font-size: 14px
+      display: inline-block
+      color: #38393c
+      line-height: 20px
   i
     @extend %brandon-black-sans
     font-size: 18px
@@ -33,7 +44,15 @@
     color: $brand-color
     background-color: white
     display: inline-block
-    margin-right: 30px
+    margin-right: 23px
+    position: relative
+    &:before
+      content: ""
+      background-color: white
+      position: absolute
+      top: -10px
+      height: 8px
+      width: 100%
 
 .m-cart--options-box
   +clearfix
@@ -163,3 +182,14 @@
   color: #818181
   width: 100%
   overflow: hidden
+
+.m-cart--frequency
+  border: 1px solid #ebebeb
+  padding: 20px
+  text-align: center
+  margin: 40px 10px 40px 0
+  &.is-active
+    background-color: $brand-color
+  img
+    height: 135px
+    display: inline-block
