@@ -7,6 +7,12 @@
 .text-white
   color: white
 
+.text-light-blue
+  color: $light-blue
+
+.text-blue
+  color: $brand-color
+
 .uppercase
   text-transform: uppercase
 
@@ -37,8 +43,14 @@
 .text-serif
   @extend %adriane-serif
 
+.text-italic-serif
+  @extend %adriane-italic-serif
+
 .text-sans
   @extend %brandon-sans
+
+.text-bold-sans
+  @extend %brandon-bold-sans
 
 .text-shadow
   text-shadow: 1px 1px 1px black
@@ -121,3 +133,10 @@
 // Margin/Padding resets
 .no-margin-bottom
   margin-bottom: 0 !important
+
+// Floats
+.right
+  float: right
+
+.left
+  float: left

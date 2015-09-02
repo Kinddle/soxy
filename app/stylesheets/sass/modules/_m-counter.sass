@@ -1,0 +1,44 @@
+.m-counter
+  +clearfix
+  border: 1px solid #d9edfb
+  text-align: center
+  margin-top: 50px
+  position: relative
+  z-index: 10
+  display: none
+  border-radius: 3px
+  &.with-label:before
+    content: "Qantity"
+    @extend %adriane-serif
+    font-size: em(13)
+    color: #737779
+    position: absolute
+    left: -50px
+    top: 3px
+
+  .qty
+    width: 40px
+    height: 25px
+    text-align: center
+
+  input
+    @extend %brandon-medium-sans
+    font-size: em(13)
+    float: left
+    color: black
+    margin: 0
+    border: 0
+    outline: none
+    box-shadow: 0
+    &.qtyplus
+      +border-right-radius(3px)
+    &.qtyminus
+      +border-left-radius(3px)
+    &.qtyplus, &.qtyminus
+      @extend %adriane-bold-serif
+      font-size: em(18)
+      line-height: 15px
+      width: 35px
+      height: 25px
+      background-color: $brand-color
+      color: white

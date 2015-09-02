@@ -19,7 +19,43 @@
   <nav class="m-navigation">
     <div class="l-single">
       <a href="/" class="m-logo">Soxy.com</a>
-      <div class="m-dropdown"><span>Cart</span><span class="m-badges blue">0</span></div>
+      <div class="m-cart--dropdown">
+        <span>Cart</span>
+        <span class="m-badges blue radius">0</span>
+        <div class="m-cart--dropdown-box">
+          <span class="m-cart--dropdown-close-btn icon-close"></span>
+          <div class="m-cart--dropdown-item">
+            <img src="images/content/product-set-white-1.jpg" />
+            <div class="m-cart--dropdown-overlay">
+              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+              <p class="m-cart--dropdown-item-amount">
+                Summer x 2
+              </p>
+              <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
+          </div>
+          <div class="m-cart--dropdown-item">
+            <img src="images/content/product-set-white-1.jpg" />
+            <div class="m-cart--dropdown-overlay">
+              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+              <p class="m-cart--dropdown-item-amount">
+                Winter x 3
+              </p>
+              <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
+          </div>
+          <a href="#" class="m-button red small full-width">Checkout</a>
+          <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+        </div>
+      </div>
       <ul class="m-navigation--list">
         <li class="m-navigation--item"><a href="#">Shop</a></li>
         <li class="m-navigation--item"><a href="#">Vip Club</a></li>
@@ -35,19 +71,67 @@
     <div class="m-cart">
       <div class="m-cart--timeline"></div>
       <h1 class="m-cart--step"><i>1</i>Shopping Cart</h1>
-      <div class="l-one-third m-cart--info-card">
+      <div class="l-one-third">
         <h2 class="m-cart--details-title">Choose the way to shop</h2>
         <div class="m-cart--options-box">
-          <h3 class="m-cart--options-box-title"><i></i>Soxy club VIP</h3>
+          <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right">FAQ</span></h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title">VIP Benefits</h4>
             <ul class="m-cart--benefits-list">
               <li class="m-cart--benefits-item icon-benefits-discount">10% off any product, any time!</li>
               <li class="m-cart--benefits-item icon-benefits-styles">New styles delivered on your schedule (monthly, every 2 months, every 3 months) </li>
               <li class="m-cart--benefits-item icon-benefits-gift">Every 6th set is FREE</li>
-              <li class="m-cart--benefits-item icon-benefits-cancel">Cancel/skip/change your deliveries anytime. Limited edition designs not</li>
-              <li class="m-cart--benefits-item icon-benefits-star">available to the public</li>
-              <li class="m-cart--benefits-item icon-benefits-shiping">
+              <li class="m-cart--benefits-item icon-benefits-cancel">Cancel/skip/change your deliveries anytime. </li>
+              <li class="m-cart--benefits-item icon-benefits-star">Limited edition designs not available to the public</li>
+              <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
+            </ul>
+          </div>
+        </div>
+        <h5 class="text-center text-light-blue text-italic-serif text-smaller">or</h5>
+        <div class="m-cart--options-box">
+          <h3 class="m-cart--options-box-title"><i></i>Pay As You Go</h3>
+          <div class="l-box">
+            <h4 class="m-cart--benefits-title">Pay As You Go Benefits</h4>
+            <ul class="m-cart--benefits-list">
+              <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l-one-third">
+        <h2 class="m-cart--details-title">Your Cart</h2>
+        <div class="m-cart--options-box bg-snow small-margin">
+          <h3 class="m-cart--item-title">Summer<span class="m-cart--trash-btn icon-trash"></span></h3>
+          <div class="l-box--small">
+            <img src="images/content/product-set-1.jpg" />
+            <div class="m-actions">
+              <div class="m-cart--item-price-wrapper">
+                <p class="vip-price text-bold-sans text-blue">$45 VIP</p>
+                <p class="regular-price text-sans">$55 REG</p>
+              </div>
+              <form id='CartCounter' class="m-counter with-label" method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="m-cart--options-box bg-snow small-margin">
+          <h3 class="m-cart--item-title">Summer<span class="m-cart--trash-btn icon-trash"></span></h3>
+          <div class="l-box--small">
+            <img src="images/content/product-set-1.jpg" />
+            <div class="m-actions">
+              <div class="m-cart--item-price-wrapper">
+                <p class="vip-price text-bold-sans text-blue">$45 VIP</p>
+                <p class="regular-price text-sans">$55 REG</p>
+              </div>
+              <form id='CartCounter' class="m-counter with-label" method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -95,13 +179,18 @@
 
 <!------ SCRIPTS ------>
 
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/controller.js"></script>
 <script src="scripts/directives/directive.js"></script>
 <script src="scripts/filters/filter.js"></script>
 <script src="scripts/services/service.js"></script>
+<script src="scripts/main.js"></script>
 
 
 </body>

@@ -1,6 +1,15 @@
 .m-badges
-  border-radius: 15px
+  border-radius: 5px
   padding: 0px 10px
   margin: 0 10px
+  color: white
+  &.radius
+    border-radius: 15px
   &.blue
     background-color: #003f7a
+  &.blue-alt
+    background-color: #005fc0
+  &.small
+    @extend %brandon-bold-sans
+    font-size: em(13)
+    padding: 8px 11px
