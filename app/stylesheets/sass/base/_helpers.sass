@@ -18,6 +18,9 @@
   text-transform: uppercase
   letter-spacing: 0.4px
   line-height: 42px
+  +media($mobile)
+    font-size: em(26)
+    line-height: 34px
 
 .subheading
   @extend %adriane-italic-serif
@@ -53,20 +56,54 @@
   background-size: cover
   min-height: 600px
   overflow: hidden
-  .heading
+  h1.heading
     margin-top: 150px
-    +media($tablet)
+  h5.heading
+    margin-top: 100px
+  +media($tablet)
+    background-image: none
+    background-color: white
+    min-height: auto
+    h1.heading
+      margin-top: 0
+    .heading
+      color: $title-color
+      text-shadow: none
+    p
+      text-shadow: none
+      color: #656565
+      font-size: em(17)
+    h5.heading
       margin-top: 50px
+      color: $brand-color
+      text-transform: capitalize
 
 // Responsive helpers
 .hidden-tablet-mobile
+  display: block
   +media($tablet)
     display: none !important
+
+.hidden-tablet-visible-mobile
+  display: block
+  +media($tablet)
+    display: none
+  +media($mobile)
+    display: block !important
 
 .visible-tablet-mobile
   display: none !important
   +media($tablet)
     display: block !important
+
+.visible-mobile
+  display: none !important
+  +media($mobile)
+    display: block !important
+
+.visible-tablet-hidden-mobile
+  +media($mobile)
+    display: none !important
 
 
 // Margin/Padding resets

@@ -5,8 +5,21 @@
   padding: 60px 40px 50px 40px
   text-align: center
   border-bottom: 1px solid white
-  &.l-one-third-break-one-half
+  &.l-one-third-break-half
     border-right: 1px solid white
+    border-bottom-width: 0
+    &:nth-child(3n)
+      border-right-width: 0
+    +media($tablet)
+      border-bottom-width: 1px
+      &:nth-child(2n)
+        border-right-width: 0
+      &:nth-child(3n)
+        border-right-width: 1px
+        border-bottom-width: 0
+    +media($mobile)
+      border-right-width: 0 !important
+      border-bottom-width: 1px !important
   &.l-one-third
     border-right: 1px solid white
     border-bottom-width: 0

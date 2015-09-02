@@ -7,15 +7,18 @@
     font-size: em(40)
     color: $title-color
     text-align: center
+    +media($tablet)
+      font-size: em(30)
 
 .m-purchase--item-wrapper
   padding-right: 500px
   text-align: center
-  +media($mobile)
+  +media($tablet)
     width: 100%
     padding-right: 0
 
 .m-purchase--dashboard
+  +clearfix
   background-color: $snow
   padding: 50px 70px
   width: 500px
@@ -23,11 +26,17 @@
   height: 100%
   top: 0
   right: 0
-  +media($mobile)
+  +media($tablet)
     width: 100%
     position: relative
+    padding: 25px 10px 45px 10px
+    .m-button
+      width: auto
     .l-one-third
       +span-columns(4 of 12)
+  +media($mobile)
+    .m-button
+      width: 100%
 
 .m-purchase--feature
   color: $oil

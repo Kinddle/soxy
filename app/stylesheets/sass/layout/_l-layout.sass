@@ -14,18 +14,28 @@
 
 .l-one-third
   +span-columns(4)
+  &.l-keep-on-tablet
+    +media($tablet)
+      +span-columns(4 of 12)
+    +media($mobile)
+      +span-columns(12 of 12)
   +media($tablet)
     +span-columns(12 of 12)
   +media($mobile)
     +span-columns(12 of 12)
 
-.l-one-third-break-one-half
+.l-one-third-break-half
   +span-columns(4)
   +media($tablet)
     width: 50%
-    +omega
   +media($mobile)
     +span-columns(12 of 12)
+
+.l-single-break-half-break-single
+  +media($tablet)
+    +span-columns(6 of 12)
+  +media($mobile)
+    width: 100%
 
 .l-one-fourth
   +span-columns(3)
@@ -56,6 +66,8 @@
 .l-content
   +clearfix
   padding: 60px 0
+  +media($mobile)
+    padding: 30px 0
 
 .l-content--medium
   +clearfix

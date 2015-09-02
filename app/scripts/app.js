@@ -5,7 +5,10 @@
           'ngAnimate',
           'ngTouch'
         ])
-        .controller('MainCtrl', function ($scope) {
+        .controller('MainCtrl', function ($scope, $interval) {
+
+            $interval( function(){ $scope.callAtInterval(); }, 3000);
+
             $scope.slides = [
                 {quote: 'I‘ll never wear any other sock again!', description: 'Quote 00'},
                 {quote: 'The best sock ever!', description: 'Quote 01'},
@@ -24,6 +27,12 @@
                 return $scope.currentIndex === index;
             };
 
+            $scope.callAtInterval = function () {
+                $scope.direction = 'left';
+                $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+            };
+
+
             $scope.prevSlide = function () {
                 $scope.direction = 'left';
                 $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
@@ -33,6 +42,7 @@
                 $scope.direction = 'right';
                 $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
             };
+
         })
         .animation('.slide-animation', function () {
             return {
