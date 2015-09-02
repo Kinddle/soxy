@@ -3,9 +3,12 @@
   background-color: $brand-color
 
 .m-feature--item
-  +span-columns(4 of 12, table)
+  +span-columns(4 of 12)
+  +omega(3n)
+  +media($tablet)
+    width: 100%
   +media($mobile)
-    +span-columns(12 of 12)
+    width: 100%
   position: relative
   text-align: center
   cursor: pointer

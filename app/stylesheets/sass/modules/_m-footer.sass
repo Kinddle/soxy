@@ -4,6 +4,7 @@
   padding-top: 74px
   .badge
     +span-columns(2)
+    margin-right: 4%
     +media($tablet)
       +span-columns(5 of 12)
     +media($mobile)
@@ -20,14 +21,14 @@
     +media($mobile)
       +span-columns(12 of 12)
       padding: 0 35px
-    .m-footer--title    
-      @extend %brandon-black-sans        
-      color: white 
+    .m-footer--title
+      @extend %brandon-black-sans
+      color: white
       +media($mobile)
         display: none
-    .m-footer--description   
+    .m-footer--description  
       +media($mobile)
-        margin-top: 37px  
+        margin-top: 37px
         letter-spacing: 1.5px
       color: white
       font-size: 14px
@@ -36,7 +37,7 @@
       @extend %adriane-serif
       span
         color: white
-        @extend %adriane-bold
+        @extend %adriane-bold-serif
         +media($mobile)
           +span-columns(12 of 12)
           &.hide-text
@@ -45,6 +46,7 @@
     float: right
     +span-columns(3)
     +media($tablet)
+      padding: 0 100px
       margin-top: 75px
       text-align: left
       +span-columns(12 of 12)
@@ -53,6 +55,7 @@
       .right-tablet-column
         +span-columns(6 of 12)
     +media($mobile)
+      padding: 0
       +span-columns(12 of 12)
       margin-top: 50px
       .left-tablet-column
@@ -70,6 +73,7 @@
       text-align: center
       display: block 
       margin-bottom: 25px  
+      color: #3aaaf6
     .m-footer--socials
       a
         margin: 0 9px

@@ -4,7 +4,7 @@
 
 .m-header--bg
   background-image: url('../../images/hero-bg.jpg')
-  background-position: center center
+  background-position: center bottom
   background-size: cover
   width: 100%
   min-height: 620px
@@ -17,8 +17,11 @@
   h1
     @extend %brandon-black-sans
     font-size: em(56)
+    line-height: 50px
     text-shadow: 0 0 40px black
     margin-bottom: 40px
+    +media($mobile)
+      font-size: em(36)
   h3
     @extend %adriane-italic-serif
     +span-columns(8)
@@ -28,3 +31,6 @@
     text-shadow: 0 0 27px black
     letter-spacing: 1.4px
     margin-bottom: 30px
+    +media($mobile)
+      font-size: em(22)
+      line-height: 32px

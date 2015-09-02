@@ -19,7 +19,43 @@
   <nav class="m-navigation">
     <div class="l-single">
       <a href="/" class="m-logo">Soxy.com</a>
-      <div class="m-dropdown"><span>Cart</span><span class="m-badges blue">0</span></div>
+      <div class="m-cart--dropdown">
+        <span>Cart</span>
+        <span class="m-badges blue">0</span>
+        <div class="m-cart--dropdown-box">
+          <span class="m-cart--dropdown-close-btn icon-close"></span>
+          <div class="m-cart--dropdown-item">
+            <img src="images/content/product-set-white-1.jpg" />
+            <div class="m-cart--dropdown-overlay">
+              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+              <p class="m-cart--dropdown-item-amount">
+                Summer x 2
+              </p>
+              <form id='dropdownCartCounter' method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
+          </div>
+          <div class="m-cart--dropdown-item">
+            <img src="images/content/product-set-white-1.jpg" />
+            <div class="m-cart--dropdown-overlay">
+              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+              <p class="m-cart--dropdown-item-amount">
+                Winter x 3
+              </p>
+              <form id='dropdownCartCounter' method='POST' action='#'>
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='0' class='qty' />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+              </form>
+            </div>
+          </div>
+          <a href="#" class="m-button red small full-width">Checkout</a>
+          <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+        </div>
+      </div>
       <div class="menu-btn">
         <span></span>
         <span></span>
@@ -105,12 +141,12 @@
   </div>
 </section>
 
-<section class="l-content--big bg-blue text-center text-white">
+<section class="l-content bg-blue text-center text-white hidden-tablet-mobile">
   <h1 class="heading">Soxy Worldwide</h1>
   <h3 class="subheading">Use the hashtag <span class="hashtag">#SoxyCrazy</span> to join in!</h3>
 </section>
 
-<section class="m-photos">
+<section class="m-photos hidden-tablet-mobile">
   <div class="m-photos--inner">
     <a href="#" target="_blank">
       <img src="images/content/photo-1.jpg">
@@ -185,12 +221,16 @@
           </p>
         </div>
         <div class="m-footer--contact-block">
-          <p>E-MAIL</p>
-          <a class="email" href="#">hello@soxy.com</a>
-          <p>STAY IN TOUCH</p>
-          <div class="m-footer--socials text-center">
-            <a class="" href="#"><img src="images/icons/icon-facebook.png"></a>
-            <a class="" href="#"><img src="images/icons/icon-instagram.png"></a>
+          <div class="left-tablet-column">
+            <p>E-MAIL</p>
+            <a class="email" href="#">hello@soxy.com</a>
+          </div>
+          <div clas="right-tablet-column">
+            <p>STAY IN TOUCH</p>
+            <div class="m-footer--socials text-center">
+              <a class="" href="#"><img src="images/icons/icon-facebook.png"></a>
+              <a class="" href="#"><img src="images/icons/icon-instagram.png"></a>
+            </div>
           </div>
         </div>
         <div class="m-footer--payment-methods text-center">

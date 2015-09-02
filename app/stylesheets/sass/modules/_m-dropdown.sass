@@ -1,12 +1,15 @@
-.m-dropdown
+.m-cart--dropdown
   display: inline-block
   background-color: $brand-color
-  padding-left: 44px
+  padding-left: 24px
   padding-right: 15px
   color: white
   float: right
-  cursor: pointer
   height: 75px
+  position: relative
+  z-index: 100
+  span
+    cursor: pointer
   +media($tablet)
     text-align: center
     padding: 15px
@@ -14,3 +17,116 @@
       display: block
       clear: both
       line-height: normal
+  +media($mobile)
+    position: absolute
+    top: 0
+    right: 0
+
+.m-cart--dropdown-box
+  box-shadow: 0 0 7px rgba(0,0,0,0.3)
+  background-color: white
+  position: absolute
+  padding: 30px 40px 0px 40px
+  margin-top: 5px
+  right: 5px
+  width: 300px
+  &:before
+    +triangle(22px, white, up)
+    content: ""
+    position: absolute
+    top: -11px
+    right: 25px
+
+.m-cart--dropdown-close-btn
+  position: absolute
+  right: 15px
+  top: 15px
+
+.m-cart--dropdown-item
+  position: relative
+
+.m-cart--dropdown-trash-btn
+  position: absolute
+  right: -20px
+  top: 0px
+  display: none
+
+.m-cart--dropdown-overlay
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  text-align: center
+  position: absolute
+  &:hover
+    background-color: rgba(255,255,255,0.9)
+    .m-cart--dropdown-item-amount
+      display: none
+    .m-cart--dropdown-trash-btn
+      display: block
+    #dropdownCartCounter
+      display: inline-block
+
+.m-cart--dropdown-item-amount
+  @extend %brandon-medium-sans
+  color: $navigation-color
+  font-size: em(15)
+  line-height: initial
+  border-radius: 3px
+  background-color: white
+  position: absolute
+  display: inline-block
+  left: 50%
+  top: 35%
+  width: 100px
+  margin-left: -50px
+  padding: 2px 0
+
+.m-cart--dropdown-promote
+  font-size: em(13)
+  @extend %brandon-medium-sans
+  color: #87888d
+  line-height: 18px
+  letter-spacing: 1px
+  text-transform: uppercase
+  text-align: center
+  padding: 0 20px
+  strong
+    @extend %brandon-bold-sans
+    color: #303032
+
+#dropdownCartCounter
+  +clearfix
+  border: 1px solid #d9edfb
+  text-align: center
+  margin-top: 50px
+  position: relative
+  z-index: 10
+  display: none
+  border-radius: 3px
+  overflow: hidden
+
+  .qty
+    width: 40px
+    height: 25px
+    text-align: center
+
+  input
+    @extend %brandon-medium-sans
+    font-size: em(13)
+    float: left
+    color: black
+    margin: 0
+    border: 0
+    outline: none
+    box-shadow: 0
+    &.qtyplus, &.qtyminus
+      @extend %adriane-bold-serif
+      font-size: em(18)
+      line-height: 15px
+      width: 35px
+      height: 25px
+      background-color: $brand-color
+      color: white
