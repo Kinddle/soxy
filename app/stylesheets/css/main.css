@@ -1177,7 +1177,6 @@ h5.text-smallest {
       right: 0; } }
 
 .m-cart--dropdown-box {
-  display: none;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
   background-color: white;
   position: absolute;
