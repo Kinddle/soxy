@@ -43,6 +43,10 @@
                 $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
             };
 
+            $scope.toggleDropdown = function() {
+                $('.m-cart--dropdown-box').toggleClass('is-active');
+            };
+            console.log('clicked');
         })
         .animation('.slide-animation', function () {
             return {

@@ -15,3 +15,27 @@
     &:focus
       border-color: $brand-color
 
+  .select-wrapper
+    display: inline-block
+    position: relative
+    width: 100%
+    &:after
+      content: ""
+      background-image: url('../../images/icons/icon-select-arrow.png')
+      width: 11px
+      height: 7px
+      position: absolute
+      top: 50%
+      right: 10px
+      margin-top: -15px
+
+  select
+    +appearance(none)
+    background-color: transparent
+    border: 1px solid #e3e3e3
+    outline: none
+    padding: 12px 20px
+    border-radius: 0
+    box-shadow: none
+    display: inline-block
+    width: 100%

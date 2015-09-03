@@ -23,7 +23,7 @@
     right: 0
 
 .m-cart--dropdown-box
-  // display: none
+  display: none
   box-shadow: 0 0 7px rgba(0,0,0,0.3)
   background-color: white
   position: absolute
@@ -31,6 +31,8 @@
   margin-top: 5px
   right: 5px
   width: 300px
+  &.is-active
+    display: block
   &:before
     +triangle(22px, white, up)
     content: ""

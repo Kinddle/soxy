@@ -1177,6 +1177,7 @@ h5.text-smallest {
       right: 0; } }
 
 .m-cart--dropdown-box {
+  display: none;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
   background-color: white;
   position: absolute;
@@ -1184,6 +1185,8 @@ h5.text-smallest {
   margin-top: 5px;
   right: 5px;
   width: 300px; }
+  .m-cart--dropdown-box.is-active {
+    display: block; }
   .m-cart--dropdown-box:before {
     height: 0;
     width: 0;
@@ -1689,6 +1692,16 @@ h5.text-smallest {
   background-position: center center;
   background-repeat: no-repeat; }
 
+.icon-secure-shopping {
+  background-image: url("../../images/secure-job-badge.png");
+  width: 98px;
+  height: 27px; }
+
+.icon-helper-arrow {
+  background-image: url("../../images/icons/icon-helper-arrow.png");
+  width: 27px;
+  height: 31px; }
+
 .m-product--item {
   padding: 60px 40px 50px 40px;
   text-align: center;
@@ -2028,6 +2041,13 @@ h5.text-smallest {
   margin-bottom: 30px;
   width: 100%;
   overflow: hidden; }
+  .m-cart--step.l-nine {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 75%; }
+    .m-cart--step.l-nine:last-child {
+      margin-right: 0; }
   .m-cart--step.finish {
     float: left;
     width: auto; }
@@ -2093,6 +2113,14 @@ h5.text-smallest {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px; }
+  .m-cart--details-title.with-arrow:before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: -10px;
+    background-image: url("../../images/icons/icon-helper-arrow.png");
+    width: 27px;
+    height: 31px; }
 
 .m-cart--options-box-title {
   font-size: 1.0625em;
@@ -2188,6 +2216,8 @@ h5.text-smallest {
   padding: 20px;
   text-align: center;
   margin: 40px 10px 40px 0; }
+  .m-cart--frequency.last {
+    margin-right: 0; }
   .m-cart--frequency.is-active {
     background-color: #0f92eb; }
   .m-cart--frequency img {
@@ -2331,3 +2361,30 @@ h5.text-smallest {
   width: 100%; }
   .m-form input:focus {
     border-color: #0f92eb; }
+.m-form .select-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%; }
+  .m-form .select-wrapper:after {
+    content: "";
+    background-image: url("../../images/icons/icon-select-arrow.png");
+    width: 11px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -15px; }
+.m-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #e3e3e3;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 0;
+  box-shadow: none;
+  display: inline-block;
+  width: 100%; }

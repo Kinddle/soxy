@@ -22,6 +22,8 @@
   margin-bottom: 30px
   width: 100%
   overflow: hidden
+  &.l-nine
+    +span-columns(9 of 12)
   &.finish
     float: left
     width: auto
@@ -91,6 +93,14 @@
   text-align: center
   text-transform: uppercase
   letter-spacing: 1px
+  &.with-arrow:before
+    content: ""
+    position: absolute
+    left: -10px
+    bottom: -10px
+    background-image: url('../../images/icons/icon-helper-arrow.png')
+    width: 27px
+    height: 31px
 
 .m-cart--options-box-title
   @extend %brandon-bold-sans
@@ -188,6 +198,8 @@
   padding: 20px
   text-align: center
   margin: 40px 10px 40px 0
+  &.last
+    margin-right: 0
   &.is-active
     background-color: $brand-color
   img
