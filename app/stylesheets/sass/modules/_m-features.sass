@@ -1,14 +1,16 @@
 .m-features
   +clearfix
-  background-color: $brand-color
+  background-color: white
 
 .m-feature--item
   +span-columns(4 of 12)
   +omega(3n)
   +media($tablet)
-    width: 100%
+    +span-columns(4 of 12)
   +media($mobile)
     width: 100%
+    border: 5px solid white
+    border-bottom-width: 0
   position: relative
   text-align: center
   cursor: pointer

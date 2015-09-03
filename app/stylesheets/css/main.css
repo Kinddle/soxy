@@ -1557,7 +1557,7 @@ h5.text-smallest {
     text-align: center; }
 
 .m-features {
-  background-color: #0f92eb; }
+  background-color: white; }
   .m-features::after {
     clear: both;
     content: "";
@@ -1579,10 +1579,17 @@ h5.text-smallest {
     clear: left; }
   @media screen and (max-width: 48em) {
     .m-feature--item {
-      width: 100%; } }
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 33.33333%; }
+      .m-feature--item:last-child {
+        margin-right: 0; } }
   @media screen and (max-width: 30em) {
     .m-feature--item {
-      width: 100%; } }
+      width: 100%;
+      border: 5px solid white;
+      border-bottom-width: 0; } }
   .m-feature--item:hover {
     opacity: 0.9; }
   .m-feature--item img {
