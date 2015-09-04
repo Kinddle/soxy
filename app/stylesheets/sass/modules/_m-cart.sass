@@ -2,6 +2,8 @@
   +clearfix
   position: relative
   padding-left: 70px
+  +media($tablet)
+    padding-left: 0
 
 .m-cart--timeline
   width: 2px
@@ -22,6 +24,9 @@
   margin-bottom: 30px
   width: 100%
   overflow: hidden
+  +media($tablet)
+    margin-left: 0
+    font-size: em(30)
   &.l-nine
     +span-columns(9 of 12)
   &.finish
@@ -60,8 +65,14 @@
   +clearfix
   border: 1px solid $border-color
   margin: 25px 25px 25px 0
-  // &.small-margin
-  //   margin: 5px 25px 5px 0
+  +media($tablet)
+    border-width: 0
+    padding: 5px
+    margin: 0
+    float: left
+    border: 5px solid white
+  +media($mobile)
+    width: 100%
   .m-counter
     display: block
     float: right
@@ -79,6 +90,8 @@
 .m-cart--benefits-list
   margin: 0
   padding: 0
+  .link
+    display: inline-block
 
 .m-cart--benefits-item
   @extend %adriane-serif
@@ -94,6 +107,13 @@
   text-transform: uppercase
   letter-spacing: 1px
   position: relative
+  padding-right: 25px
+  +media($tablet)
+    text-align: center
+    width: 100%
+    padding: 0
+  + .l-content--small
+    padding-bottom: 0
   &.with-arrow:before
     content: ""
     position: absolute
@@ -102,6 +122,8 @@
     background-image: url('../../images/icons/icon-helper-arrow.png')
     width: 27px
     height: 31px
+    +media($tablet)
+      display: none
 
 .m-cart--options-box-title
   @extend %brandon-bold-sans
@@ -114,6 +136,8 @@
   letter-spacing: 1px
   position: relative
   cursor: pointer
+  +media($tablet)
+    display: none
   i
     width: 26px
     height: 26px
@@ -206,3 +230,23 @@
   img
     height: 135px
     display: inline-block
+
+.m-cart--options-toggler-wrapper
+  display: inline-block
+  text-align: center
+
+.m-cart--options-toggler
+  @extend %brandon-bold-sans
+  border: 1px solid $brand-color
+  font-size: em(12)
+  float: left
+  padding: 10px
+  text-transform: uppercase
+  &:first-child
+    +border-left-radius(3px)
+  &:last-child
+    +border-right-radius(3px)
+    margin-left: -1px
+  &.is-active
+    background-color: $brand-color
+    color: white

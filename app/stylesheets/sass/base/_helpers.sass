@@ -3,6 +3,7 @@
 
 .text-center
   text-align: center
+  width: 100%
 
 .text-white
   color: white
@@ -98,32 +99,32 @@
 
 // Responsive helpers
 .hidden-tablet-mobile
-  display: block
+  display: inline-block
   +media($tablet)
     display: none !important
 
 .hidden-mobile
-  display: block
+  display: inline-block
   +media($mobile)
     display: none !important
 
 .hidden-tablet-visible-mobile
-  display: block
+  display: inline-block
   +media($tablet)
     display: none
   +media($mobile)
-    display: block !important
+    display: inline-block !important
 
 
 .visible-tablet-mobile
   display: none !important
   +media($tablet)
-    display: block !important
+    display: inline-block !important
 
 .visible-mobile
   display: none !important
   +media($mobile)
-    display: block !important
+    display: inline-block !important
 
 .visible-tablet-hidden-mobile
   +media($mobile)
@@ -154,4 +155,14 @@
 
 // Links
 .link
+  @extend %brandon-bold-sans
   color: $brand-color
+  &.with-arrow
+    padding-right: 30px
+    position: relative
+    i
+      position: absolute
+      right: 0
+      top: 50%
+      margin-top: -3px
+

@@ -69,26 +69,40 @@
 <section class="l-single">
   <div class="l-content--big">
     <div class="m-cart">
-      <div class="m-cart--timeline"></div>
+      <div class="m-cart--timeline hidden-tablet-mobile"></div>
       <h1 class="m-cart--step"><i>1</i>Shopping Cart</h1>
-      <div class="l-one-third">
-        <h2 class="m-cart--details-title with-arrow">Choose the way to shop</h2>
-        <div class="m-cart--options-box">
+      <h2 class="m-cart--details-title with-arrow visible-tablet-mobile">Choose the way to shop</h2>
+      <div class="l-content--small text-center visible-tablet-mobile">
+        <div class="m-cart--options-toggler-wrapper visible-tablet-mobile">
+          <a href="#" class="m-cart--options-toggler" ng-class="{'is-active':tab===1}" ng-click="tab = 1">VIP MEMBERSHIP</a>
+          <a href="#" class="m-cart--options-toggler" ng-class="{'is-active':tab===2}" ng-click="tab = 2">PAY AS YOU GO</a>
+        </div>
+      </div>
+      <div class="l-one-third tabs">
+        <h2 class="m-cart--details-title with-arrow hidden-tablet-mobile text-center">Choose the way to shop</h2>
+        <div class="m-cart--options-box" ng-hide="" ng-show="tab === 1">
           <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right">FAQ</span></h3>
           <div class="l-box">
-            <h4 class="m-cart--benefits-title">VIP Benefits</h4>
+            <h4 class="m-cart--benefits-title hidden-tablet-mobile">VIP Benefits</h4>
             <ul class="m-cart--benefits-list">
-              <li class="m-cart--benefits-item icon-benefits-discount">10% off any product, any time!</li>
-              <li class="m-cart--benefits-item icon-benefits-styles">New styles delivered on your schedule (monthly, every 2 months, every 3 months) </li>
-              <li class="m-cart--benefits-item icon-benefits-gift">Every 6th set is FREE</li>
-              <li class="m-cart--benefits-item icon-benefits-cancel">Cancel/skip/change your deliveries anytime. </li>
-              <li class="m-cart--benefits-item icon-benefits-star">Limited edition designs not available to the public</li>
-              <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
+              <div class="l-single-break-half-break-single">
+                <li class="m-cart--benefits-item icon-benefits-discount">10% off any product, any time!</li>
+                <li class="m-cart--benefits-item icon-benefits-styles">New styles delivered on your schedule (monthly, every 2 months, every 3 months) </li>
+                <li class="m-cart--benefits-item icon-benefits-gift">Every 6th set is FREE</li>
+              </div>
+              <div class="l-single-break-half-break-single">
+                <li class="m-cart--benefits-item icon-benefits-cancel">Cancel/skip/change your deliveries anytime. </li>
+                <li class="m-cart--benefits-item icon-benefits-star">Limited edition designs not available to the public</li>
+                <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
+              </div>
+              <div class="m-actions full-width">
+                <a href="#" class="link with-arrow">Learn more<i class="icon-arrow-bottom-blue"></i></a>
+              </div>
             </ul>
           </div>
         </div>
-        <h5 class="text-center text-light-blue text-italic-serif text-smaller">or</h5>
-        <div class="m-cart--options-box">
+        <h5 class="text-center text-light-blue text-italic-serif text-smaller hidden-tablet-mobile">or</h5>
+        <div class="m-cart--options-box" ng-show="tab === 2">
           <h3 class="m-cart--options-box-title"><i></i>Pay As You Go</h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title">Pay As You Go Benefits</h4>
@@ -136,7 +150,7 @@
         </div>
       </div>
       <div class="l-one-third">
-        <div class="m-cart--order-box">
+        <div class="m-cart--order-box hidden-tablet-mobile">
           <h3 class="m-cart--details-title">Order</h3>
           <div class="l-box">
             <div class="m-cart--order-details-wrapper">

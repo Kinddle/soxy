@@ -5,7 +5,7 @@
           'ngAnimate',
           'ngTouch'
         ])
-        .controller('MainCtrl', function ($scope, $interval) {
+        .controller('MainCtrl', function ($scope, $interval, $window) {
 
             $interval( function(){ $scope.callAtInterval(); }, 3000);
 
@@ -32,7 +32,6 @@
                 $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
             };
 
-
             $scope.prevSlide = function () {
                 $scope.direction = 'left';
                 $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
@@ -46,7 +45,23 @@
             $scope.toggleDropdown = function() {
                 $('.m-cart--dropdown-box').toggleClass('is-active');
             };
-            console.log('clicked');
+
+            $scope.$watch(function() {
+                var width = $window.innerWidth;
+                console.log(width);
+                this.tab = 1;
+                if( width < 768 ) {
+
+                    this.selectTab = function (setTab){
+                        this.tab = setTab;
+                    };
+                    this.isSelected = function(checkTab) {
+                        return this.tab === checkTab;
+                    };
+                }
+
+            });
+
         })
         .animation('.slide-animation', function () {
             return {
