@@ -113,6 +113,18 @@
   +media($mobile)
     display: none !important
 
+.hidden-tablet
+  display: inline-block
+  +media($tablet)
+    display: none !important
+  +media($mobile)
+    display: inline-block !important
+
+.visible-tablet
+  display: none !important
+  +media($tablet)
+    display: inline-block !important
+
 .hidden-tablet-visible-mobile
   display: inline-block
   +media($tablet)

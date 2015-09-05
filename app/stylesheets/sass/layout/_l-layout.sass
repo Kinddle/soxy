@@ -26,6 +26,11 @@
       width: 100%
       &.gutter
         padding-right: 0
+  &.l-keep-on-mobile
+    +media($mobile)
+      +span-columns(6 of 12)
+      &.gutter
+        padding-right: 20px
   &.gutter
     padding-right: 20px
     +media($tablet)
@@ -37,6 +42,17 @@
     +span-columns(6 of 12)
   +media($mobile)
     width: 100%
+
+.l-half-mobile
+  +clearfix
+  +media($mobile)
+    +span-columns(6 of 12)
+    &.gutter
+      padding-right: 20px
+  &.l-keep-on-tablet.l-one-fourth
+    +clearfix
+    +media($mobile)
+      +span-columns(6 of 12)
 
 .l-one-third
   +clearfix
@@ -70,9 +86,16 @@
   +clearfix
   +span-columns(3)
   +media($tablet)
-    +span-columns(12 of 12)
+    width: 100%
+  &.l-keep-on-tablet
+    +span-columns(3)
   +media($mobile)
     +span-columns(12 of 12)
+
+.l-one-fourth-tablet
+  +clearfix
+  +media($tablet)
+    +span-columns(3 of 12)
 
 .l-one-sixth
   +clearfix
@@ -90,14 +113,29 @@
   +media($mobile)
     +span-columns(12 of 12)
 
+.l-eight-tablet
+  +clearfix
+  +media($tablet)
+    +span-columns(8 of 12)
+    &.gutter
+      padding-right: 20px
+
 .l-nine
   +clearfix
-  +span-columns(9)
+  +span-columns(9 of 12)
   &.gutter
     padding-right: 20px
-    +media($tablet)
+  +media($mobile)
+    width: 100%
+    &.gutter
       padding-right: 0
-      width: 100%
+
+.l-nine-tablet
+  +media($tablet)
+    +clearfix
+    +span-columns(9 of 12)
+    &.gutter
+      padding-right: 20px
 
 
 // Vertical

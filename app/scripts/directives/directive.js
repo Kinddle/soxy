@@ -52,15 +52,12 @@
                     topPadding = parseInt(attrs.paddingWhenAtTop, 10),
                     parent = element.parent().parent().parent().parent().parent(),
                     offsetTop;
-                    console.log(parent);
 
                 $win.on("scroll", function () {
                     // dynamic page layout so have to recalculate every time;
                     // take offset of parent because after the element gets fixed
                     // it now has a different offset from the top
                     offsetTop = topPadding - parent.offset().top;
-                    console.log(offsetTop);
-                    console.log(topPadding);
                     if ($win.scrollTop() >= offsetTop) {
                         element.addClass(topClass);
                         parent.height(element.height());

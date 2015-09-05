@@ -248,7 +248,7 @@
               <input type="text">
             </div>
             <div class="l-half l-keep-on-tablet">
-              <div class="l-half gutter l-keep-on-tablet">
+              <div class="l-half gutter l-keep-on-tablet l-keep-on-mobile">
                 <label>State</label>
                 <div class="select-wrapper">
                   <select>
@@ -306,7 +306,7 @@
                   </select>
                 </div>
               </div>
-              <div class="l-half l-keep-on-tablet">
+              <div class="l-half l-keep-on-tablet l-keep-on-mobile">
                 <label>ZIP</label>
                 <input type="text">
               </div>
@@ -329,13 +329,11 @@
                 <label>Credit card number</label>
                 <input type="text">
               </div>
-              <div class="l-one-fourth">
+              <div class="l-one-fourth l-keep-on-tablet l-half-mobile gutter">
                 <label>CVV</label>
                 <input text>
               </div>
-            </div>
-            <div class="l-row">
-              <div class="l-half gutter">
+              <div class="l-half-mobile visible-mobile">
                 <label>Expire</label>
                 <div class="select-wrapper">
                   <select>
@@ -346,8 +344,21 @@
                   </select>
                 </div>
               </div>
-              <div class="l-half">
-                <div class="l-half gutter">
+            </div>
+            <div class="l-row">
+              <div class="l-half gutter l-nine-tablet hidden-mobile">
+                <div class="l-eight-tablet gutter">
+                  <label>Expire</label>
+                  <div class="select-wrapper">
+                    <select>
+                      <option value="">07 July</option>
+                      <option value="">08 July</option>
+                      <option value="">09 July</option>
+                      <option value="">10 July</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="l-one-third l-keep-on-tablet visible-tablet">
                   <label>&nbsp;</label>
                   <div class="select-wrapper">
                     <select>
@@ -357,7 +368,19 @@
                     </select>
                   </div>
                 </div>
-                <div class="l-half">
+              </div>
+              <div class="l-half l-one-fourth-tablet">
+                <div class="l-half gutter hidden-tablet-mobile">
+                  <label>&nbsp;</label>
+                  <div class="select-wrapper">
+                    <select>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option value="2015">2015</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="l-half hidden-mobile">
                   <label>Billing ZIP</label>
                   <input type="text">
                 </div>
@@ -419,6 +442,10 @@
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>
                 </select>
+              </div>
+              <div class="visible-mobile">
+                <label>Billing ZIP</label>
+                <input type="text">
               </div>
             </div>
           </div>
