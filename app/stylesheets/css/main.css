@@ -2476,7 +2476,8 @@ h5.text-smallest {
   background-color: white;
   position: relative;
   top: -40px;
-  padding-top: 40px; }
+  padding-top: 40px;
+  margin-left: 20px; }
   .m-cart--order-box::after {
     clear: both;
     content: "";
@@ -2499,7 +2500,7 @@ h5.text-smallest {
   .m-cart--order-box.is-fixed {
     position: fixed;
     top: 0px;
-    max-width: 356px; }
+    max-width: 336px; }
 
 .m-cart--order-details-wrapper::after {
   clear: both;
