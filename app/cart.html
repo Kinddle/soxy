@@ -100,13 +100,13 @@
                 <li class="m-cart--benefits-item icon-benefits-star">Limited edition designs not available to the public</li>
                 <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
               </div>
-              <div class="m-actions full-width">
-                <a href="#" class="link with-arrow">Learn more<i class="icon-arrow-bottom-blue"></i></a>
-              </div>
             </ul>
+            <div class="m-actions full-width">
+              <a href="#" class="link with-arrow">Learn more<i class="icon-arrow-bottom-blue"></i></a>
+            </div>
           </div>
         </div>
-        <h5 class="text-center text-light-blue text-italic-serif text-smaller hidden-tablet-mobile">or</h5>
+        <h5 class="m-cart--options-box-or hidden-tablet-mobile">or</h5>
         <div class="m-cart--options-box" ng-hide="tab === 1" on-resize ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title"><i class="icon-tick"></i>Pay As You Go</h3>
           <div class="l-box">
@@ -114,6 +114,9 @@
             <ul class="m-cart--benefits-list">
               <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
             </ul>
+            <div class="m-actions full-width">
+              <a href="#" class="link with-arrow">Learn more<i class="icon-arrow-bottom-blue"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -209,19 +212,22 @@
       <h1 class="m-cart--step"><i>2</i>Frequency</h1>
       <div class="l-eight">
         <h2 class="m-cart--details-title">HOW OFTEN do you want socks delivered?</h2>
-        <div class="l-one-third">
+        <div class="l-one-third l-keep-on-tablet">
           <div class="m-cart--frequency">
-            <img src="images/frequency-calendar-month.png">
+            <img class="hidden-mobile" src="images/frequency-calendar-month.png">
+            <h2 class="visible-mobile">Every month</h2>
           </div>
         </div>
-        <div class="l-one-third">
+        <div class="l-one-third l-keep-on-tablet">
           <div class="m-cart--frequency is-active">
-            <img src="images/frequency-calendar-decade-white.png">
+            <img class="hidden-mobile" src="images/frequency-calendar-decade-white.png">
+            <h2 class="visible-mobile">Every 3 months</h2>
           </div>
         </div>
-        <div class="l-one-third">
+        <div class="l-one-third l-keep-on-tablet">
           <div class="m-cart--frequency last">
-            <img src="images/frequency-calendar-half-year.png">
+            <img class="hidden-mobile" src="images/frequency-calendar-half-year.png">
+            <h2 class="visible-mobile">Every 6 months</h2>
           </div>
         </div>
       </div>
@@ -449,7 +455,7 @@
               </div>
             </div>
           </div>
-          <div class="m-cart--order-box visible-tablet-mobile is-mobile">
+          <div class="m-cart--order-box visible-tablet-mobile">
             <h3 class="m-cart--details-title">Order</h3>
             <div class="l-box">
               <div class="m-cart--order-details-wrapper">
