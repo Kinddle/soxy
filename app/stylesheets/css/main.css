@@ -2267,20 +2267,22 @@ h5.text-smallest {
       margin-left: 0;
       font-size: 1.875em;
       text-align: center;
-      width: 90% !important;
       margin-top: 20px; }
       .m-cart--step i {
-        float: left; } }
+        position: absolute !important;
+        left: 0; } }
   .m-cart--step.l-nine {
     float: left;
     display: block;
     margin-right: 0%;
-    width: 75%; }
+    width: 75%;
+    padding-right: 35px; }
     .m-cart--step.l-nine:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 30em) {
+    @media screen and (max-width: 48em) {
       .m-cart--step.l-nine {
-        width: 100%; } }
+        width: 100%;
+        padding-right: 0; } }
   .m-cart--step.finish {
     float: left;
     width: auto; }
@@ -2401,7 +2403,7 @@ h5.text-smallest {
   letter-spacing: 1px;
   position: relative;
   padding-right: 25px;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
   @media screen and (max-width: 48em) {
     .m-cart--details-title {
       text-align: center;

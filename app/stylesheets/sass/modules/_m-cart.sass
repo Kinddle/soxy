@@ -38,14 +38,16 @@
     margin-left: 0
     font-size: em(30)
     text-align: center
-    width: 90% !important
     margin-top: 20px
     i
-      float: left
+      position: absolute !important
+      left: 0
   &.l-nine
     +span-columns(9 of 12)
-    +media($mobile)
+    padding-right: 35px
+    +media($tablet)
       width: 100%
+      padding-right: 0
   &.finish
     float: left
     width: auto
@@ -166,7 +168,7 @@
   letter-spacing: 1px
   position: relative
   padding-right: 25px
-  margin-bottom: 20px
+  margin-bottom: 10px
   +media($tablet)
     text-align: center
     width: 100%
