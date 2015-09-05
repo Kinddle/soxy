@@ -46,22 +46,6 @@
                 $('.m-cart--dropdown-box').toggleClass('is-active');
             };
 
-            $scope.$watch(function() {
-                var width = $window.innerWidth;
-                console.log(width);
-                this.tab = 1;
-                if( width < 768 ) {
-
-                    this.selectTab = function (setTab){
-                        this.tab = setTab;
-                    };
-                    this.isSelected = function(checkTab) {
-                        return this.tab === checkTab;
-                    };
-                }
-
-            });
-
         })
         .animation('.slide-animation', function () {
             return {

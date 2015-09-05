@@ -4,6 +4,20 @@
   padding-left: 70px
   +media($tablet)
     padding-left: 0
+    .m-actions
+      float: none
+      width: 100%
+      text-align: center
+      margin-top: 40px
+  // small space for fixed order box
+  .l-eight
+    padding-right: 1%
+    +media($tablet)
+      padding-right: 0
+  .l-nine
+    padding-right: 4%
+    +media($tablet)
+      padding-right: 0
 
 .m-cart--timeline
   width: 2px
@@ -23,21 +37,36 @@
   margin-left: -69px
   margin-bottom: 30px
   width: 100%
-  overflow: hidden
+  display: inline-block
   +media($tablet)
     margin-left: 0
     font-size: em(30)
+    text-align: center
+    width: 90%
+    margin-top: 20px
+    i
+      float: left
   &.l-nine
     +span-columns(9 of 12)
+    +media($tablet)
+      width: 100%
   &.finish
     float: left
     width: auto
-    span
-      @extend %adriane-serif
-      font-size: 14px
-      display: inline-block
-      color: #38393c
-      line-height: 20px
+    +media($mobile)
+      float: none
+      width: 100%
+      text-align: center
+    i
+      &:after
+        content: ""
+        background-color: white
+        position: absolute
+        bottom: -53px
+        left: 0
+        right: 0
+        height: 50px
+        width: 100%
   i
     @extend %brandon-black-sans
     font-size: 18px
@@ -57,14 +86,38 @@
       content: ""
       background-color: white
       position: absolute
+      left: 0
+      right: 0
       top: -10px
       height: 8px
       width: 100%
 
+.m-cart--step-help-info
+  @extend %adriane-serif
+  font-size: 14px
+  display: inline-block
+  color: #38393c
+  line-height: 20px
+  +media($tablet)
+    margin-top: 20px
+    width: 100%
+    text-align: center
+
 .m-cart--options-box
   +clearfix
   border: 1px solid $border-color
-  margin: 25px 25px 25px 0
+  margin: 0 25px 25px 0
+  .icon-tick
+    background-size: 0
+  .m-badges
+    background-color: $snow
+  &.is-active .m-cart--options-box-title
+    background-color: $brand-color
+    color: white
+    .icon-tick
+      background-size: auto
+    .m-badges
+      background-color: #003f7a
   +media($tablet)
     border-width: 0
     padding: 5px
@@ -108,6 +161,7 @@
   letter-spacing: 1px
   position: relative
   padding-right: 25px
+  margin-bottom: 20px
   +media($tablet)
     text-align: center
     width: 100%
@@ -152,9 +206,6 @@
     position: absolute
     right: 5px
     top: 13px
-  &.is-active
-    background-color: $brand-color
-    color: white
 
 .m-cart--item-title
   @extend %brandon-sans
@@ -180,9 +231,24 @@
 .m-cart--order-box
   +clearfix
   box-shadow: 0 0 27px rgba(0,0,0,0.3)
+  background-color: white
   position: relative
   top: -40px
   padding-top: 40px
+  +media($tablet)
+    padding-left: 70px
+    padding-right: 70px
+  +media($mobile)
+    padding-left: 0
+    padding-right: 0
+  &.is-mobile
+    width: 90%
+    top: 0
+    margin: 0 5%
+  &.is-fixed
+    position: fixed
+    top: 0px
+    max-width: 356px
 
 .m-cart--order-details-wrapper
   +clearfix
@@ -223,6 +289,8 @@
   padding: 20px
   text-align: center
   margin: 40px 10px 40px 0
+  +media($tablet)
+    margin: 40px 0
   &.last
     margin-right: 0
   &.is-active

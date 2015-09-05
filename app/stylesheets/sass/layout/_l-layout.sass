@@ -1,23 +1,45 @@
 // Grid
 .l-single
+  +clearfix
   +outer-container
   +row
   +media($desktop)
     padding: 0 2%
 
 .l-row
+  +clearfix
   +row
 
 .l-half
+  +clearfix
   +span-columns(6)
   +media($tablet)
     +span-columns(12 of 12)
   +media($mobile)
-    +span-columns(12 of 12)
+    width: 100%
+  &.l-keep-on-tablet
+    +media($tablet)
+      +span-columns(6 of 12)
+      &.gutter
+        padding-right: 20px
+    +media($mobile)
+      width: 100%
+      &.gutter
+        padding-right: 0
   &.gutter
     padding-right: 20px
+    +media($tablet)
+      padding-right: 0
+
+.l-half-tablet
+  +clearfix
+  +media($tablet)
+    +span-columns(6 of 12)
+  +media($mobile)
+    width: 100%
 
 .l-one-third
+  +clearfix
   +span-columns(4)
   &.l-keep-on-tablet
     +media($tablet)
@@ -30,6 +52,7 @@
     +span-columns(12 of 12)
 
 .l-one-third-break-half
+  +clearfix
   +span-columns(4)
   +media($tablet)
     width: 50%
@@ -37,12 +60,14 @@
     +span-columns(12 of 12)
 
 .l-single-break-half-break-single
+  +clearfix
   +media($tablet)
     +span-columns(6 of 12)
   +media($mobile)
     width: 100%
 
 .l-one-fourth
+  +clearfix
   +span-columns(3)
   +media($tablet)
     +span-columns(12 of 12)
@@ -50,6 +75,7 @@
     +span-columns(12 of 12)
 
 .l-one-sixth
+  +clearfix
   +span-columns(2)
   +media($tablet)
     +span-columns(12)
@@ -57,6 +83,7 @@
     +span-columns(12)
 
 .l-eight
+  +clearfix
   +span-columns(8)
   +media($tablet)
     +span-columns(12 of 12)
@@ -64,15 +91,23 @@
     +span-columns(12 of 12)
 
 .l-nine
+  +clearfix
   +span-columns(9)
   &.gutter
     padding-right: 20px
+    +media($tablet)
+      padding-right: 0
+      width: 100%
 
 
 // Vertical
 .l-content--small
   +clearfix
   padding: 30px 0
+
+.l-content--tiny
+  +clearfix
+  padding: 10px 0
 
 .l-content
   +clearfix
@@ -83,6 +118,8 @@
 .l-content--medium
   +clearfix
   padding: 70px 0
+  +media($mobile)
+    padding: 35px 0
 
 .l-content--big
   +clearfix
