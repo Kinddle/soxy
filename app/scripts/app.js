@@ -46,6 +46,13 @@
                 $('.m-cart--dropdown-box').toggleClass('is-active');
             };
 
+            // $scope.isNotActive = function() {
+            //     if ($('.m-cart--dropdown-box').hasClass('is-active')) {
+            //         // $('.m-cart--dropdown-box').removeClass('is-active');
+            //         console.log('hasClass');
+            //     }
+            // };
+
         })
         .animation('.slide-animation', function () {
             return {

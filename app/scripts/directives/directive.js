@@ -61,9 +61,14 @@
                     if ($win.scrollTop() >= offsetTop) {
                         element.addClass(topClass);
                         parent.height(element.height());
+                        $('.m-cart--dropdown-box').removeClass('is-active');
+                        if ($win.scrollTop() >= 900) {
+                            $('.m-cart--order-box .m-button').text('Buy Now');
+                        }
                     } else {
                         element.removeClass(topClass);
                         parent.css("height", null);
+                        $('.m-cart--order-box .m-button').text('Continue Checkout');
                     }
                 });
             }
