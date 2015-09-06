@@ -1,0 +1,34 @@
+// Rewrite default ngDialog css
+.ngdialog-overlay
+  background-color: rgba(18, 24, 35, 0.85) !important
+
+// Custom
+.m-dialog
+  &.wide
+    .ngdialog-content
+      width: 70% !important
+      padding: 1em 3em !important
+      background-color: white
+  .l-one-third
+    padding: 0 1em
+    p
+      @extend %adriane-serif
+      font-size: 14px
+      line-height: 24px
+  .m-cart--benefits-item
+    font-size: 14px
+
+  h5
+    @extend %brandon-sans
+    font-size: em(26)
+    text-align: center
+  h6
+    @extend %brandon-bold-sans
+    font-size: em(18)
+    font-weight: normal
+
+.m-dialog--image-wrapper
+  min-height: 120px
+  &.truck
+    position: relative
+    top: 20px

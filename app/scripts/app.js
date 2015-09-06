@@ -3,7 +3,8 @@
     angular.module('myApp', [
           // 'ui-router',
           'ngAnimate',
-          'ngTouch'
+          'ngTouch',
+          'ngDialog'
         ])
         .controller('MainCtrl', function ($scope, $interval, $window) {
 
@@ -46,11 +47,8 @@
                 $('.m-cart--dropdown-box').toggleClass('is-active');
             };
 
-            // $scope.isNotActive = function() {
-            //     if ($('.m-cart--dropdown-box').hasClass('is-active')) {
-            //         // $('.m-cart--dropdown-box').removeClass('is-active');
-            //         console.log('hasClass');
-            //     }
+            // $scope.clickToOpen = function () {
+            //     ngDialog.open({ template: 'popupTmpl.html' });
             // };
 
         })

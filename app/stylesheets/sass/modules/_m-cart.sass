@@ -239,26 +239,37 @@
   +clearfix
   box-shadow: 0 0 27px rgba(0,0,0,0.3)
   background-color: white
-  position: relative
-  top: -40px
+  position: absolute
+  top: 50px
   padding-top: 40px
   .m-cart--details-title
     padding-right: 0
+  &.is-fixed
+    position: fixed
+    top: 0px
+    max-width: 356px
   +media($tablet)
     padding-left: 70px
     padding-right: 70px
     width: 90%
     top: 0
     margin: 0 5%
+    //#TODO //this is dirty
+    position: relative !important
+    top: 0 !important
+    &.is-fixed
+      position: relative !important
+      max-width: 100% !important
   +media($mobile)
     padding-left: 0
     padding-right: 0
     margin: 0
     width: 100%
-  &.is-fixed
-    position: fixed
-    top: 0px
-    max-width: 356px
+    position: relative !important
+    top: 0 !important
+    &.is-fixed
+      position: relative !important
+      max-width: 100% !important
 
 .m-cart--order-details-wrapper
   +clearfix

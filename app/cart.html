@@ -11,9 +11,12 @@
     <!------ STYLESHEETS ------>
 
     <link rel="stylesheet" href="stylesheets/css/main.css" />
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.min.css" />
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.min.css">
+    <!-- <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog&#45;theme&#45;plain.min.css"> -->
 
 </head>
-<body ng-controller="MainCtrl" ng-click="isNotActive()">
+<body ng-controller="MainCtrl">
 
 <section class="m-header">
   <nav class="m-navigation">
@@ -85,8 +88,8 @@
       </div>
       <div class="l-one-third tabs">
         <h2 class="m-cart--details-title with-arrow hidden-tablet-mobile text-center">Choose the way to shop</h2>
-        <div class="m-cart--options-box" ng-init="tab=1" ng-show="tab === 1" on-resize ng-click="isActive = !isActive" ng-class="isActive ? 'is-active' : ''">
-          <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right">FAQ</span></h3>
+        <div class="m-cart--options-box" ng-show="tab === 1 || tab === true" ng-init="isActive = !isActive" on-resize ng-click="isActive = !isActive" ng-class="isActive ? 'is-active' : ''">
+          <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right" ng-dialog="faqDialogId" ng-dialog-class="ngdialog-theme-default m-dialog wide">FAQ</span></h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title hidden-tablet-mobile">VIP Benefits</h4>
             <ul class="m-cart--benefits-list">
@@ -107,7 +110,7 @@
           </div>
         </div>
         <h5 class="m-cart--options-box-or hidden-tablet-mobile">or</h5>
-        <div class="m-cart--options-box" ng-hide="tab === 1" on-resize ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
+        <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab == true" on-resize ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title"><i class="icon-tick"></i>Pay As You Go</h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title">Pay As You Go Benefits</h4>
@@ -162,7 +165,7 @@
         </div>
       </div>
       <div class="l-one-third hidden-tablet-mobile">
-        <div class="m-cart--order-box" on-scroll="fix-to-top" set-class-when-at-top="is-fixed" padding-when-at-top="200">
+        <aside class="m-cart--order-box is-natural" on-scroll="fix-to-top" set-class-when-at-top="is-fixed" padding-when-at-top="200" padding-when-at-bottom="500">
           <h3 class="m-cart--details-title">Order</h3>
           <div class="l-box">
             <div class="m-cart--order-details-wrapper">
@@ -207,7 +210,7 @@
             <p class="text-center uppercase text-sans">NEED HELP?</p>
             <p class="text-center text-serif">Our friendly team is here for you <a class="link" href="mailto:help@soxy.com">help@soxy.com</a></p>
           </div>
-        </div>
+        </aside>
       </div>
       <h1 class="m-cart--step"><i>2</i>Frequency</h1>
       <div class="l-eight">
@@ -503,9 +506,9 @@
               </br>You may cancel at anytime.
             </span>
           </h1>
-          <!-- <div class="m&#45;actions right"> -->
-          <!--   <a href="#" class="m&#45;button red text&#45;center&#45;tablet">BUY NOW</a> -->
-          <!-- </div> -->
+          <div class="m-actions right visible-tablet-mobile">
+            <a href="#" class="m-button red text-center-tablet">BUY NOW</a>
+          </div>
           <span class="m-cart--step-help-info visible-tablet-mobile">Plans automatically renew.
               </br>You may cancel at anytime.
           </span>
@@ -554,10 +557,68 @@
 
 
 <!------ SCRIPTS ------>
+<script type="text/ng-template" id="faqDialogId">
+  <div class="ngdialog-message text-center">
+    <h5>How it works</h5>
+    <!--<p ng-show="theme">Test content for <code>{{theme}}</code></p>-->
+    <!--<p ng-show="ngDialogId">Dialog Id: <code>{{ngDialogId}}</code></p>-->
+    <!--<p ng-show="ngDialogData.foo">Data passed through: <code>{{ngDialogData.foo}}</code></p>-->
+    <!--<p ng-show="dialogModel.message">Scope passed through: <code>{{dialogModel.message}}</code></p>-->
+    <div class="l-content--small">
+      <div class="l-one-third">
+        <div class="m-dialog--image-wrapper">
+          <img src="images/icons/icon-calendar-faq.png"/>
+        </div>
+        <p>Let us know how often you want fresh socks delivered</p>
+      </div>
+      <div class="l-one-third">
+        <div class="m-dialog--image-wrapper">
+          <img src="images/icons/icon-designs-faq.png"/>
+        </div>
+        <p>We design 5 new styles using the highest quality fabrics</p>
+      </div>
+      <div class="l-one-third">
+        <div class="m-dialog--image-wrapper truck">
+          <img src="images/icons/icon-truck-faq.png"/>
+        </div>
+        <p>You get 5 new pair delivered to your door</p>
+      </div>
+    </div>
+    <h6>Perks of being part of the club</h6>
+    <div class="l-content--small no-padding-bottom">
+      <ul class="m-cart--benefits-list">
+        <div class="l-half">
+          <li class="m-cart--benefits-item icon-benefits-discount">10% off any product, any time!</li>
+          <li class="m-cart--benefits-item icon-benefits-gift">Every 6th set is FREE</li>
+        </div>
+        <div class="l-half">
+          <li class="m-cart--benefits-item icon-benefits-cancel">Cancel/skip/change your deliveries anytime. </li>
+          <li class="m-cart--benefits-item icon-benefits-star">Limited edition designs not available to the public</li>
+        </div>
+        <div class="l-single text-center">
+          <li class="m-cart--benefits-item icon-benefits-happy">Free shipping & Exchanges </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <!--
+  <div class="ngdialog-buttons">
+    <button type="button" class="ngdialog-button ngdialog-button-secondary"
+        ng-dialog="secondDialogId"
+        ng-dialog-class="ngdialog-theme-default m-dialog wide"
+        ng-dialog-controller="SecondModalCtrl"
+        ng-dialog-close-previous>Close and open
+    </button>
+    <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond()">Open next</button>
+  </div>
+  -->
+</script>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+<script src="bower_components/ngDialog/js/ngDialog.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>

@@ -665,7 +665,7 @@ html {
   font-style: normal;
   font-weight: normal;
   src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
-.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--step-help-info, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before, .m-form label {
+.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--step-help-info, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before, .m-form label, .m-dialog .l-one-third p {
   font-family: "Adriane-regular", serif; }
 
 .subheading, .text-italic-serif, .m-header--slogan h3, .m-footer .m-footer--contact-block .email, .slider, .m-cart--options-box-or {
@@ -674,13 +674,13 @@ html {
 .m-footer .m-footer--text-block .m-footer--description span, .m-cart--order-details-strong, .m-counter input.qtyplus, .m-counter input.qtyminus {
   font-family: "Adriane-bold", serif; }
 
-.text-sans, .m-footer .m-footer--contact-block p, .m-feature--caption, .m-product--item p, .m-purchase h1, .m-cart--step, .m-cart--details-title, .m-cart--item-title {
+.text-sans, .m-footer .m-footer--contact-block p, .m-feature--caption, .m-product--item p, .m-purchase h1, .m-cart--step, .m-cart--details-title, .m-cart--item-title, .m-dialog h5 {
   font-family: "Brandon-regular", serif; }
 
 .m-navigation, .m-cart--dropdown-item-amount, .m-cart--dropdown-promote, .m-counter input {
   font-family: "Brandon-medium", sans-serif; }
 
-.text-bold-sans, .link, .m-cart--dropdown-promote strong, .m-badges.small, .m-purchase--label, .m-purchase--price-regular, .m-cart--benefits-title, .m-cart--options-box-title, .m-cart--order-price, .m-cart--order-price-strong, .m-cart--frequency h2, .m-cart--options-toggler {
+.text-bold-sans, .link, .m-cart--dropdown-promote strong, .m-badges.small, .m-purchase--label, .m-purchase--price-regular, .m-cart--benefits-title, .m-cart--options-box-title, .m-cart--order-price, .m-cart--order-price-strong, .m-cart--frequency h2, .m-cart--options-toggler, .m-dialog h6 {
   font-family: "Brandon-bold", sans-serif; }
 
 h1, h2, h3, h4, h5, .m-header--slogan h1, .m-footer .m-footer--text-block .m-footer--title, .m-button, .m-product--item .m-product--price, .m-purchase--price, .m-cart--step i {
@@ -844,6 +844,9 @@ h5.text-smallest {
 
 .no-margin-bottom {
   margin-bottom: 0 !important; }
+
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
 
 .right {
   float: right; }
@@ -1839,9 +1842,12 @@ h5.text-smallest {
   width: 24px;
   height: 23px; }
 
-.icon-benefits-discount, .icon-benefits-styles, .icon-benefits-gift, .icon-benefits-cancel, .icon-benefits-star, .icon-benefits-shipping {
+.icon-benefits-discount, .icon-benefits-styles, .icon-benefits-gift, .icon-benefits-cancel, .icon-benefits-star, .icon-benefits-shipping, .icon-benefits-happy {
   background-repeat: no-repeat;
-  background-position: left 5px; }
+  background-position: left 5px;
+  text-align: left;
+  float: left;
+  display: inline-block; }
 
 .icon-benefits-discount {
   background-image: url("../../images/icons/icon-benefits-discount.png"); }
@@ -1860,6 +1866,10 @@ h5.text-smallest {
 
 .icon-benefits-shipping {
   background-image: url("../../images/icons/icon-benefits-shipping.png"); }
+
+.icon-benefits-happy {
+  background-image: url("../../images/icons/icon-benefits-happy.png");
+  float: none; }
 
 .icon-close {
   background-image: url("../../images/icons/icon-close.png");
@@ -2474,8 +2484,8 @@ h5.text-smallest {
 .m-cart--order-box {
   box-shadow: 0 0 27px rgba(0, 0, 0, 0.3);
   background-color: white;
-  position: relative;
-  top: -40px;
+  position: absolute;
+  top: 50px;
   padding-top: 40px; }
   .m-cart--order-box::after {
     clear: both;
@@ -2483,23 +2493,33 @@ h5.text-smallest {
     display: table; }
   .m-cart--order-box .m-cart--details-title {
     padding-right: 0; }
+  .m-cart--order-box.is-fixed {
+    position: fixed;
+    top: 0px;
+    max-width: 356px; }
   @media screen and (max-width: 48em) {
     .m-cart--order-box {
       padding-left: 70px;
       padding-right: 70px;
       width: 90%;
       top: 0;
-      margin: 0 5%; } }
+      margin: 0 5%;
+      position: relative !important;
+      top: 0 !important; }
+      .m-cart--order-box.is-fixed {
+        position: relative !important;
+        max-width: 100% !important; } }
   @media screen and (max-width: 30em) {
     .m-cart--order-box {
       padding-left: 0;
       padding-right: 0;
       margin: 0;
-      width: 100%; } }
-  .m-cart--order-box.is-fixed {
-    position: fixed;
-    top: 0px;
-    max-width: 356px; }
+      width: 100%;
+      position: relative !important;
+      top: 0 !important; }
+      .m-cart--order-box.is-fixed {
+        position: relative !important;
+        max-width: 100% !important; } }
 
 .m-cart--order-details-wrapper::after {
   clear: both;
@@ -2744,3 +2764,30 @@ h5.text-smallest {
   box-shadow: none;
   display: inline-block;
   width: 100%; }
+
+.ngdialog-overlay {
+  background-color: rgba(18, 24, 35, 0.85) !important; }
+
+.m-dialog.wide .ngdialog-content {
+  width: 70% !important;
+  padding: 1em 3em !important;
+  background-color: white; }
+.m-dialog .l-one-third {
+  padding: 0 1em; }
+  .m-dialog .l-one-third p {
+    font-size: 14px;
+    line-height: 24px; }
+.m-dialog .m-cart--benefits-item {
+  font-size: 14px; }
+.m-dialog h5 {
+  font-size: 1.625em;
+  text-align: center; }
+.m-dialog h6 {
+  font-size: 1.125em;
+  font-weight: normal; }
+
+.m-dialog--image-wrapper {
+  min-height: 120px; }
+  .m-dialog--image-wrapper.truck {
+    position: relative;
+    top: 20px; }

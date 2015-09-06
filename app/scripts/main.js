@@ -65,3 +65,29 @@ function showMenu(e) {
 function reverse(e) {
     tl.reverse();
 }
+
+$stick = $('.m-cart--order-box');
+$stickbutton = $('.m-cart--order-box .m-button');
+$foot = $('footer');
+$footheight = $('footer').height();
+margin = 20;
+offtop = $stick.offset().top - (margin*2);
+offbtm = $foot.offset().top - ( $footheight + $stick.height() );
+
+$(window).scroll(function () {
+    scrtop = $(window).scrollTop();
+    if (scrtop > offtop && $stick.hasClass('is-natural')) {
+        $stick.removeClass('is-natural').addClass('is-fixed').css('top', margin);
+    }
+    if (offtop > scrtop && $stick.hasClass('is-fixed')) {
+        $stick.removeClass('is-fixed').addClass('is-natural').css('top', '40px');
+    }
+    if (scrtop > (offbtm+120) && $stick.hasClass('is-fixed')) {
+        $stick.removeClass('is-fixed').addClass('is-bottom').css('top', offbtm+margin);
+        $stickbutton.text('Buy Now');
+    }
+    if ((offbtm+170) > scrtop && $stick.hasClass('is-bottom')) {
+        $stick.removeClass('is-bottom').addClass('is-fixed').css('top', margin);
+        $stickbutton.text('Continue Checkout');
+    }
+});
