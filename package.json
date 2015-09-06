@@ -36,6 +36,6 @@
     "serve-static": "^1.10.0"
   },
   "scripts": {
-    "postinstal": "./node_modules/bower/bin/bower install"
+    ".node_modules/bower/bin/bower install"
   }
 }
