@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="stylesheets/css/main.css" />
     <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.min.css" />
     <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.min.css">
-    <!-- <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog&#45;theme&#45;plain.min.css"> -->
 
 </head>
 <body ng-controller="MainCtrl">
@@ -225,8 +224,8 @@
           </div>
         </aside>
       </div>
-      <h1 class="m-cart--step"><i>2</i>Frequency</h1>
-      <div class="l-eight">
+      <h1 class="m-cart--step" ng-show="isActive"><i>2</i>Frequency</h1>
+      <div class="l-eight" ng-show="isActive">
         <h2 class="m-cart--details-title">HOW OFTEN do you want socks delivered?</h2>
         <div class="l-one-third l-keep-on-tablet">
           <div class="m-cart--frequency">
@@ -247,30 +246,169 @@
           </div>
         </div>
       </div>
-      <h1 class="m-cart--step l-nine gutter"><i>3</i>Shipping info<span class="icon-secure-shopping right hidden-tablet-mobile"></span></h1>
-      <div class="l-eight">
-        <form class="m-form">
-          <div class="l-row">
-            <div class="l-half gutter l-keep-on-tablet">
-              <label>Full name</label>
+      <div class="l-row">
+        <h1 class="m-cart--step l-nine gutter"><i>{{isActive ? '3' : '2'}}</i>Shipping info<span class="icon-secure-shopping right hidden-tablet-mobile"></span></h1>
+        <div class="l-eight">
+          <form class="m-form">
+            <div class="l-row">
+              <div class="l-half gutter l-keep-on-tablet">
+                <label>Full name</label>
+                <input type="text">
+              </div>
+              <div class="l-half l-keep-on-tablet">
+                <label>E-mail</label>
+                <input type="email">
+              </div>
+            </div>
+            <div class="l-row">
+              <label>Street adress, Apt</label>
               <input type="text">
             </div>
-            <div class="l-half l-keep-on-tablet">
-              <label>E-mail</label>
-              <input type="email">
+            <div class="l-row">
+              <div class="l-half gutter l-keep-on-tablet">
+                <label>City</label>
+                <input type="text">
+              </div>
+              <div class="l-half l-keep-on-tablet">
+                <div class="l-half gutter l-keep-on-tablet l-keep-on-mobile">
+                  <label>State</label>
+                  <div class="select-wrapper">
+                    <select>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District Of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="l-half l-keep-on-tablet l-keep-on-mobile">
+                  <label>ZIP</label>
+                  <input type="text">
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="l-row">
-            <label>Street adress, Apt</label>
-            <input type="text">
-          </div>
-          <div class="l-row">
-            <div class="l-half gutter l-keep-on-tablet">
-              <label>City</label>
-              <input type="text">
+            <div class="l-row">
+              <div class="l-half gutter l-keep-on-tablet">
+                <label>Country</label>
+                <input type="text">
+              </div>
             </div>
-            <div class="l-half l-keep-on-tablet">
-              <div class="l-half gutter l-keep-on-tablet l-keep-on-mobile">
+          </form>
+          <form class="m-form">
+            <div class="l-content">
+              <div class="l-content--tiny">
+                <h3 class="text-smaller text-center-tablet">BILLING INFO</h3>
+              </div>
+              <div class="l-row">
+                <div class="l-nine gutter">
+                  <label>Credit card number</label>
+                  <input type="text">
+                </div>
+                <div class="l-one-fourth l-keep-on-tablet l-half-mobile gutter">
+                  <label>CVV</label>
+                  <input text>
+                </div>
+                <div class="l-half-mobile visible-mobile">
+                  <label>Expire</label>
+                  <div class="select-wrapper">
+                    <select>
+                      <option value="">07 July</option>
+                      <option value="">08 July</option>
+                      <option value="">09 July</option>
+                      <option value="">10 July</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="l-row">
+                <div class="l-half gutter l-nine-tablet hidden-mobile">
+                  <div class="l-eight-tablet gutter">
+                    <label>Expire</label>
+                    <div class="select-wrapper">
+                      <select>
+                        <option value="">07 July</option>
+                        <option value="">08 July</option>
+                        <option value="">09 July</option>
+                        <option value="">10 July</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="l-one-third l-keep-on-tablet visible-tablet">
+                    <label>&nbsp;</label>
+                    <div class="select-wrapper">
+                      <select>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-half l-one-fourth-tablet">
+                  <div class="l-half gutter hidden-tablet-mobile">
+                    <label>&nbsp;</label>
+                    <div class="select-wrapper">
+                      <select>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="l-half hidden-mobile">
+                    <label>Billing ZIP</label>
+                    <input type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="l-row">
                 <label>State</label>
                 <div class="select-wrapper">
                   <select>
@@ -327,205 +465,68 @@
                     <option value="WY">Wyoming</option>
                   </select>
                 </div>
-              </div>
-              <div class="l-half l-keep-on-tablet l-keep-on-mobile">
-                <label>ZIP</label>
-                <input type="text">
-              </div>
-            </div>
-          </div>
-          <div class="l-row">
-            <div class="l-half gutter l-keep-on-tablet">
-              <label>Country</label>
-              <input type="text">
-            </div>
-          </div>
-        </form>
-        <form class="m-form">
-          <div class="l-content">
-            <div class="l-content--tiny">
-              <h3 class="text-smaller text-center-tablet">BILLING INFO</h3>
-            </div>
-            <div class="l-row">
-              <div class="l-nine gutter">
-                <label>Credit card number</label>
-                <input type="text">
-              </div>
-              <div class="l-one-fourth l-keep-on-tablet l-half-mobile gutter">
-                <label>CVV</label>
-                <input text>
-              </div>
-              <div class="l-half-mobile visible-mobile">
-                <label>Expire</label>
-                <div class="select-wrapper">
-                  <select>
-                    <option value="">07 July</option>
-                    <option value="">08 July</option>
-                    <option value="">09 July</option>
-                    <option value="">10 July</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="l-row">
-              <div class="l-half gutter l-nine-tablet hidden-mobile">
-                <div class="l-eight-tablet gutter">
-                  <label>Expire</label>
-                  <div class="select-wrapper">
-                    <select>
-                      <option value="">07 July</option>
-                      <option value="">08 July</option>
-                      <option value="">09 July</option>
-                      <option value="">10 July</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="l-one-third l-keep-on-tablet visible-tablet">
-                  <label>&nbsp;</label>
-                  <div class="select-wrapper">
-                    <select>
-                      <option value="2013">2013</option>
-                      <option value="2014">2014</option>
-                      <option value="2015">2015</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="l-half l-one-fourth-tablet">
-                <div class="l-half gutter hidden-tablet-mobile">
-                  <label>&nbsp;</label>
-                  <div class="select-wrapper">
-                    <select>
-                      <option value="2013">2013</option>
-                      <option value="2014">2014</option>
-                      <option value="2015">2015</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="l-half hidden-mobile">
+                <div class="visible-mobile">
                   <label>Billing ZIP</label>
                   <input type="text">
                 </div>
               </div>
             </div>
-            <div class="l-row">
-              <label>State</label>
-              <div class="select-wrapper">
-                <select>
-                  <option value="AL">Alabama</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="CA">California</option>
-                  <option value="CO">Colorado</option>
-                  <option value="CT">Connecticut</option>
-                  <option value="DE">Delaware</option>
-                  <option value="DC">District Of Columbia</option>
-                  <option value="FL">Florida</option>
-                  <option value="GA">Georgia</option>
-                  <option value="HI">Hawaii</option>
-                  <option value="ID">Idaho</option>
-                  <option value="IL">Illinois</option>
-                  <option value="IN">Indiana</option>
-                  <option value="IA">Iowa</option>
-                  <option value="KS">Kansas</option>
-                  <option value="KY">Kentucky</option>
-                  <option value="LA">Louisiana</option>
-                  <option value="ME">Maine</option>
-                  <option value="MD">Maryland</option>
-                  <option value="MA">Massachusetts</option>
-                  <option value="MI">Michigan</option>
-                  <option value="MN">Minnesota</option>
-                  <option value="MS">Mississippi</option>
-                  <option value="MO">Missouri</option>
-                  <option value="MT">Montana</option>
-                  <option value="NE">Nebraska</option>
-                  <option value="NV">Nevada</option>
-                  <option value="NH">New Hampshire</option>
-                  <option value="NJ">New Jersey</option>
-                  <option value="NM">New Mexico</option>
-                  <option value="NY">New York</option>
-                  <option value="NC">North Carolina</option>
-                  <option value="ND">North Dakota</option>
-                  <option value="OH">Ohio</option>
-                  <option value="OK">Oklahoma</option>
-                  <option value="OR">Oregon</option>
-                  <option value="PA">Pennsylvania</option>
-                  <option value="RI">Rhode Island</option>
-                  <option value="SC">South Carolina</option>
-                  <option value="SD">South Dakota</option>
-                  <option value="TN">Tennessee</option>
-                  <option value="TX">Texas</option>
-                  <option value="UT">Utah</option>
-                  <option value="VT">Vermont</option>
-                  <option value="VA">Virginia</option>
-                  <option value="WA">Washington</option>
-                  <option value="WV">West Virginia</option>
-                  <option value="WI">Wisconsin</option>
-                  <option value="WY">Wyoming</option>
-                </select>
-              </div>
-              <div class="visible-mobile">
-                <label>Billing ZIP</label>
-                <input type="text">
-              </div>
-            </div>
-          </div>
-          <div class="m-cart--order-box visible-tablet-mobile">
-            <h3 class="m-cart--details-title">Order</h3>
-            <div class="l-box">
-              <div class="m-cart--order-details-wrapper">
-                <span class="m-cart--order-details left">Regular Price</span>
-                <span class="m-cart--order-price right">$135</span>
+            <div class="m-cart--order-box visible-tablet-mobile">
+              <h3 class="m-cart--details-title">Order</h3>
+              <div class="l-box">
+                <div class="m-cart--order-details-wrapper">
+                  <span class="m-cart--order-details left">Regular Price</span>
+                  <span class="m-cart--order-price right">$135</span>
+                </div>
+                <div class="hr"></div>
+                <div class="m-cart--order-details-wrapper">
+                  <span class="m-cart--order-details left">VIP Discount</span>
+                  <span class="m-cart--order-price discount right">-$35</span>
+                </div>
+                <div class="m-cart--order-details-wrapper">
+                  <span class="m-cart--order-details left">Sub Total</span>
+                  <span class="m-cart--order-price right">$100</span>
+                </div>
+                <div class="hr"></div>
+                <div class="m-cart--order-details-wrapper">
+                  <span class="m-cart--order-details left">Discount</span>
+                  <span class="m-cart--order-price discount right">-$100</span>
+                  <p class="m-cart--order-details-code">(31JD01X)</p>
+                  <span class="m-cart--order-details left">Shipping & Exchanges</span>
+                  <span class="m-cart--order-price discount right">Free</span>
+                </div>
+                <div class="hr strong"></div>
+                <div class="m-cart--order-details-wrapper">
+                  <span class="m-cart--order-details-strong left">Grand Total</span>
+                  <span class="m-cart--order-price-strong right">$80</span>
+                </div>
               </div>
               <div class="hr"></div>
-              <div class="m-cart--order-details-wrapper">
-                <span class="m-cart--order-details left">VIP Discount</span>
-                <span class="m-cart--order-price discount right">-$35</span>
-              </div>
-              <div class="m-cart--order-details-wrapper">
-                <span class="m-cart--order-details left">Sub Total</span>
-                <span class="m-cart--order-price right">$100</span>
+              <div class="l-box--middle">
+                <h5 class="text-sans text-center text-smallest uppercase">gift card</h5>
+                </br>
+                <span class="left">31JD01X</span>
+                <span class="right text-tiny">REMOVE</span>
               </div>
               <div class="hr"></div>
-              <div class="m-cart--order-details-wrapper">
-                <span class="m-cart--order-details left">Discount</span>
-                <span class="m-cart--order-price discount right">-$100</span>
-                <p class="m-cart--order-details-code">(31JD01X)</p>
-                <span class="m-cart--order-details left">Shipping & Exchanges</span>
-                <span class="m-cart--order-price discount right">Free</span>
-              </div>
-              <div class="hr strong"></div>
-              <div class="m-cart--order-details-wrapper">
-                <span class="m-cart--order-details-strong left">Grand Total</span>
-                <span class="m-cart--order-price-strong right">$80</span>
+              <div class="l-box">
+                <p class="text-center uppercase text-sans">NEED HELP?</p>
+                <p class="text-center text-serif">Our friendly team is here for you <a class="link" href="mailto:help@soxy.com">help@soxy.com</a></p>
               </div>
             </div>
-            <div class="hr"></div>
-            <div class="l-box--middle">
-              <h5 class="text-sans text-center text-smallest uppercase">gift card</h5>
-              </br>
-              <span class="left">31JD01X</span>
-              <span class="right text-tiny">REMOVE</span>
+            <h1 class="m-cart--step finish hidden-tablet-mobile"><i class="icon-tick"></i>
+              <span class="m-cart--step-help-info">Plans automatically renew.
+                </br>You may cancel at anytime.
+              </span>
+            </h1>
+            <div class="m-actions right visible-tablet-mobile">
+              <a href="#" class="m-button red text-center-tablet">BUY NOW</a>
             </div>
-            <div class="hr"></div>
-            <div class="l-box">
-              <p class="text-center uppercase text-sans">NEED HELP?</p>
-              <p class="text-center text-serif">Our friendly team is here for you <a class="link" href="mailto:help@soxy.com">help@soxy.com</a></p>
-            </div>
-          </div>
-          <h1 class="m-cart--step finish hidden-tablet-mobile"><i class="icon-tick"></i>
-            <span class="m-cart--step-help-info">Plans automatically renew.
-              </br>You may cancel at anytime.
+            <span class="m-cart--step-help-info visible-tablet-mobile">Plans automatically renew.
+                </br>You may cancel at anytime.
             </span>
-          </h1>
-          <div class="m-actions right visible-tablet-mobile">
-            <a href="#" class="m-button red text-center-tablet">BUY NOW</a>
-          </div>
-          <span class="m-cart--step-help-info visible-tablet-mobile">Plans automatically renew.
-              </br>You may cancel at anytime.
-          </span>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>

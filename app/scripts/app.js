@@ -47,23 +47,6 @@
                 $('.link.with-arrow').text('Close');
             };
 
-            // $scope.toggleDropdown = function() {
-            //     $('.m-cart--dropdown-box').addClass('is-active');
-            // };
-
-            // $scope.closeMenu = function () {
-            //     $('.m-cart--dropdown-box').removeClass('is-active');
-            //     console.log('clicked');
-            // };
-
-            // $scope.$watch('body', function() {
-            //     closeMenu();
-            // });
-
-            // $scope.clickToOpen = function () {
-            //     ngDialog.open({ template: 'popupTmpl.html' });
-            // };
-
         })
         .animation('.slide-animation', function () {
             return {
