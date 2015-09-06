@@ -78,6 +78,7 @@ $(window).scroll(function () {
     scrtop = $(window).scrollTop();
     if (scrtop > offtop && $stick.hasClass('is-natural')) {
         $stick.removeClass('is-natural').addClass('is-fixed').css('top', margin);
+        $('.m-cart--dropdown-box').removeClass('is-active');
     }
     if (offtop > scrtop && $stick.hasClass('is-fixed')) {
         $stick.removeClass('is-fixed').addClass('is-natural').css('top', '40px');

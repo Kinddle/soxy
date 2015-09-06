@@ -41,7 +41,18 @@
                 });
             },
         };
-    }]);
+    }])
+    .directive('showWithDelay', function($timeout){
+        return {
+            restrict: 'A',
+            link: function($scope, $element, attrs){
+                $element.addClass("ng-hide");
+                $timeout(function() {
+                    $element.removeClass("ng-hide");
+                },attrs.showWithDelay);
+            }
+        };
+    });
     // .directive('onScroll', ['$window', function setClassWhenAtTop($window) {
     // var $win = angular.element($window);
     //

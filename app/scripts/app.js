@@ -43,9 +43,18 @@
                 $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
             };
 
-            $scope.toggleDropdown = function() {
-                $('.m-cart--dropdown-box').toggleClass('is-active');
-            };
+            // $scope.toggleDropdown = function() {
+            //     $('.m-cart--dropdown-box').addClass('is-active');
+            // };
+
+            // $scope.closeMenu = function () {
+            //     $('.m-cart--dropdown-box').removeClass('is-active');
+            //     console.log('clicked');
+            // };
+
+            // $scope.$watch('body', function() {
+            //     closeMenu();
+            // });
 
             // $scope.clickToOpen = function () {
             //     ngDialog.open({ template: 'popupTmpl.html' });
