@@ -72,7 +72,7 @@ $foot = $('footer');
 $footheight = $('footer').height();
 margin = 20;
 offtop = $stick.offset().top - (margin*2);
-offbtm = $foot.offset().top - ( $footheight + $stick.height() );
+offbtm = $foot.offset().top - ( 650 + $stick.height() );
 
 $(window).scroll(function () {
     scrtop = $(window).scrollTop();
