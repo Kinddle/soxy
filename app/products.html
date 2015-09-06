@@ -19,11 +19,11 @@
   <nav class="m-navigation">
     <div class="l-single">
       <a href="/" class="m-logo">Soxy.com</a>
-      <div class="m-cart--dropdown" ng-mouseover="toggleDropdown()">
+      <div class="m-cart--dropdown" ng-mouseenter="menuActive = true" ng-mouseleave="menuActive = false">
         <span>Cart</span>
-        <span class="m-badges blue">0</span>
-        <div class="m-cart--dropdown-box">
-          <span class="m-cart--dropdown-close-btn icon-close"></span>
+        <span class="m-badges blue radius">0</span>
+        <div class="m-cart--dropdown-box" ng-show="menuActive" ng-class="menuActive ? 'is-active' : ''">
+          <span class="m-cart--dropdown-close-btn icon-close" ng-click="menuActive = !menuActive"></span>
           <div class="m-cart--dropdown-item">
             <img src="images/content/product-set-white-1.jpg" />
             <div class="m-cart--dropdown-overlay">
@@ -339,6 +339,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+<script src="bower_components/ngDialog/js/ngDialog.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
@@ -348,7 +349,6 @@
 <script src="scripts/filters/filter.js"></script>
 <script src="scripts/services/service.js"></script>
 <script src="scripts/main.js"></script>
-
 
 </body>
 
