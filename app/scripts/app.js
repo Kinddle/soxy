@@ -43,6 +43,10 @@
                 $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
             };
 
+            $scope.changeText = function () {
+                $('.link.with-arrow').text('Close');
+            };
+
             // $scope.toggleDropdown = function() {
             //     $('.m-cart--dropdown-box').addClass('is-active');
             // };

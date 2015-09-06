@@ -88,7 +88,7 @@
       </div>
       <div class="l-one-third tabs">
         <h2 class="m-cart--details-title with-arrow hidden-tablet-mobile text-center">Choose the way to shop</h2>
-        <div class="m-cart--options-box" ng-show="tab === 1 || tab === true" ng-init="isActive = !isActive" on-resize ng-click="isActive = !isActive" ng-class="isActive ? 'is-active' : ''">
+        <div class="m-cart--options-box" ng-show="tab === 1 || tab === true" ng-init="isActive = !isActive" on-resize ng-click="isActive = true" ng-class="isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right" ng-dialog="faqDialogId" ng-dialog-class="ngdialog-theme-default m-dialog wide">FAQ</span></h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title hidden-tablet-mobile">VIP Benefits</h4>
@@ -105,21 +105,34 @@
               </div>
             </ul>
             <div class="m-actions full-width">
-              <a href="#" class="link with-arrow">Learn more<i class="icon-arrow-bottom-blue"></i></a>
+              <a href="" class="link with-arrow" ng-click="moreVipActive = !moreVipActive" ng-class="moreVipActive ? 'is-active' : ''">{{moreVipActive ? 'Close' : 'Learn More'}}<i class="icon-arrow-bottom-blue"></i></a>
+              <ul class="m-cart--learn-more-dropdown" ng-show="moreVipActive">
+                <li class="m-cart--learn-more-item">
+                  <h6>What happens next?</h6>
+                  <p>Mauris justo dolor, accumsan et commodo a, sodales sed lectus. Donec eu mauris in sem cursus placerat.</p>
+                </li>
+                <li class="m-cart--learn-more-item">
+                  <h6>How much will I be charged?</h6>
+                  <p>Duis vel tellus accumsan, placerat nisl a, commodo dui. Sed lacinia velit nibh, et accumsan ante vehicula eget.</p>
+                </li>
+                <li class="m-cart--learn-more-item">
+                  <h6>Do I get to choose the socks?</h6>
+                  <p>Ut et congue magna. Quisque mi libero, elementum vitae metus ac, porta aliquet neque.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <h5 class="m-cart--options-box-or hidden-tablet-mobile">or</h5>
-        <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab == true" on-resize ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
+        <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab == true" on-resize ng-click="isActive = false" ng-class="!isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title"><i class="icon-tick"></i>Pay As You Go</h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title">Pay As You Go Benefits</h4>
             <ul class="m-cart--benefits-list">
               <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
             </ul>
-            <div class="m-actions full-width">
-              <a href="#" class="link with-arrow">Learn more<i class="icon-arrow-bottom-blue"></i></a>
-            </div>
+            <!-- <div class="m&#45;actions full&#45;width"> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
