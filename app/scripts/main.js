@@ -70,32 +70,34 @@ TweenLite.defaultEase = Power3.easeInOut;
 //responsive timeline animation.
 //values recorded once, nothing changes on resize
 var display = true;
-if($(window).width() <= 480) {
-    var tl = new TimelineMax({ yoyo:true, repeatDelay:1});
-    $('.menu-btn').on('click', function () {
-        if ( display === true) {
-            tl.to(".slide", 1, {'xPercent':90, force3D:true});
-            display = false;
-        } else if ( display === false) {
-            tl.to(".slide", 1, {'xPercent':0, force3D:true});
-            display = true;
-        }
-    });
-    // // $('[class!=".slide"]').on('click', function () {
-    // //     if ( display === false) {
-    // //         tl.to(".slide", 1, {'xPercent':0, force3D:true});
-    // //         display = true;
-    // //     }
-    // // });
-    // $('.page').on('click', function () {
-    //     console.log('page clicked');
-    //     if ( display === true) {
-    //         tl.to(".slide", 1, {'xPercent':0, force3D:true});
-    //         display = false;
-    //     }
-    // });
-    // $('.slide').on('click', function () {
-    //     console.log('slide clicked');
-    // });
-}
+$(window).resize(function () {
+    if($(window).width() <= 480) {
+        var tl = new TimelineMax({ yoyo:true, repeatDelay:1});
+        $('.menu-btn').on('click', function () {
+            if ( display === true) {
+                tl.to(".slide", 1, {'xPercent':80, force3D:true});
+                display = false;
+            } else if ( display === false) {
+                tl.to(".slide", 1, {'xPercent':0, force3D:true});
+                display = true;
+            }
+        });
+        // // $('[class!=".slide"]').on('click', function () {
+        // //     if ( display === false) {
+        // //         tl.to(".slide", 1, {'xPercent':0, force3D:true});
+        // //         display = true;
+        // //     }
+        // // });
+        // $('.page').on('click', function () {
+        //     console.log('page clicked');
+        //     if ( display === true) {
+        //         tl.to(".slide", 1, {'xPercent':0, force3D:true});
+        //         display = false;
+        //     }
+        // });
+        // $('.slide').on('click', function () {
+        //     console.log('slide clicked');
+        // });
+    }
+});
 
