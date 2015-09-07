@@ -12,17 +12,22 @@
             link: function (scope, el, attrs) {
                 var initialWidth = $window.innerWidth,
                     smallClass   = attrs.resizeClass || 'is-mobile',
-                    smallAttr    = attrs.resizeAttr  || 'on-resize',
-                    smallWidth   = attrs.resizeWidth || 768;
+                    smallAttr    = attrs.resizeAttr  || 'ng-init',
+                    smallAttrValue = attrs.resizeAttr || 'tab=2',
+                    smallWidth   = attrs.resizeWidth || 768,
+
+                    largeAttr    = attrs.resizeAttr  || 'ng-init',
+                    largeAttrValue = attrs.resizeAttr || 'tab=true';
     
                 var setSmall = function () {
                     el.addClass(smallClass);
-                    el.attr(smallAttr, smallAttr);
+                    el.attr(smallAttr, smallAttrValue);
                 };
     
                 var setLarge = function () {
                     el.removeClass(smallClass);
-                    el.removeAttr(smallAttr);
+                    // el.removeAttr(smallAttr);
+                    el.attr(largeAttr, largeAttrValue);
                 };
     
                 if (initialWidth < smallWidth) {

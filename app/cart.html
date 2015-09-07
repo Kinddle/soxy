@@ -15,8 +15,16 @@
     <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.min.css">
 
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" class="device">
 
+<section class="page">
+  <ul class="m-navigation--list visible-mobile">
+    <li class="m-navigation--item"><a href="shop.html">Shop</a></li>
+    <li class="m-navigation--item"><a href="#">Vip Club</a></li>
+    <li class="m-navigation--item"><a href="#">Vip FAQ</a></li>
+    <li class="m-navigation--item"><a href="#">MyAccount</a></li>
+  </ul>
+<section class="slide">
 <section class="m-header">
   <nav class="m-navigation">
     <div class="l-single">
@@ -63,10 +71,10 @@
         <span></span>
         <span></span>
       </div>
-      <ul class="m-navigation--list menu-bar">
-        <li class="m-navigation--item"><a href="#">Shop</a></li>
-        <li class="m-navigation--item"><a href="#">Vip Club</a></li>
-        <li class="m-navigation--item"><a href="#">Vip FAQ</a></li>
+      <ul class="m-navigation--list hidden-mobile">
+        <li class="m-navigation--item"><a href="shop.html">Shop</a></li>
+        <li class="m-navigation--item"><a href="vip-club.html">Vip Club</a></li>
+        <li class="m-navigation--item"><a href="faq.html">Vip FAQ</a></li>
         <li class="m-navigation--item hidden-tablet-mobile"><a href="#">MyAccount</a></li>
       </ul>
     </div>
@@ -74,6 +82,12 @@
 </section>
 
 <section class="l-single">
+    <!-- <div class="box slide"> -->
+    <!--   <p>I am a "full screen" sliding panel  -->
+    <!--     <code>{width:100%}</code></p> -->
+    <!-- </div> -->
+    <!-- <p>I represent the width of your device</p> -->
+
   <div class="l-content">
     <div class="m-cart">
       <div class="m-cart--timeline hidden-tablet-mobile"></div>
@@ -81,13 +95,13 @@
       <h2 class="m-cart--details-title with-arrow visible-tablet-mobile">Choose the way to shop</h2>
       <div class="l-content--small text-center visible-tablet-mobile">
         <div class="m-cart--options-toggler-wrapper visible-tablet-mobile">
-          <a href="#" class="m-cart--options-toggler" ng-class="{'is-active':tab===1}" ng-click="tab = 1">VIP MEMBERSHIP</a>
-          <a href="#" class="m-cart--options-toggler" ng-class="{'is-active':tab===2}" ng-click="tab = 2">PAY AS YOU GO</a>
+          <a href="#" class="m-cart--options-toggler" on-resize ng-class="tab===2 ? 'is-active' : ''" ng-click="tab = 2">VIP MEMBERSHIP</a>
+          <a href="#" class="m-cart--options-toggler" ng-class="{'is-active':tab===3}" ng-click="tab = 3">PAY AS YOU GO</a>
         </div>
       </div>
       <div class="l-one-third tabs">
         <h2 class="m-cart--details-title with-arrow hidden-tablet-mobile text-center">Choose the way to shop</h2>
-        <div class="m-cart--options-box" ng-show="tab === 1 || tab === true" ng-init="isActive = !isActive" on-resize ng-click="isActive = true" ng-class="isActive ? 'is-active' : ''">
+        <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab === true" ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right" ng-dialog="faqDialogId" ng-dialog-class="ngdialog-theme-default m-dialog wide">FAQ</span></h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title hidden-tablet-mobile">VIP Benefits</h4>
@@ -123,7 +137,7 @@
           </div>
         </div>
         <h5 class="m-cart--options-box-or hidden-tablet-mobile">or</h5>
-        <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab == true" on-resize ng-click="isActive = false" ng-class="!isActive ? 'is-active' : ''">
+        <div class="m-cart--options-box" ng-show="tab === 3 || tab == true" ng-click="isActive = !isActive" ng-class="isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title"><i class="icon-tick"></i>Pay As You Go</h3>
           <div class="l-box">
             <h4 class="m-cart--benefits-title">Pay As You Go Benefits</h4>
@@ -225,8 +239,8 @@
         </aside>
       </div>
       <div class="l-content--small"></div>
-      <h1 class="m-cart--step" ng-show="isActive"><i>2</i>Frequency</h1>
-      <div class="l-eight" ng-show="isActive">
+      <h1 class="m-cart--step" ng-show="!isActive"><i>2</i>Frequency</h1>
+      <div class="l-eight" ng-show="!isActive">
         <h2 class="m-cart--details-title">HOW OFTEN do you want socks delivered?</h2>
         <div class="l-one-third l-keep-on-tablet">
           <div class="m-cart--frequency" ng-class="frequencyTab === 1 ? 'is-active' : ''" ng-click="frequencyTab = 1">
@@ -567,6 +581,8 @@
     </div>
   </div>
 </footer>
+</section>
+</section>
 
 <ui-view></ui-view>
 
@@ -637,7 +653,9 @@
 <script src="bower_components/ngDialog/js/ngDialog.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/jquery.ui.touch-punch.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/controller.js"></script>
 <script src="scripts/directives/directive.js"></script>

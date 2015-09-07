@@ -1,25 +1,5 @@
 var tl;
 $(document).ready(function() {
-    //create a TimelineLite instance
-    tl = new TimelineLite({
-        'paused':true,
-        align: 'sequence',
-        'smoothChildTiming':true
-    });
-    tl.add(TweenMax.to(".menu-btn",0.2,{"autoAlpha":0}));
-    tl.add(TweenMax.to(".screen", 0.1,{"autoAlpha":0.9}));
-    // colors
-    tl.add(TweenMax.to(".feed",0.2,{"left":0, "opacity":1, ease:Back.easeOut}) );
-    tl.add(TweenMax.to(".radio",0.2,{ "left":0, "opacity":1, ease:Back.easeOut}) );
-    tl.add(TweenMax.to(".browse",0.2,{"left":0, "opacity":1, ease:Back.easeOut}) );
-    // images
-    tl.add(TweenMax.to(".feed a",0.2,{"left":0, "opacity":1, ease:Back.easeOut}) );
-    tl.add(TweenMax.to(".radio a",0.2,{"left":0, "opacity":1, ease:Back.easeOut}) );
-    tl.add(TweenMax.to(".browse a",0.3,{"left":0, "opacity":1, ease:Back.easeOut}) );
-    $(".menu-btn").on("click", showMenu);
-    $(".radio").on("click", reverse);
-    $(".menu>a").on("click", reverse);
-
     // Dropdown Cart counter
     // This button will increment the value
     $('.qtyplus').click(function(e){
@@ -58,14 +38,6 @@ $(document).ready(function() {
 });
 
 
-function showMenu(e) {
-    tl.play();
-}
-
-function reverse(e) {
-    tl.reverse();
-}
-
 $stick = $('.m-cart--order-box');
 $stickbutton = $('.m-cart--order-box .m-button');
 $foot = $('footer');
@@ -92,3 +64,38 @@ $(window).scroll(function () {
         $stickbutton.text('Continue Checkout');
     }
 });
+
+TweenLite.defaultEase = Power3.easeInOut;
+
+//responsive timeline animation.
+//values recorded once, nothing changes on resize
+var display = true;
+if($(window).width() <= 480) {
+    var tl = new TimelineMax({ yoyo:true, repeatDelay:1});
+    $('.menu-btn').on('click', function () {
+        if ( display === true) {
+            tl.to(".slide", 1, {'xPercent':90, force3D:true});
+            display = false;
+        } else if ( display === false) {
+            tl.to(".slide", 1, {'xPercent':0, force3D:true});
+            display = true;
+        }
+    });
+    // // $('[class!=".slide"]').on('click', function () {
+    // //     if ( display === false) {
+    // //         tl.to(".slide", 1, {'xPercent':0, force3D:true});
+    // //         display = true;
+    // //     }
+    // // });
+    // $('.page').on('click', function () {
+    //     console.log('page clicked');
+    //     if ( display === true) {
+    //         tl.to(".slide", 1, {'xPercent':0, force3D:true});
+    //         display = false;
+    //     }
+    // });
+    // $('.slide').on('click', function () {
+    //     console.log('slide clicked');
+    // });
+}
+
