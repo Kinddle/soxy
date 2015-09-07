@@ -229,20 +229,20 @@
       <div class="l-eight" ng-show="isActive">
         <h2 class="m-cart--details-title">HOW OFTEN do you want socks delivered?</h2>
         <div class="l-one-third l-keep-on-tablet">
-          <div class="m-cart--frequency">
-            <img class="hidden-mobile" src="images/frequency-calendar-month.png">
+          <div class="m-cart--frequency" ng-class="frequencyTab === 1 ? 'is-active' : ''" ng-click="frequencyTab = 1">
+            <img class="hidden-mobile" ng-src="{{frequencyTab === 1 && 'images/frequency-calendar-month-white.png' || 'images/frequency-calendar-month.png'}}"/>
             <h2 class="visible-mobile">Every month</h2>
           </div>
         </div>
         <div class="l-one-third l-keep-on-tablet">
-          <div class="m-cart--frequency is-active">
-            <img class="hidden-mobile" src="images/frequency-calendar-decade-white.png">
+          <div class="m-cart--frequency" ng-init="frequencyTab = 2" ng-class="frequencyTab === 2 ? 'is-active' : ''" ng-click="frequencyTab = 2">
+            <img class="hidden-mobile" ng-src="{{frequencyTab === 2 && 'images/frequency-calendar-decade-white.png' || 'images/frequency-calendar-decade.png'}}"/>
             <h2 class="visible-mobile">Every 3 months</h2>
           </div>
         </div>
         <div class="l-one-third l-keep-on-tablet">
-          <div class="m-cart--frequency last">
-            <img class="hidden-mobile" src="images/frequency-calendar-half-year.png">
+          <div class="m-cart--frequency last" ng-class="frequencyTab === 3 ? 'is-active' : ''" ng-click="frequencyTab = 3">
+            <img class="hidden-mobile" ng-src="{{frequencyTab === 3 && 'images/frequency-calendar-half-year-white.png' || 'images/frequency-calendar-half-year.png'}}"/>
             <h2 class="visible-mobile">Every 6 months</h2>
           </div>
         </div>

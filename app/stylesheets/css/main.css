@@ -2581,7 +2581,8 @@ h5.text-smallest {
   border: 1px solid #ebebeb;
   padding: 20px;
   text-align: center;
-  margin: 40px 10px 40px 0; }
+  margin: 40px 10px 40px 0;
+  cursor: pointer; }
   @media screen and (max-width: 48em) {
     .m-cart--frequency {
       margin: 40px 0; } }
