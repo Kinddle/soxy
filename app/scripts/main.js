@@ -36,18 +36,17 @@ $(document).ready(function() {
         }
     });
 
-    resizeContent();
-
-    $('.slide').bind('resize', function() {
-        console.log('resized');
-        resizeContent();
+    // $('.slide').bind('resize', function() {
+    //     console.log($('.slide').height());
+    //     resizeContent();
+    // });
+    //
+    $('.m-cart--options-box').bind('resize', function(){
+        console.log( 'Height changed to' + $(this).height() );
     });
-
 });
 
-
-function resizeContent() {
-    console.log($('.slide').height());
+if($('body').hasClass('cart')) {
     $stick = $('.m-cart--order-box');
     $stickbutton = $('.m-cart--order-box .m-button');
     $foot = $('footer');
@@ -74,7 +73,6 @@ function resizeContent() {
             $stickbutton.text('Continue Checkout');
         }
     });
-
 }
 
 TweenLite.defaultEase = Power3.easeInOut;
@@ -86,6 +84,7 @@ var display = true;
 if(isMobile) {
     var tl = new TimelineMax({ yoyo:true, repeatDelay:1});
     $('.menu-btn').on('click', function () {
+        console.log('clicked');
         if ( display === true) {
             tl.to(".slide", 1, {'xPercent':80, force3D:true});
             display = false;
