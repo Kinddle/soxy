@@ -7,6 +7,9 @@
   text-align: center
   width: 100%
 
+.text-right
+  text-align: right
+
 .text-center-tablet
   +media($tablet)
     text-align: center
@@ -51,11 +54,17 @@
 .text-serif
   @extend %adriane-serif
 
+.text-sans
+  @extend %brandon-sans
+
 .text-italic-serif
   @extend %adriane-italic-serif
 
 .text-sans
   @extend %brandon-sans
+
+.text-medium-sans
+  @extend %brandon-medium-sans
 
 .text-bold-sans
   @extend %brandon-bold-sans
@@ -180,11 +189,11 @@
   @extend %brandon-bold-sans
   color: $brand-color
   &.with-arrow
-    padding-right: 30px
+    padding-right: 20px
     position: relative
     i
       position: absolute
       right: 0
       top: 50%
-      margin-top: -3px
+      margin-top: -2px
 

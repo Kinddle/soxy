@@ -15,6 +15,14 @@
 </head>
 <body ng-controller="MainCtrl">
 
+<section class="page">
+  <ul class="m-navigation--list visible-mobile">
+    <li class="m-navigation--item"><a href="shop.html">Shop</a></li>
+    <li class="m-navigation--item"><a href="#">Vip Club</a></li>
+    <li class="m-navigation--item"><a href="#">Vip FAQ</a></li>
+    <li class="m-navigation--item"><a href="#">MyAccount</a></li>
+  </ul>
+<section class="slide">
 <section class="m-header">
   <nav class="m-navigation">
     <div class="l-single">
@@ -62,7 +70,7 @@
         <span></span>
       </div>
       <!-- <div class="screen"></div> -->
-      <ul class="m-navigation--list menu-bar">
+      <ul class="m-navigation--list hidden-mobile">
         <li class="m-navigation--item menu feed"><a href="#">Shop</a></li>
         <li class="m-navigation--item menu radio"><a href="#">Vip Club</a></li>
         <li class="m-navigation--item menu browse"><a href="#">Vip FAQ</a></li>
@@ -249,6 +257,8 @@
     </div>
   </div>
 </footer>
+</seciton>
+</section>
 
 <ui-view></ui-view>
 

@@ -32,11 +32,15 @@
     box-shadow: 0
     &.qtyplus
       +border-right-radius(3px)
+      +border-left-radius(0)
     &.qtyminus
       +border-left-radius(3px)
+      +border-right-radius(0)
     &.qtyplus, &.qtyminus
       @extend %adriane-bold-serif
+      text-indent: -9999px
       font-size: em(18)
+      text-align: center
       line-height: 15px
       width: 35px
       height: 25px

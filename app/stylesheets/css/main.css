@@ -665,7 +665,7 @@ html {
   font-style: normal;
   font-weight: normal;
   src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
-.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--step-help-info, .m-cart--learn-more-item p, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before, .m-form label, .m-dialog .l-one-third p {
+.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--step-help-info, .m-cart--learn-more-item p, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before, .m-form label, .m-form input.text-serif, input[type="text"].text-serif, .m-dialog .l-one-third p {
   font-family: "Adriane-regular", serif; }
 
 .subheading, .text-italic-serif, .m-header--slogan h3, .m-footer .m-footer--contact-block .email, .slider, .m-cart--options-box-or {
@@ -677,7 +677,7 @@ html {
 .text-sans, .m-footer .m-footer--contact-block p, .m-feature--caption, .m-product--item p, .m-purchase h1, .m-cart--step, .m-cart--details-title, .m-cart--item-title, .m-dialog h5 {
   font-family: "Brandon-regular", serif; }
 
-.m-navigation, .m-cart--dropdown-item-amount, .m-cart--dropdown-promote, .m-counter input {
+.text-medium-sans, .m-navigation, .m-cart--dropdown-item-amount, .m-cart--dropdown-promote, .m-counter input {
   font-family: "Brandon-medium", sans-serif; }
 
 .text-bold-sans, .link, .m-cart--dropdown-promote strong, .m-badges.small, .m-purchase--label, .m-purchase--price-regular, .m-cart--learn-more-item h6, .m-cart--benefits-title, .m-cart--options-box-title, .m-cart--order-price, .m-cart--order-price-strong, .m-cart--frequency h2, .m-cart--options-toggler, .m-dialog h6 {
@@ -700,11 +700,15 @@ h5.text-smallest {
 
 .text-tiny {
   font-size: 0.75em;
-  color: #aaaaaa; }
+  color: #aaaaaa;
+  font-weight: normal; }
 
 .text-center {
   text-align: center;
   width: 100%; }
+
+.text-right {
+  text-align: right; }
 
 @media screen and (max-width: 48em) {
   .text-center-tablet {
@@ -867,13 +871,13 @@ h5.text-smallest {
 .link {
   color: #0f92eb; }
   .link.with-arrow {
-    padding-right: 30px;
+    padding-right: 20px;
     position: relative; }
     .link.with-arrow i {
       position: absolute;
       right: 0;
       top: 50%;
-      margin-top: -3px; }
+      margin-top: -2px; }
 
 .l-single {
   max-width: 71.25em;
@@ -1310,6 +1314,13 @@ h5.text-smallest {
   border-bottom: 1px solid #ebebeb; }
   .m-navigation .l-single {
     padding: 0; }
+
+.m-navigation--help {
+  line-height: 75px; }
+  @media screen and (max-width: 30em) {
+    .m-navigation--help {
+      text-indent: -9999px;
+      display: none; } }
 
 .m-navigation--list {
   display: inline-block;
@@ -1939,6 +1950,20 @@ h5.text-smallest {
     -o-transform: rotate(-180deg);
     transform: rotate(-180deg); }
 
+.icon-plus {
+  background-image: url("../../images/icons/icon-plus-minus.png");
+  background-position: -55px center;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px; }
+
+.icon-minus {
+  background-image: url("../../images/icons/icon-plus-minus.png");
+  background-position: 13px center;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px; }
+
 .m-product--item {
   padding: 60px 40px 50px 40px;
   text-align: center;
@@ -2386,10 +2411,15 @@ h5.text-smallest {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 30em) {
+    .m-cart--options-box .l-box--small {
+      padding: 10px 25px; }
+      .m-cart--options-box .l-box--small .m-actions {
+        margin-top: 10px; } }
   .m-cart--options-box .icon-tick {
     background-size: 0; }
   .m-cart--options-box .m-badges {
-    background-color: #f1f1f1; }
+    background-color: #005fc0; }
   .m-cart--options-box.is-active .m-cart--options-box-title {
     background-color: #0f92eb;
     color: white; }
@@ -2430,7 +2460,7 @@ h5.text-smallest {
 .m-cart--benefits-title {
   font-size: 1.0625em;
   color: #2f2f2f;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 .m-cart--benefits-list {
   margin: 0;
@@ -2442,7 +2472,7 @@ h5.text-smallest {
   font-size: 0.875em;
   padding-left: 20px;
   position: relative;
-  margin: 10px 0; }
+  margin: 5px 0; }
 
 .m-cart--details-title {
   font-size: 1.125em;
@@ -2502,6 +2532,9 @@ h5.text-smallest {
 .m-cart--item-title {
   font-size: 1.375em;
   padding: 20px 25px; }
+  @media screen and (max-width: 30em) {
+    .m-cart--item-title {
+      padding: 10px 25px; } }
 
 .m-cart--trash-btn {
   border: 1px solid #e3e6e8;
@@ -2708,12 +2741,18 @@ h5.text-smallest {
     box-shadow: 0; }
     .m-counter input.qtyplus {
       border-bottom-right-radius: 3px;
-      border-top-right-radius: 3px; }
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0; }
     .m-counter input.qtyminus {
       border-bottom-left-radius: 3px;
-      border-top-left-radius: 3px; }
+      border-top-left-radius: 3px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0; }
     .m-counter input.qtyplus, .m-counter input.qtyminus {
+      text-indent: -9999px;
       font-size: 1.125em;
+      text-align: center;
       line-height: 15px;
       width: 35px;
       height: 25px;
@@ -2732,6 +2771,8 @@ h5.text-smallest {
   box-shadow: none;
   display: inline-block;
   width: 100%; }
+  .m-form input.text-serif {
+    font-family: "Adriane-regular", serif !important; }
   .m-form input:focus {
     border-color: #0f92eb; }
 .m-form .select-wrapper {
@@ -2762,13 +2803,19 @@ h5.text-smallest {
   display: inline-block;
   width: 100%; }
 
+input[type="text"].text-serif {
+  font-size: 0.9375em !important;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  padding: 7px 10px; }
+
 .ngdialog-overlay {
   background-color: rgba(18, 24, 35, 0.85) !important; }
 
 .m-dialog.wide .ngdialog-content {
   width: 70% !important;
   padding: 1em 3em !important;
-  background-color: white; }
+  background-color: white !important; }
 .m-dialog .l-one-third {
   padding: 0 1em; }
   .m-dialog .l-one-third p {

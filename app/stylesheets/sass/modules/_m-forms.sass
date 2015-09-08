@@ -12,9 +12,11 @@
     box-shadow: none
     display: inline-block
     width: 100%
+    &.text-serif
+      @extend %adriane-serif
+      font-family: 'Adriane-regular', serif !important
     &:focus
       border-color: $brand-color
-
   .select-wrapper
     display: inline-block
     position: relative
@@ -39,3 +41,10 @@
     box-shadow: none
     display: inline-block
     width: 100%
+
+input[type="text"].text-serif
+  @extend %adriane-serif
+  font-size: em(15) !important
+  text-transform: uppercase
+  letter-spacing: -0.5px
+  padding: 7px 10px

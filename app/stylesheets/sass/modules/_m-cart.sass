@@ -114,10 +114,15 @@
   +clearfix
   border: 1px solid $border-color
   margin: 0 25px 25px 0
+  .l-box--small
+    +media($mobile)
+      padding: 10px 25px
+      .m-actions
+        margin-top: 10px
   .icon-tick
     background-size: 0
   .m-badges
-    background-color: $snow
+    background-color: #005fc0
   &.is-active .m-cart--options-box-title
     background-color: $brand-color
     color: white
@@ -160,7 +165,7 @@
   @extend %brandon-bold-sans
   font-size: em(17)
   color: $title-color
-  margin-bottom: 20px
+  margin-bottom: 10px
 
 .m-cart--benefits-list
   margin: 0
@@ -173,7 +178,7 @@
   font-size: em(14)
   padding-left: 20px
   position: relative
-  margin: 10px 0
+  margin: 5px 0
 
 .m-cart--details-title
   @extend %brandon-sans
@@ -233,6 +238,8 @@
   @extend %brandon-sans
   font-size: em(22)
   padding: 20px 25px
+  +media($mobile)
+    padding: 10px 25px
 
 .m-cart--trash-btn
   border: 1px solid #e3e6e8

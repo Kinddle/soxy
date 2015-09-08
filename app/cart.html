@@ -29,54 +29,14 @@
   <nav class="m-navigation">
     <div class="l-single">
       <a href="/" class="m-logo">Soxy.com</a>
-      <div class="m-cart--dropdown" ng-mouseenter="menuActive = true" ng-mouseleave="menuActive = false">
-        <span>Cart</span>
-        <span class="m-badges blue radius">0</span>
-        <div class="m-cart--dropdown-box" ng-show="menuActive" ng-class="menuActive ? 'is-active' : ''">
-          <span class="m-cart--dropdown-close-btn icon-close" ng-click="menuActive = !menuActive"></span>
-          <div class="m-cart--dropdown-item">
-            <img src="images/content/product-set-white-1.jpg" />
-            <div class="m-cart--dropdown-overlay">
-              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
-              <p class="m-cart--dropdown-item-amount">
-                Summer x 2
-              </p>
-              <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
-                <input type='button' value='-' class='qtyminus' field='quantity' />
-                <input type='text' name='quantity' value='0' class='qty' />
-                <input type='button' value='+' class='qtyplus' field='quantity' />
-              </form>
-            </div>
-          </div>
-          <div class="m-cart--dropdown-item">
-            <img src="images/content/product-set-white-1.jpg" />
-            <div class="m-cart--dropdown-overlay">
-              <span class="m-cart--dropdown-trash-btn icon-trash"></span>
-              <p class="m-cart--dropdown-item-amount">
-                Winter x 3
-              </p>
-              <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
-                <input type='button' value='-' class='qtyminus' field='quantity' />
-                <input type='text' name='quantity' value='0' class='qty' />
-                <input type='button' value='+' class='qtyplus' field='quantity' />
-              </form>
-            </div>
-          </div>
-          <a href="#" class="m-button red small full-width">Checkout</a>
-          <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
-        </div>
-      </div>
       <div class="menu-btn">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul class="m-navigation--list hidden-mobile">
-        <li class="m-navigation--item"><a href="shop.html">Shop</a></li>
-        <li class="m-navigation--item"><a href="vip-club.html">Vip Club</a></li>
-        <li class="m-navigation--item"><a href="faq.html">Vip FAQ</a></li>
-        <li class="m-navigation--item hidden-tablet-mobile"><a href="#">MyAccount</a></li>
-      </ul>
+      <div class="right">
+        <h5 class="text-medium-sans m-navigation--help">Need help? We‘re an email away&nbsp;&nbsp;<a class="text-bold-sans link" href="mailto:help@soxy.com">help@soxy.com</a></h5>
+      </div>
     </div>
   </nav>
 </section>
@@ -103,7 +63,7 @@
         <h2 class="m-cart--details-title with-arrow hidden-tablet-mobile text-center">Choose the way to shop</h2>
         <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab === true" ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right" ng-dialog="faqDialogId" ng-dialog-class="ngdialog-theme-default m-dialog wide">FAQ</span></h3>
-          <div class="l-box">
+          <div class="l-box--middle">
             <h4 class="m-cart--benefits-title hidden-tablet-mobile">VIP Benefits</h4>
             <ul class="m-cart--benefits-list">
               <div class="l-single-break-half-break-single">
@@ -139,7 +99,7 @@
         <h5 class="m-cart--options-box-or hidden-tablet-mobile">or</h5>
         <div class="m-cart--options-box" ng-show="tab === 3 || tab == true" ng-click="isActive = !isActive" ng-class="isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title"><i class="icon-tick"></i>Pay As You Go</h3>
-          <div class="l-box">
+          <div class="l-box--middle">
             <h4 class="m-cart--benefits-title">Pay As You Go Benefits</h4>
             <ul class="m-cart--benefits-list">
               <li class="m-cart--benefits-item icon-benefits-shipping">Free shipping & Exchanges </li>
@@ -162,9 +122,9 @@
                   <p class="regular-price text-sans">$55 REG</p>
                 </div>
                 <form id='CartCounter' class="m-counter with-label" method='POST' action='#'>
-                  <input type='button' value='-' class='qtyminus' field='quantity' />
+                  <input type='button' value='-' class='qtyminus icon-minus' field='quantity' />
                   <input type='text' name='quantity' value='0' class='qty' />
-                  <input type='button' value='+' class='qtyplus' field='quantity' />
+                  <input type='button' value='+' class='qtyplus icon-plus' field='quantity' />
                 </form>
               </div>
             </div>
@@ -223,10 +183,21 @@
           </div>
           <div class="hr"></div>
           <div class="l-box--middle">
-            <h5 class="text-sans text-center text-smallest uppercase">gift card</h5>
-            </br>
-            <span class="left">31JD01X</span>
-            <span class="right text-tiny">REMOVE</span>
+            <!-- <h5 class="text&#45;sans text&#45;center text&#45;smallest uppercase">gift card</h5> -->
+            <!-- </br> -->
+            <!-- <span class="left">31JD01X</span> -->
+            <!-- <span class="right text&#45;tiny">REMOVE</span> -->
+            <form>
+              <div class="l-content--tiny">
+                <h5 class="text-smallest text-center text-sans">Promo code/Gift Card</h5>
+              </div>
+              <div class="l-half">
+                <input class="text-serif" type="text" placeholder="codename">
+              </div>
+              <div class="l-half text-right">
+                <input class="m-button blue small" type="submit" value="submit">
+              </div>
+            </form>
           </div>
           <div class="hr"></div>
           <div class="l-box">
@@ -238,7 +209,7 @@
           </div>
         </aside>
       </div>
-      <div class="l-content--small"></div>
+      <div class="l-content--tiny"></div>
       <h1 class="m-cart--step" ng-show="!isActive"><i>2</i>Frequency</h1>
       <div class="l-eight" ng-show="!isActive">
         <h2 class="m-cart--details-title">HOW OFTEN do you want socks delivered?</h2>
@@ -262,8 +233,8 @@
         </div>
       </div>
       <div class="l-row">
-        <div class="l-content--small"></div>
-        <h1 class="m-cart--step l-nine gutter"><i>{{isActive ? '3' : '2'}}</i>Shipping info<span class="icon-secure-shopping right hidden-tablet-mobile"></span></h1>
+        <div class="l-content--tiny"></div>
+        <h1 class="m-cart--step l-nine gutter"><i>{{isActive ? '2' : '3'}}</i>Shipping info<span class="icon-secure-shopping right hidden-tablet-mobile"></span></h1>
         <div class="l-eight">
           <form class="m-form">
             <div class="l-row">
