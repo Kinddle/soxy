@@ -1423,6 +1423,14 @@ h5.text-smallest {
     position: absolute;
     top: -11px;
     right: 25px; }
+  .m-cart--dropdown-box:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 10px; }
 
 .m-cart--dropdown-close-btn {
   position: absolute;
