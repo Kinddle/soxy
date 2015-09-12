@@ -774,7 +774,7 @@ h5.text-smallest {
   .bg-our-socks h1.heading {
     margin-top: 150px; }
   .bg-our-socks h5.heading {
-    margin-top: 100px; }
+    margin-top: 200px; }
   @media screen and (max-width: 48em) {
     .bg-our-socks {
       background-image: none;
@@ -1883,8 +1883,11 @@ h5.text-smallest {
 
 .icon-benefits-discount, .icon-benefits-styles, .icon-benefits-gift, .icon-benefits-cancel, .icon-benefits-star, .icon-benefits-shipping, .icon-benefits-happy {
   background-repeat: no-repeat;
-  background-position: left 5px;
+  width: 15px;
+  height: 15px;
   text-align: left;
+  margin: 5px 5px 0 0;
+  margin-left: -20px;
   float: left;
   display: inline-block; }
 
@@ -2485,9 +2488,12 @@ h5.text-smallest {
 
 .m-cart--benefits-item {
   font-size: 0.875em;
-  padding-left: 20px;
   position: relative;
-  margin: 5px 0; }
+  margin: 5px 0;
+  padding-left: 20px;
+  width: 100%;
+  overflow: hidden;
+  text-align: left; }
 
 .m-cart--details-title {
   font-size: 1.125em;
