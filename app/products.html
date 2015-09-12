@@ -148,7 +148,7 @@
         <div class="m-product--item l-one-third-break-half">
           <p class="title hidden-tablet-mobile">Stripes</p>
           <img src="images/content/product-set-1.jpg">
-          <div class="m-product--info hidden-tablet-mobile">
+          <div class="m-product--info">
             <div class="m-product--price-wrapper">
               <p class="m-product--customer-status">VIP:</p>
               <p class="m-product--price">$45</p>
@@ -159,7 +159,7 @@
         <div class="m-product--item l-one-third-break-half">
           <p class="title text-center hidden-tablet-mobile">Summer</p>
           <img src="images/content/product-set-1.jpg">
-          <div class="m-product--info hidden-tablet-mobile">
+          <div class="m-product--info">
             <div class="m-product--price-wrapper">
               <p class="m-product--customer-status">VIP:</p>
               <p class="m-product--price">$45</p>
@@ -170,7 +170,7 @@
         <div class="m-product--item l-one-third-break-half">
           <p class="title text-center hidden-tablet-mobile">Stripes</p>
           <img src="images/content/product-set-1.jpg">
-          <div class="m-product--info hidden-tablet-mobile">
+          <div class="m-product--info">
             <div class="m-product--price-wrapper">
               <p class="m-product--customer-status">VIP:</p>
               <p class="m-product--price">$45</p>
@@ -181,12 +181,12 @@
         <div class="m-product--item l-one-third-break-half visible-tablet-mobile">
           <p class="title text-center hidden-tablet-mobile">Stripes</p>
           <img src="images/content/product-set-1.jpg">
-          <div class="m-product--info hidden-tablet-mobile">
+          <div class="m-product--info">
             <div class="m-product--price-wrapper">
               <p class="m-product--customer-status">VIP:</p>
               <p class="m-product--price">$45</p>
             </div>
-            <a href="#" class="m-button small blue">Add to Cart</a>
+            <a href="#" class="m-button small red">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -198,15 +198,15 @@
   <div class="l-content">
     <div class="l-single">
       <h1 class="heading">Our Socks</h1>
-      <div class="l-one-third l-keep-on-tablet">
+      <div class="l-one-third l-keep-on-tablet l-box--small">
         <h5 class="heading text-bold text-shadow uppercase">Luxury Fabric</h5>
         <p class="text-serif text-shadow">We searched the world for the finest combed cotton making sure we had the right amount of softness, stretch, and durability.</p>
       </div>
-      <div class="l-one-third l-keep-on-tablet">
+      <div class="l-one-third l-keep-on-tablet l-box--small">
         <h5 class="heading text-bold text-shadow uppercase">Flawless Design</h5>
         <p class="text-serif text-shadow">Each sock is carefully examined and designed by experts ensuring unique colors and patterns.</p>
       </div>
-      <div class="l-one-third l-keep-on-tablet">
+      <div class="l-one-third l-keep-on-tablet l-box--small">
         <h5 class="heading text-bold text-shadow uppercase">The Perfect Length</h5>
         <p class="text-serif text-shadow">Mid-calf length socks to compliment your dress pants or shorts making you picture perfect.</p>
       </div>
@@ -217,9 +217,8 @@
 <section class="l-content text-center hidden-tablet-mobile">
   <h1 class="heading">What people think</h1>
   <p class="subheading-normal">We‘re commited to your 100% happiness.</p>
-  <div class="icon-stars"></div>
   <div class="container slider">
-    <p ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+    <p ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage icon-stars"
          ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
          ng-hide="!isCurrentSlideIndex($index)">
       {{slide.quote}}

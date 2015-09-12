@@ -1916,7 +1916,9 @@ h5.text-smallest {
 .icon-stars {
   background-image: url("../../images/icons/icon-stars.png");
   background-repeat: no-repeat;
+  background-position: top center;
   width: 109px;
+  padding-top: 50px;
   display: inline-block;
   height: 20px;
   margin-top: 40px; }
@@ -1984,16 +1986,18 @@ h5.text-smallest {
         padding: 0; }
       .m-product--item .l-content {
         padding: 0; }
+      .m-product--item .m-product--price-wrapper {
+        float: left; }
+      .m-product--item.l-one-third-break-half .m-product--price-wrapper {
+        margin: 10px 0 10px 0;
+        float: none; }
       .m-product--item .m-product--info {
         float: none;
         margin-top: 40px;
         width: auto; }
       .m-product--item .m-product--price-wrapper {
         margin: 0 25px 0 0;
-        display: inline-block;
-        float: left; }
-      .m-product--item .m-button {
-        float: right; } }
+        display: inline-block; } }
   @media screen and (max-width: 30em) {
     .m-product--item {
       padding: 35px 20px 30px 20px; }
@@ -2185,7 +2189,7 @@ h5.text-smallest {
 .slider {
   font-size: 2.5em;
   width: 100%;
-  min-height: 150px;
+  min-height: 250px;
   overflow: hidden;
   position: relative;
   border: 20px solid #FFF;

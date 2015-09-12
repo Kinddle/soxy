@@ -16,6 +16,11 @@
       padding: 0
     .l-content
       padding: 0
+    .m-product--price-wrapper
+      float: left
+    &.l-one-third-break-half .m-product--price-wrapper
+      margin: 10px 0 10px 0
+      float: none
     .m-product--info
       float: none
       margin-top: 40px
@@ -23,9 +28,6 @@
     .m-product--price-wrapper
       margin: 0 25px 0 0
       display: inline-block
-      float: left
-    .m-button
-      float: right
   +media($mobile)
     padding: 35px 20px 30px 20px
     .m-product--info
