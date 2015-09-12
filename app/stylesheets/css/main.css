@@ -871,7 +871,7 @@ h5.text-smallest {
 .link {
   color: #0f92eb; }
   .link.with-arrow {
-    padding-right: 20px;
+    padding-right: 30px;
     position: relative; }
     .link.with-arrow i {
       position: absolute;
@@ -1557,6 +1557,9 @@ h5.text-smallest {
   background-color: #252428;
   min-height: 439px;
   padding-top: 74px; }
+  .cart .m-footer {
+    min-height: 15px;
+    padding-top: 0px; }
   .m-footer .badge {
     float: left;
     display: block;
@@ -2493,7 +2496,7 @@ h5.text-smallest {
   letter-spacing: 1px;
   position: relative;
   padding-right: 25px;
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
   @media screen and (max-width: 48em) {
     .m-cart--details-title {
       text-align: center;
@@ -2569,7 +2572,7 @@ h5.text-smallest {
   background-color: white;
   position: absolute;
   top: 50px;
-  padding-top: 40px; }
+  padding-top: 30px; }
   .m-cart--order-box::after {
     clear: both;
     content: "";

@@ -53,7 +53,7 @@
       <div class="m-cart--timeline hidden-tablet-mobile"></div>
       <h1 class="m-cart--step"><i>1</i>Shopping Cart</h1>
       <h2 class="m-cart--details-title with-arrow visible-tablet-mobile">Choose the way to shop</h2>
-      <div class="l-content--small text-center visible-tablet-mobile">
+      <div class="text-center visible-tablet-mobile">
         <div class="m-cart--options-toggler-wrapper visible-tablet-mobile">
           <a href="#" class="m-cart--options-toggler" on-resize ng-class="tab===2 ? 'is-active' : ''" ng-click="tab = 2">VIP MEMBERSHIP</a>
           <a href="#" class="m-cart--options-toggler" ng-class="{'is-active':tab===3}" ng-click="tab = 3">PAY AS YOU GO</a>
@@ -64,7 +64,7 @@
         <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab === true" ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
           <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right" ng-dialog="faqDialogId" ng-dialog-class="ngdialog-theme-default m-dialog wide">FAQ</span></h3>
           <div class="l-box--middle">
-            <h4 class="m-cart--benefits-title hidden-tablet-mobile">VIP Benefits</h4>
+            <h4 class="m-cart--benefits-title">VIP Benefits</h4>
             <ul class="m-cart--benefits-list">
               <div class="l-single-break-half-break-single">
                 <li class="m-cart--benefits-item icon-benefits-discount">10% off any product, any time!</li>
@@ -490,10 +490,21 @@
               </div>
               <div class="hr"></div>
               <div class="l-box--middle">
-                <h5 class="text-sans text-center text-smallest uppercase">gift card</h5>
-                </br>
-                <span class="left">31JD01X</span>
-                <span class="right text-tiny">REMOVE</span>
+                <!-- <h5 class="text&#45;sans text&#45;center text&#45;smallest uppercase">gift card</h5> -->
+                <!-- </br> -->
+                <!-- <span class="left">31JD01X</span> -->
+                <!-- <span class="right text&#45;tiny">REMOVE</span> -->
+                <form>
+                  <div class="l-content--tiny">
+                    <h5 class="text-smallest text-center text-sans">Promo code/Gift Card</h5>
+                  </div>
+                  <div class="l-half">
+                    <input class="text-serif" type="text" placeholder="codename">
+                  </div>
+                  <div class="l-half text-right">
+                    <input class="m-button blue small" type="submit" value="submit">
+                  </div>
+                </form>
               </div>
               <div class="hr"></div>
               <div class="l-box">
@@ -522,33 +533,33 @@
 <footer>
   <div class="m-footer">
     <div class="l-single">
-      <div class="badge"></div>
-      <div class="m-footer--text-block">
-      <p class="m-footer--title">SOXY GUARANTEE</p>
-      <p class="m-footer--description">Your happiness is our #1priority. Which means we stand by our product 100%, no matter what, no questions asked. If you have a problem, we will solve it. Exchange it for free. Refund it. Send you new socks. Whatever it takes. Simply send us a message, you're family now.<span> We’re always here for you. Happiness.</span> <span class="hide-text">Guaranteed.</span>
-          </p>
-        </div>
-        <div class="m-footer--contact-block">
-          <div class="left-tablet-column">
-            <p>E-MAIL</p>
-            <a class="email" href="#">hello@soxy.com</a>
-          </div>
-          <div class="right-tablet-column">
-            <p>STAY IN TOUCH</p>
-            <div class="m-footer--socials text-center">
-              <a class="" href="#"><img src="images/icons/icon-facebook.png"></a>
-              <a class="" href="#"><img src="images/icons/icon-instagram.png"></a>
-            </div>
-          </div>
-        </div>
-        <div class="m-footer--payment-methods text-center">
-        <img src="images/icons/icon-payment-methods.png">
-        <div class="l-content">
-          <p class="copyright">Copyright © 2014. All rights reserved.</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-          </div>
-        </div>
+      <!-- <div class="badge"></div> -->
+      <!-- <div class="m&#45;footer&#45;&#45;text&#45;block"> -->
+      <!-- <p class="m&#45;footer&#45;&#45;title">SOXY GUARANTEE</p> -->
+      <!-- <p class="m&#45;footer&#45;&#45;description">Your happiness is our #1priority. Which means we stand by our product 100%, no matter what, no questions asked. If you have a problem, we will solve it. Exchange it for free. Refund it. Send you new socks. Whatever it takes. Simply send us a message, you're family now.<span> We’re always here for you. Happiness.</span> <span class="hide&#45;text">Guaranteed.</span> -->
+      <!--     </p> -->
+      <!--   </div> -->
+      <!--   <div class="m&#45;footer&#45;&#45;contact&#45;block"> -->
+      <!--     <div class="left&#45;tablet&#45;column"> -->
+      <!--       <p>E&#45;MAIL</p> -->
+      <!--       <a class="email" href="#">hello@soxy.com</a> -->
+      <!--     </div> -->
+      <!--     <div class="right&#45;tablet&#45;column"> -->
+      <!--       <p>STAY IN TOUCH</p> -->
+      <!--       <div class="m&#45;footer&#45;&#45;socials text&#45;center"> -->
+      <!--         <a class="" href="#"><img src="images/icons/icon&#45;facebook.png"></a> -->
+      <!--         <a class="" href="#"><img src="images/icons/icon&#45;instagram.png"></a> -->
+      <!--       </div> -->
+      <!--     </div> -->
+      <!--   </div> -->
+      <!--   <div class="m&#45;footer&#45;&#45;payment&#45;methods text&#45;center"> -->
+      <!--   <img src="images/icons/icon&#45;payment&#45;methods.png"> -->
+      <!--   <div class="l&#45;content"> -->
+      <!--     <p class="copyright">Copyright © 2014. All rights reserved.</p> -->
+      <!--       <p>Terms &#38; Conditions</p> -->
+      <!--       <p>Privacy Policy</p> -->
+      <!--     </div> -->
+      <!--   </div> -->
     </div>
   </div>
 </footer>
