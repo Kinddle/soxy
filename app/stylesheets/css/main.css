@@ -1609,7 +1609,8 @@ h5.text-smallest {
       top: 0; }
     .m-cart--dropdown-item .m-counter {
       display: inline-block;
-      margin-top: 10px; }
+      margin-top: 10px;
+      float: left; }
     .m-cart--dropdown-item .m-cart--dropdown-trash-btn {
       display: block;
       position: relative;
@@ -2929,8 +2930,7 @@ h5.text-smallest {
   position: relative;
   z-index: 10;
   display: none;
-  border-radius: 3px;
-  float: left; }
+  border-radius: 3px; }
   .m-counter::after {
     clear: both;
     content: "";
