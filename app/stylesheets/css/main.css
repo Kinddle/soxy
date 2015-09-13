@@ -1304,9 +1304,15 @@ h5.text-smallest {
 
 .l-one-shift {
   margin-left: 8.33333%; }
+  @media screen and (max-width: 48em) {
+    .l-one-shift {
+      margin-left: 0; } }
 
 .l-one-half-shift {
   margin-left: 4.16667%; }
+  @media screen and (max-width: 48em) {
+    .l-one-half-shift {
+      margin-left: 0; } }
 
 .l-content--small {
   padding: 30px 0; }
@@ -1441,16 +1447,18 @@ h5.text-smallest {
   width: 100%; }
 
 .m-counter-down--call {
-  margin-left: 8.33333%;
   font-size: 16px; }
 
 .m-counter-down--time-left {
-  margin-left: 4.16667%;
   font-size: 14px;
   float: left; }
 
 .m-counter-down--separator {
-  border-right: 1px solid #e33333; }
+  border-right: 1px solid #e33333;
+  border-left: 1px solid #e33333; }
+  @media screen and (max-width: 48em) {
+    .m-counter-down--separator {
+      border-right-width: 0; } }
 
 .m-counter-down--dial-wrapper {
   float: left; }

@@ -12,16 +12,17 @@
   width: 100%
 
 .m-counter-down--call
-  +shift(1)
   font-size: 16px
 
 .m-counter-down--time-left
-  +shift(0.5)
   font-size: 14px
   float: left
 
 .m-counter-down--separator
   border-right: 1px solid #e33333
+  border-left: 1px solid #e33333
+  +media($tablet)
+    border-right-width: 0
 
 .m-counter-down--dial-wrapper
   float: left
