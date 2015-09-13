@@ -24,6 +24,41 @@
   </ul>
 <section class="slide">
 <section class="m-header">
+  <div class="m-counter-down">
+    <div class="l-single">
+      <div class="l-four m-counter-down--separator">
+        <span>Don't forget your</span>
+        <span class="text-black-sans">&nbsp;10%</span>
+      </div>
+      <div class="l-single-break-half">
+        <div class="l-two m-counter-down--separator">
+          <span class="m-counter-down--call">USE:</span>
+          <span class="text-black-sans">&nbsp;SOXY10</span>
+        </div>
+      </div>
+      <div class="l-single-break-half">
+        <div class="l-five">
+          <span class="m-counter-down--time-left hidden-tablet-mobile">Time left:&nbsp;</span>
+          <div class="m-counter-down--dial-wrapper">
+            <timer end-time="1451628000000">
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{hours}}</div>
+                <div class="m-counter-down--time-info">hours</div>
+              </div>
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{minutes}}</div>
+                <div class="m-counter-down--time-info">minutes</div>
+              </div>
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{seconds}}</div>
+                <div class="m-counter-down--time-info">seconds</div>
+              </div>
+            </timer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <nav class="m-navigation">
     <div class="l-single">
       <a href="/" class="m-logo">Soxy.com</a>
@@ -272,7 +307,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/jquery.ui.touch-punch.js"></script>
+<script src="bower_components/momentjs/moment.js"></script>
+<script src="bower_components/angular-timer/dist/angular-timer.min.js"></script>
+<script src="bower_components/humanize-duration/humanize-duration.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/controller.js"></script>
 <script src="scripts/directives/directive.js"></script>

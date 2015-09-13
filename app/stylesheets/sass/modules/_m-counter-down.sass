@@ -1,0 +1,56 @@
+.m-counter-down
+  @extend %brandon-sans
+  font-weight: normal
+  font-size: em(30)
+  text-transform: uppercase
+  background-color: #f53d3d
+  min-height: 70px
+  color: white
+  letter-spacing: -0.4px
+  overflow: hidden
+  line-height: 70px
+  width: 100%
+
+.m-counter-down--call
+  +shift(1)
+  font-size: 16px
+
+.m-counter-down--time-left
+  +shift(0.5)
+  font-size: 14px
+  float: left
+
+.m-counter-down--separator
+  border-right: 1px solid #e33333
+
+.m-counter-down--dial-wrapper
+  float: left
+
+.m-counter-down--dial-item
+  float: left
+  background-color: #222325
+  border-radius: 3px
+  margin: 5px 2px
+  padding: 5px
+  height: 60px
+  width: 60px
+  text-align: center
+  &:last-child
+    margin-right: 0
+
+.m-counter-down--time
+  @extend %brandon-bold-sans
+  line-height: 36px
+  font-size: 36px
+  display: block
+  width: 100%
+  height: 36px
+
+.m-counter-down--time-info
+  @extend %brandon-sans
+  font-size: 12px
+  line-height: 12px
+  height: 12px
+  color: #88898b
+  clear: both
+  display: block

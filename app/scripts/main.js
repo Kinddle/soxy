@@ -50,10 +50,10 @@ if($('body').hasClass('cart')) {
     $stick = $('.m-cart--order-box');
     $stickbutton = $('.m-cart--order-box .m-button');
     $foot = $('footer');
-    $footheight = $('footer').height()-300;
+    $footheight = $('footer').height();
     margin = 20;
     offtop = $stick.offset().top - (margin*2);
-    offbtm = $foot.offset().top - ( $footheight + $stick.height() );
+    offbtm = $foot.offset().top - ( $footheight + $stick.height() + 600 );
 
     $(window).scroll(function () {
         scrtop = $(window).scrollTop();
@@ -64,8 +64,9 @@ if($('body').hasClass('cart')) {
         if (offtop > scrtop && $stick.hasClass('is-fixed')) {
             $stick.removeClass('is-fixed').addClass('is-natural').css('top', '40px');
         }
-        if (scrtop > (offbtm+120) && $stick.hasClass('is-fixed')) {
-            $stick.removeClass('is-fixed').addClass('is-bottom').css('top', offbtm+margin);
+        if (scrtop > (offbtm) && $stick.hasClass('is-fixed')) {
+            $stick.removeClass('is-fixed').addClass('is-bottom').css('top', offbtm+margin*3);
+            console.log('at bottom');
             $stickbutton.text('Buy Now');
         }
         if ((offbtm+170) > scrtop && $stick.hasClass('is-bottom')) {

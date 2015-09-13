@@ -4,7 +4,8 @@
           // 'ui-router',
           'ngAnimate',
           'ngTouch',
-          'ngDialog'
+          'ngDialog',
+          'timer'
         ])
         .controller('MainCtrl', function ($scope, $interval, $window) {
 

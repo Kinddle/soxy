@@ -75,6 +75,10 @@
   +media($mobile)
     +span-columns(12 of 12)
 
+.l-single-break-half
+  +media($tablet)
+    +span-columns(6 of 12)
+
 .l-single-break-half-break-single
   +clearfix
   +media($tablet)
@@ -104,6 +108,32 @@
     +span-columns(12)
   +media($mobile)
     +span-columns(12)
+
+//-------------------------
+.l-two
+  +span-columns(2)
+  +media($tablet)
+    width: 100%
+
+.l-three
+  +span-columns(3)
+  +media($tablet)
+    width: 100%
+
+.l-four
+  +span-columns(4)
+  +media($tablet)
+    width: 100%
+
+.l-five
+  +span-columns(5)
+  +media($tablet)
+    width: 100%
+
+.l-seven
+  +span-columns(7)
+  +media($tablet)
+    width: 100%
 
 .l-eight
   +clearfix
@@ -137,6 +167,12 @@
     &.gutter
       padding-right: 20px
 
+// Shift
+.l-one-shift
+  +shift(1)
+
+.l-one-half-shift
+  +shift(0.5)
 
 // Vertical
 .l-content--small
