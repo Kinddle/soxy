@@ -1614,6 +1614,7 @@ h5.text-smallest {
       display: block;
       position: relative;
       right: 0;
+      top: 0;
       float: right;
       margin-top: 10px; } }
 
@@ -2928,7 +2929,8 @@ h5.text-smallest {
   position: relative;
   z-index: 10;
   display: none;
-  border-radius: 3px; }
+  border-radius: 3px;
+  float: left; }
   .m-counter::after {
     clear: both;
     content: "";
