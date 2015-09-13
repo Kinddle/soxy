@@ -1458,7 +1458,7 @@ h5.text-smallest {
   border-left: 1px solid #e33333; }
   @media screen and (max-width: 48em) {
     .m-counter-down--separator {
-      border-right-width: 0; } }
+      border-width: 0; } }
 
 .m-counter-down--dial-wrapper {
   float: left; }
