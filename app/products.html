@@ -22,6 +22,38 @@
     <li class="m-navigation--item"><a href="#">Vip FAQ</a></li>
     <li class="m-navigation--item"><a href="#">MyAccount</a></li>
   </ul>
+  <div class="m-cart--dropdown-box visible-mobile">
+    <span class="m-cart--dropdown-close-btn icon-close" ng-click="menuCart = !menuCart"></span>
+    <div class="m-cart--dropdown-item l-box">
+      <p class="m-cart--dropdown-item-amount">
+        Summer x 2
+      </p>
+      <img src="images/content/product-set-white-1.jpg" />
+      <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+        <input type='button' value='-' class='qtyminus icon-minus' field='quantity' />
+        <input type='text' name='quantity' value='0' class='qty' />
+        <input type='button' value='+' class='qtyplus icon-plus' field='quantity' />
+      </form>
+      <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+    </div>
+    <div class="hr"></div>
+    <div class="m-cart--dropdown-item l-box">
+      <p class="m-cart--dropdown-item-amount">
+        Winter x 3
+      </p>
+      <img src="images/content/product-set-white-1.jpg" />
+      <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+        <input type='button' value='-' class='qtyminus icon-minus' field='quantity' />
+        <input type='text' name='quantity' value='0' class='qty' />
+        <input type='button' value='+' class='qtyplus icon-plus' field='quantity' />
+      </form>
+      <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+    </div>
+    <div class="l-box">
+      <a href="#" class="m-button red small full-width">Checkout</a>
+      <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+    </div>
+  </div>
 <section class="slide">
 <section class="m-header">
   <div class="m-counter-down ng-cloak">
@@ -65,9 +97,9 @@
       <div class="m-cart--dropdown" ng-mouseenter="menuActive = true" ng-mouseleave="menuActive = false">
         <span>Cart</span>
         <span class="m-badges blue radius">0</span>
-        <div class="m-cart--dropdown-box" ng-show="menuActive" ng-class="menuActive ? 'is-active' : ''">
+        <div class="m-cart--dropdown-box hidden-mobile" ng-show="menuActive" ng-class="menuActive ? 'is-active' : ''">
           <span class="m-cart--dropdown-close-btn icon-close" ng-click="menuActive = !menuActive"></span>
-          <div class="m-cart--dropdown-item">
+          <div class="m-cart--dropdown-item l-box--small no-padding-bottom">
             <img src="images/content/product-set-white-1.jpg" />
             <div class="m-cart--dropdown-overlay">
               <span class="m-cart--dropdown-trash-btn icon-trash"></span>
@@ -81,7 +113,8 @@
               </form>
             </div>
           </div>
-          <div class="m-cart--dropdown-item">
+          <div class="hr"></div>
+          <div class="m-cart--dropdown-item l-box--small no-padding-bottom">
             <img src="images/content/product-set-white-1.jpg" />
             <div class="m-cart--dropdown-overlay">
               <span class="m-cart--dropdown-trash-btn icon-trash"></span>
@@ -95,8 +128,10 @@
               </form>
             </div>
           </div>
-          <a href="#" class="m-button red small full-width">Checkout</a>
-          <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+          <div class="l-box">
+            <a href="#" class="m-button red small full-width">Checkout</a>
+            <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+          </div>
         </div>
       </div>
       <div class="menu-btn">

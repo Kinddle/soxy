@@ -28,12 +28,22 @@
   box-shadow: 0 0 7px rgba(0,0,0,0.3)
   background-color: white
   position: absolute
-  padding: 30px 40px 0px 40px
+  // padding: 30px 40px 0px 40px
   margin-top: 5px
   right: 5px
   width: 300px
   z-index: 110
   top: 75px
+  +media($mobile)
+    display: block
+    top: 0
+    right: 0
+    bottom: 0
+    width: 80%
+    height: 100%
+    margin-top: 0
+    &:before
+      display: none
   &.is-active
     display: block
   &:before
@@ -56,15 +66,36 @@
   right: 15px
   top: 15px
   cursor: pointer
+  z-index: 10
 
 .m-cart--dropdown-item
   position: relative
+  // Mobile cart
+  +media($mobile)
+    .m-cart--dropdown-trach-btn
+      position: relative
+    .m-cart--dropdown-item-amount
+      position: relative
+      margin-left: 0
+      left: 0
+      top: 0
+    .m-counter
+      display: inline-block
+      margin-top: 10px
+    .m-cart--dropdown-trash-btn
+      display: block
+      position: relative
+      right: 0
+      float: right
+      margin-top: 10px
 
 .m-cart--dropdown-trash-btn
   position: absolute
-  right: -20px
-  top: 0px
+  right: 25px
+  top: 25px
   display: none
+  &:hover
+    background-color: $snow !important
 
 .m-cart--dropdown-overlay
   top: 0
@@ -94,7 +125,7 @@
   position: absolute
   display: inline-block
   left: 50%
-  top: 35%
+  top: 40%
   width: 100px
   margin-left: -50px
   padding: 2px 0
