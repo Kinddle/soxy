@@ -42,6 +42,23 @@
     display: inline-block
     width: 100%
 
+.m-form--group
+  margin-bottom: 20px
+  label
+    @extend %adriane-serif
+    font-size: em(14)
+    text-align: right
+    margin-right: 15px
+    display: inline-block
+    vertical-align: middle
+    width: 80px
+  .m-form--input-wrapper
+    display: inline-block
+    vertical-align: middle
+    width: 70%
+    input
+      display: inline
+
 input[type="text"].text-serif
   @extend %adriane-serif
   font-size: em(15) !important

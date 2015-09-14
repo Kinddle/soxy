@@ -91,7 +91,7 @@
       <div class="l-one-third tabs">
         <h2 class="m-cart--details-title with-arrow hidden-tablet-mobile text-center">Choose the way to shop</h2>
         <div class="m-cart--options-box" ng-init="tab=true" ng-show="tab === 2 || tab === true" ng-click="isActive = !isActive" ng-class="!isActive ? 'is-active' : ''">
-          <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right" ng-dialog="faqDialogId" ng-dialog-class="ngdialog-theme-default m-dialog wide">FAQ</span></h3>
+          <h3 class="m-cart--options-box-title is-active"><i class="icon-tick"></i>Soxy club VIP<span class="m-badges blue small right" ng-dialog="signInId" ng-dialog-class="ngdialog-theme-default m-dialog middle">FAQ</span></h3>
           <div class="l-box--middle">
             <h4 class="m-cart--benefits-title">VIP Benefits</h4>
             <ul class="m-cart--benefits-list">
@@ -653,6 +653,47 @@
     <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond()">Open next</button>
   </div>
   -->
+</script>
+<script type="text/ng-template" id="signInId">
+    <div class="ng-dialog-message text-center">
+    <div class="m-cart--options-toggler-wrapper">
+        <a href="#" class="m-cart--options-toggler" ng-init="tabSignIn=1" ng-class="tabSignIn===1 ? 'is-active' : ''" ng-click="tabSignIn = 1">Im a new customer</a>
+        <a href="#" class="m-cart--options-toggler" ng-class="tabSignIn===2 ? 'is-active' : ''" ng-click="tabSignIn = 2">Existing members</a>
+    </div>
+    <div ng-show="tabSignIn === 1">
+      <div class="l-content--small">
+        <h3 class="text-sans" style="font-size: 26px">Enter your email adress and password</h3>
+      </div>
+      <form class="">
+        <div class="m-form--group">
+          <label>Email</label>
+          <div class="m-form--input-wrapper">
+            <input type="text" />
+          </div>
+        </div>
+        <button type="button" class="m-button small red full-width icon-lock">Sign Up</button>
+      </form>
+    </div>
+    <div ng-show="tabSignIn === 2">
+      <div class="l-content--small">
+        <h3 class="text-sans" style="font-size: 26px">Enter your email adress</h3>
+      </div>
+      <div class="m-form--group">
+        <label>Email</label>
+        <div class="m-form--input-wrapper">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="m-form--group">
+        <label>Password</label>
+        <div class="m-form--input-wrapper">
+          <input type="password" />
+        </div>
+        <div class="m-actions top full-width">
+          <button type="button" class="m-button small red full-width icon-lock">Sign In</button>
+        </div>
+      </div>
+    </div>
 </script>
 
 

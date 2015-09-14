@@ -665,7 +665,7 @@ html {
   font-style: normal;
   font-weight: normal;
   src: url("/fonts/Adriane/adriane_bold_italic.eot?#iefix") format("embedded-opentype"), url("/fonts/Adriane/adriane_bold_italic.woff2") format("woff2"), url("/fonts/Adriane/adriane_bold_italic.woff") format("woff"), url("/fonts/Adriane/adriane_bold_italic.ttf") format("truetype"); }
-.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--step-help-info, .m-cart--learn-more-item p, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before, .m-form label, .m-form input.text-serif, input[type="text"].text-serif, .m-dialog .l-one-third p {
+.subheading-normal, .text-serif, .m-footer .m-footer--text-block .m-footer--description, .m-footer .m-footer--payment-methods p, .m-product--item .m-product--customer-status, .m-purchase--feature, .m-purchase--details, .m-purchase--price-status, .m-cart--step-help-info, .m-cart--learn-more-item p, .m-cart--benefits-item, .m-cart--order-details, .m-cart--order-details-code, .m-counter.with-label:before, .m-form label, .m-form input.text-serif, .m-form--group label, input[type="text"].text-serif, .m-dialog .l-one-third p {
   font-family: "Adriane-regular", serif; }
 
 .subheading, .text-italic-serif, .m-header--slogan h3, .m-footer .m-footer--contact-block .email, .slider, .m-cart--options-box-or {
@@ -680,7 +680,7 @@ html {
 .text-medium-sans, .m-navigation, .m-cart--dropdown-item-amount, .m-cart--dropdown-promote, .m-counter input {
   font-family: "Brandon-medium", sans-serif; }
 
-.text-bold-sans, .link, .m-counter-down--time, .m-cart--dropdown-promote strong, .m-badges.small, .m-purchase--label, .m-purchase--price-regular, .m-cart--learn-more-item h6, .m-cart--benefits-title, .m-cart--options-box-title, .m-cart--order-price, .m-cart--order-price-strong, .m-cart--frequency h2, .m-cart--options-toggler, .m-dialog h6 {
+h3.text-smaller, h5.text-smaller, h5.text-smallest, .text-bold-sans, .link, .m-counter-down--time, .m-cart--dropdown-promote strong, .m-badges.small, .m-purchase--label, .m-purchase--price-regular, .m-cart--learn-more-item h6, .m-cart--benefits-title, .m-cart--options-box-title, .m-cart--order-price, .m-cart--order-price-strong, .m-cart--frequency h2, .m-cart--options-toggler, .m-dialog h6 {
   font-family: "Brandon-bold", sans-serif; }
 
 h1, h2, h3, h4, h5, .text-black-sans, .m-header--slogan h1, .m-footer .m-footer--text-block .m-footer--title, .m-button, .m-product--item .m-product--price, .m-purchase--price, .m-cart--step i {
@@ -690,13 +690,16 @@ h1, h2, h3, h4, h5 {
   font-weight: normal; }
 
 h3.text-smaller {
-  font-size: 1.5625em; }
+  font-size: 1.5625em;
+  font-weight: normal; }
 
 h5.text-smaller {
-  font-size: 1.0625em; }
+  font-size: 1.0625em;
+  font-weight: normal; }
 
 h5.text-smallest {
-  font-size: 0.9375em; }
+  font-size: 0.9375em;
+  font-weight: normal; }
 
 .text-tiny {
   font-size: 0.75em;
@@ -1952,6 +1955,8 @@ h5.text-smallest {
   .m-actions.full-width {
     width: 100%;
     text-align: center; }
+  .m-actions.top {
+    margin-top: 30px; }
 
 .m-button {
   -webkit-transition: all 0.25s linear;
@@ -2161,6 +2166,11 @@ h5.text-smallest {
   background-repeat: no-repeat;
   width: 10px;
   height: 10px; }
+
+.icon-lock {
+  background-image: url("../../images/icons/icon-lock.png");
+  background-position: 20px center;
+  background-repeat: no-repeat; }
 
 .m-product--item {
   padding: 60px 40px 50px 40px;
@@ -2871,9 +2881,9 @@ h5.text-smallest {
 
 .m-cart--options-toggler {
   border: 1px solid #0f92eb;
-  font-size: 0.75em;
+  font-size: 12px;
   float: left;
-  padding: 10px;
+  padding: 7px 15px;
   text-transform: uppercase; }
   .m-cart--options-toggler:first-child {
     border-bottom-left-radius: 3px;
@@ -3018,6 +3028,22 @@ h5.text-smallest {
   display: inline-block;
   width: 100%; }
 
+.m-form--group {
+  margin-bottom: 20px; }
+  .m-form--group label {
+    font-size: 0.875em;
+    text-align: right;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px; }
+  .m-form--group .m-form--input-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%; }
+    .m-form--group .m-form--input-wrapper input {
+      display: inline; }
+
 input[type="text"].text-serif {
   font-size: 0.9375em !important;
   text-transform: uppercase;
@@ -3030,6 +3056,10 @@ input[type="text"].text-serif {
 .m-dialog.wide .ngdialog-content {
   width: 70% !important;
   padding: 1em 3em !important;
+  background-color: white !important; }
+.m-dialog.middle .ngdialog-content {
+  width: 60% !important;
+  padding: 60px 120px !important;
   background-color: white !important; }
 .m-dialog .l-one-third {
   padding: 0 1em; }
