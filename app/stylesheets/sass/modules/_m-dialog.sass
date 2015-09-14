@@ -11,9 +11,12 @@
       background-color: white !important
   &.middle
     .ngdialog-content
-      width: 60% !important
+      width: 650px !important
       padding: 60px 120px !important
       background-color: white !important
+      +media($mobile)
+        width: 95% !important
+        padding: 50px 10px !important
   .l-one-third
     padding: 0 1em
     p

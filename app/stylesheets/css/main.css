@@ -2885,6 +2885,9 @@ h5.text-smallest {
   float: left;
   padding: 7px 15px;
   text-transform: uppercase; }
+  @media screen and (max-width: 30em) {
+    .m-cart--options-toggler {
+      font-size: 9px; } }
   .m-cart--options-toggler:first-child {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px; }
@@ -3037,10 +3040,17 @@ h5.text-smallest {
     display: inline-block;
     vertical-align: middle;
     width: 80px; }
+    @media screen and (max-width: 30em) {
+      .m-form--group label {
+        width: 100%;
+        text-align: left; } }
   .m-form--group .m-form--input-wrapper {
     display: inline-block;
     vertical-align: middle;
     width: 70%; }
+    @media screen and (max-width: 30em) {
+      .m-form--group .m-form--input-wrapper {
+        width: 100%; } }
     .m-form--group .m-form--input-wrapper input {
       display: inline; }
 
@@ -3058,9 +3068,13 @@ input[type="text"].text-serif {
   padding: 1em 3em !important;
   background-color: white !important; }
 .m-dialog.middle .ngdialog-content {
-  width: 60% !important;
+  width: 650px !important;
   padding: 60px 120px !important;
   background-color: white !important; }
+  @media screen and (max-width: 30em) {
+    .m-dialog.middle .ngdialog-content {
+      width: 95% !important;
+      padding: 50px 10px !important; } }
 .m-dialog .l-one-third {
   padding: 0 1em; }
   .m-dialog .l-one-third p {

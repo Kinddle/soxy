@@ -52,10 +52,15 @@
     display: inline-block
     vertical-align: middle
     width: 80px
+    +media($mobile)
+      width: 100%
+      text-align: left
   .m-form--input-wrapper
     display: inline-block
     vertical-align: middle
     width: 70%
+    +media($mobile)
+      width: 100%
     input
       display: inline
 
