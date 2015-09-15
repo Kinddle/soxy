@@ -41,40 +41,47 @@ $(document).ready(function() {
     //     resizeContent();
     // });
     //
-    $('.m-cart--options-box').bind('resize', function(){
-        console.log( 'Height changed to' + $(this).height() );
-    });
+    // $('.m-cart--options-box').bind('resize', function(){
+    //     console.log( 'Height changed to' + $(this).height() );
+    // });
 });
 
-if($('body').hasClass('cart')) {
-    $stick = $('.m-cart--order-box');
-    $stickbutton = $('.m-cart--order-box .m-button');
-    $foot = $('footer');
-    $footheight = $('footer').height();
-    margin = 20;
-    offtop = $stick.offset().top - (margin*2);
-    offbtm = $foot.offset().top - ( $footheight + $stick.height() + 600 );
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       $('.m-cart--options-box a.m-button').text('Buy Now');
+       console.log("bottom!");
+   }
+});
 
-    $(window).scroll(function () {
-        scrtop = $(window).scrollTop();
-        if (scrtop > offtop && $stick.hasClass('is-natural')) {
-            $stick.removeClass('is-natural').addClass('is-fixed').css('top', margin);
-            $('.m-cart--dropdown-box').removeClass('is-active');
-        }
-        if (offtop > scrtop && $stick.hasClass('is-fixed')) {
-            $stick.removeClass('is-fixed').addClass('is-natural').css('top', '40px');
-        }
-        if (scrtop > (offbtm) && $stick.hasClass('is-fixed')) {
-            $stick.removeClass('is-fixed').addClass('is-bottom').css('top', offbtm+margin*3);
-            console.log('at bottom');
-            $stickbutton.text('Buy Now');
-        }
-        if ((offbtm+170) > scrtop && $stick.hasClass('is-bottom')) {
-            $stick.removeClass('is-bottom').addClass('is-fixed').css('top', margin);
-            $stickbutton.text('Continue Checkout');
-        }
-    });
-}
+// if($('body').hasClass('cart')) {
+//     $stick = $('.m-cart--order-box');
+//     $stickbutton = $('.m-cart--order-box .m-button');
+//     $foot = $('footer');
+//     $footheight = $('footer').height();
+//     margin = 20;
+//     offtop = $stick.offset().top - (margin*2);
+//     offbtm = $foot.offset().top - ( $footheight + $stick.height() + 600 );
+//
+//     $(window).scroll(function () {
+//         scrtop = $(window).scrollTop();
+//         if (scrtop > offtop && $stick.hasClass('is-natural')) {
+//             $stick.removeClass('is-natural').addClass('is-fixed').css('top', margin);
+//             $('.m-cart--dropdown-box').removeClass('is-active');
+//         }
+//         if (offtop > scrtop && $stick.hasClass('is-fixed')) {
+//             $stick.removeClass('is-fixed').addClass('is-natural').css('top', '40px');
+//         }
+//         if (scrtop > (offbtm) && $stick.hasClass('is-fixed')) {
+//             $stick.removeClass('is-fixed').addClass('is-bottom').css('top', offbtm+margin*3);
+//             console.log('at bottom');
+//             $stickbutton.text('Buy Now');
+//         }
+//         if ((offbtm+170) > scrtop && $stick.hasClass('is-bottom')) {
+//             $stick.removeClass('is-bottom').addClass('is-fixed').css('top', margin);
+//             $stickbutton.text('Continue Checkout');
+//         }
+//     });
+// }
 
 TweenLite.defaultEase = Power3.easeInOut;
 

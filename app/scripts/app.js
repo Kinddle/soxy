@@ -5,9 +5,11 @@
           'ngAnimate',
           'ngTouch',
           'ngDialog',
-          'timer'
+          'timer',
+          'scrollToFixed',
         ])
         .controller('MainCtrl', function ($scope, $interval, $window) {
+
 
             $interval( function(){ $scope.callAtInterval(); }, 3000);
 
@@ -16,6 +18,10 @@
                 {quote: 'The best sock ever!', description: 'Quote 01'},
                 {quote: 'Like the color of sock a lot!', description: 'Quote 02'},
             ];
+
+            $scope.scrollToFixedOptions = {
+              bottom: 0
+            };
 
             $scope.direction = 'left';
             $scope.currentIndex = 0;
