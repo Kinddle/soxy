@@ -46,11 +46,21 @@ $(document).ready(function() {
     // });
 });
 
+// $(window).scroll(function() {
+//    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+//        $('.m-cart--options-box a.m-button').text('Buy Now');
+//        console.log("bottom!");
+//    }
+// });
+
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-       $('.m-cart--options-box a.m-button').text('Buy Now');
-       console.log("bottom!");
+   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+       // $(window).unbind('scroll');
+       $('#text-trigger').text('Buy Now');
    }
+   // else if($(window).scrollTop() + $(window).height() < $(document).height()) {
+   //     $('#text-trigger').text('Continue Checkout');
+   // }
 });
 
 // if($('body').hasClass('cart')) {
