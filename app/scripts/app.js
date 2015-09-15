@@ -20,7 +20,23 @@
             ];
 
             $scope.scrollToFixedOptions = {
-              bottom: 0
+                marginTop : 10,
+                limit : 0,
+                bottom : -1,
+                zIndex : 1000,
+                baseClassName: 'scroll-to-fixed-fixed',
+                preFixed:
+                    function() {
+                        $(window).scroll(function(){ 
+                            if($(window).scrollTop() == ($(document).height() - $(window).height())) {
+                                $('#text-trigger').text('Buy Now');
+                            }
+                        });
+                    },
+                postFixed:
+                    function() {
+                        $(this).find('#text-trigger').text('Continue Checkout');
+                    }
             };
 
             $scope.direction = 'left';

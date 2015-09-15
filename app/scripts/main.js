@@ -54,10 +54,10 @@ $(document).ready(function() {
 // });
 
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-       // $(window).unbind('scroll');
-       $('#text-trigger').text('Buy Now');
-   }
+   // if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+   //     // $(window).unbind('scroll');
+   //     $('#text-trigger').text('Buy Now');
+   // }
    // else if($(window).scrollTop() + $(window).height() < $(document).height()) {
    //     $('#text-trigger').text('Continue Checkout');
    // }
