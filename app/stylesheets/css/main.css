@@ -903,6 +903,9 @@ h5.text-smallest {
     .l-single {
       padding: 0 2%; } }
 
+.l-centered {
+  margin: 0 auto; }
+
 .l-row {
   display: block; }
   .l-row::after {
@@ -1689,7 +1692,8 @@ h5.text-smallest {
     padding: 8px 11px; }
 
 .m-header {
-  width: 100%; }
+  width: 100%;
+  background-color: #f53d3d; }
   @media screen and (max-width: 30em) {
     .m-header {
       text-align: center; } }
