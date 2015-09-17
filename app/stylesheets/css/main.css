@@ -886,8 +886,7 @@ h5.text-smallest {
   max-width: 71.25em;
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  overflow: hidden; }
+  display: block; }
   .l-single::after {
     clear: both;
     content: "";
@@ -2401,7 +2400,6 @@ h5.text-smallest {
   font-size: 2.5em;
   width: 100%;
   min-height: 250px;
-  overflow: hidden;
   position: relative;
   border: 20px solid #FFF;
   margin-top: 20px;
