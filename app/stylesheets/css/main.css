@@ -886,7 +886,8 @@ h5.text-smallest {
   max-width: 71.25em;
   margin-left: auto;
   margin-right: auto;
-  display: block; }
+  display: block;
+  overflow: hidden; }
   .l-single::after {
     clear: both;
     content: "";
