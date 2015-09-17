@@ -29,6 +29,6 @@
     "angular-scrolltofixed": "~0.1.0"
   },
   "resolutions": {
-    "angular": "1.4.5"
+    "angular": "1.4.6"
   }
 }
