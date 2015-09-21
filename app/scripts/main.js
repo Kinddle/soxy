@@ -46,7 +46,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 var displayMenu = false;
 var displayCart = false;
 
-// if(isMobile) {
+if(isMobile) {
 
     var tl = new TimelineMax({});
 
@@ -119,5 +119,5 @@ var displayCart = false;
         $('.slide').removeClass('is-active');
         displayCart = true;
     });
-// }
+}
 
