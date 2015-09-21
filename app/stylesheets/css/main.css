@@ -861,6 +861,11 @@ h5.text-smallest {
 .left {
   float: left; }
 
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table; }
+
 .hr {
   overflow: hidden;
   width: 100%;
@@ -1453,7 +1458,8 @@ h5.text-smallest {
   width: 100%; }
   @media screen and (max-width: 30em) {
     .m-counter-down {
-      font-size: 1.375em; } }
+      font-size: 1.375em;
+      line-height: 35px; } }
 
 .m-counter-down--call {
   font-size: 16px; }
@@ -1468,6 +1474,9 @@ h5.text-smallest {
   @media screen and (max-width: 48em) {
     .m-counter-down--separator {
       border-width: 0; } }
+  @media screen and (max-width: 30em) {
+    .m-counter-down--separator {
+      line-height: 50px; } }
 
 .m-counter-down--dial-wrapper {
   float: left; }
@@ -2176,6 +2185,11 @@ h5.text-smallest {
   background-position: 20px center;
   background-repeat: no-repeat; }
 
+.m-products::after {
+  clear: both;
+  content: "";
+  display: table; }
+
 .m-product--item {
   padding: 60px 40px 50px 40px;
   text-align: center;
@@ -2403,7 +2417,8 @@ h5.text-smallest {
   position: relative;
   border: 20px solid #FFF;
   margin-top: 20px;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
 
 .slide {
   position: absolute;
