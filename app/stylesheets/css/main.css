@@ -1975,7 +1975,7 @@ h5.text-smallest {
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
   transition: all 0.25s linear;
-  font-size: 1.125em;
+  font-size: 1.125em !important;
   display: inline-block;
   border-radius: 3px;
   padding: 16px 60px;
@@ -1991,6 +1991,15 @@ h5.text-smallest {
     background-color: #0f92eb; }
     .m-button.blue:hover {
       background-color: #0c74bb; }
+  .m-button.white {
+    background-color: white;
+    font-size: 15px !important;
+    color: #0f92eb;
+    text-align: center;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 0 20px; }
   .m-button.small {
     font-size: 0.875em; }
   .m-button.full-width {
