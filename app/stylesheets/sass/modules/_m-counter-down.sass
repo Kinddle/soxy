@@ -7,12 +7,18 @@
   min-height: 70px
   color: white
   letter-spacing: -0.4px
-  overflow: hidden
   line-height: 70px
-  width: 100%
+  margin: 0 auto
+  display: inline-block
   +media($mobile)
     font-size: em(22)
     line-height: 35px
+
+.m-counter-down--column
+  padding: 0 10px
+  height: 70px
+  +media($mobile)
+    height: 50px
 
 .m-counter-down--call
   font-size: 16px
@@ -20,10 +26,12 @@
 .m-counter-down--time-left
   font-size: 14px
   float: left
+  display: inline-block
 
 .m-counter-down--separator
   border-right: 1px solid #e33333
   border-left: 1px solid #e33333
+  padding: 0 10px
   +media($tablet)
     border-width: 0
   +media($mobile)
@@ -31,6 +39,7 @@
 
 .m-counter-down--dial-wrapper
   float: left
+  display: inline-block
 
 .m-counter-down--dial-item
   float: left
