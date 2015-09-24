@@ -1420,6 +1420,10 @@ h5.text-smallest {
       margin-top: 50px;
       border-top: 1px solid black;
       border-bottom: 1px solid #666; } }
+  .m-navigation--list.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0; }
 
 .m-navigation--item {
   float: left;
@@ -2960,13 +2964,14 @@ h5.text-smallest {
         margin-top: 20px; }
 
   .device {
-    background-image: url("../../images/bg-pattern.gif"); }
+    background-image: url("../../images/bg-pattern.gif");
+    background-attachment: fixed;
+    background-position: center; }
 
   .page {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden;
     z-index: 1; }
 
   .slide {

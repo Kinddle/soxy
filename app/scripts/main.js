@@ -56,46 +56,14 @@ if(isMobile) {
             tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 0, display:'none'});
             tl.to(".slide", 1, {'xPercent':80, force3D:true});
             $('.slide').addClass('is-active');
+            $('.page').css('overflow', 'hidden');
             displayMenu = true;
         } else if ( displayMenu === true) {
             tl.to(".slide", 1, {'xPercent':0, force3D:true});
             tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
             $('.slide').removeClass('is-active');
+            $('.page').css('overflow', 'hidden');
             displayMenu = false;
-        }
-    });
-
-    var D = document.createElement('div');
-    Draggable.create(D,{
-        type:'x',
-        lockAxis : true ,
-        trigger:$("#page"),
-        onDragEnd:function(){
-            if ( displayMenu === false && displayCart === false && this.getDirection("start") == "left" ) {
-                tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
-                tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 1, display:'block'});
-                tl.to(".slide", 1, {'xPercent':-80, force3D:true});
-                $('.slide').addClass('is-cart-active');
-                displayCart = true;
-                console.log('cart ' + displayCart);
-            } else if ( displayCart === false && displayMenu === false && this.getDirection("start") == "right" ) {
-                tl.to(".m-navigation--list", 0, {autoAlpha: 1, display:'block'});
-                tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 0, display:'none'});
-                tl.to(".slide", 1, {'xPercent':80, force3D:true});
-                $('.slide').addClass('is-active');
-                displayMenu = true;
-                console.log('menu shown');
-            } else if ( displayMenu === false && displayCart === true && this.getDirection("start") == 'right' && $('.slide').hasClass('is-cart-active')) {
-                tl.to(".slide", 1, {'xPercent':0, force3D:true});
-                $('.slide').removeClass('is-cart-active');
-                displayCart = false;
-                console.log('cart ' + displayCart);
-            } else if ( displayCart === false && displayMenu === true && this.getDirection("start") == "left" && $('.slide').hasClass('is-active')) {
-                tl.to(".slide", 1, {'xPercent':0, force3D:true});
-                tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
-                $('.slide').removeClass('is-active');
-                displayMenu = false;
-            }
         }
     });
 
@@ -105,14 +73,56 @@ if(isMobile) {
             tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 1, display:'block'});
             tl.to(".slide", 1, {'xPercent':-80, force3D:true});
             $('.slide').addClass('is-active');
+            $('.page').css('overflow', 'hidden');
             displayCart = true;
         } else if ( displayCart === true) {
             tl.to(".slide", 1, {'xPercent':0, force3D:true});
             $('.slide').removeClass('is-active');
+            $('.page').css('overflow', 'inherit');
             displayCart = false;
         }
     });
 
+
+
+    var D = document.createElement('div');
+    Draggable.create(D,{
+        type:'x',
+        lockAxis: true ,
+        minimumMovement: 150,
+        trigger:$("#page"),
+        onDragEnd:function(){
+            if ( displayMenu === false && displayCart === false && this.getDirection("start") == "left" ) {
+                tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
+                tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 1, display:'block'});
+                tl.to(".slide", 1, {'xPercent':-80, force3D:true});
+                $('.slide').addClass('is-active');
+                $('.page').css('overflow', 'hidden');
+                displayCart = true;
+                console.log('cart ' + displayCart);
+            } else if ( displayCart === false && displayMenu === false && this.getDirection("start") == "right" ) {
+                tl.to(".m-navigation--list", 0, {autoAlpha: 1, display:'block'});
+                tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 0, display:'none'});
+                tl.to(".slide", 1, {'xPercent':80, force3D:true});
+                $('.slide').addClass('is-active');
+                $('.page').css('overflow', 'hidden');
+                displayMenu = true;
+                console.log('menu shown');
+            } else if ( displayMenu === false && displayCart === true && this.getDirection("start") == 'right' && $('.slide').hasClass('is-active')) {
+                tl.to(".slide", 1, {'xPercent':0, force3D:true});
+                $('.slide').removeClass('is-active');
+                $('.page').css('overflow', 'inherit');
+                displayCart = false;
+                console.log('cart ' + displayCart);
+            } else if ( displayCart === false && displayMenu === true && this.getDirection("start") == "left" && $('.slide').hasClass('is-active')) {
+                tl.to(".slide", 1, {'xPercent':0, force3D:true});
+                tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
+                $('.slide').removeClass('is-active');
+                $('.page').css('overflow', 'inherit');
+                displayMenu = false;
+            }
+        }
+    });
 
     $('.m-cart--dropdown-close-btn').on('click', function () {
         tl.to(".slide", 1, {'xPercent':0, force3D:true});
