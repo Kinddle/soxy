@@ -1707,14 +1707,16 @@ h5.text-smallest {
   .m-cart--dropdown-promote strong {
     color: #303032; }
 
-@media screen and (max-width: 30em) {
-  .m-cart-dropdown--checkout {
-    position: fixed;
-    z-index: 1000;
-    background-color: white;
-    bottom: 0;
-    height: 180px;
-    border-top: 1px solid #f2f2f2; } }
+.m-cart-dropdown-wrapper {
+  position: relative; }
+
+.m-cart-dropdown--checkout {
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  bottom: 0;
+  height: 180px;
+  border-top: 1px solid #f2f2f2; }
 
 .m-badges {
   border-radius: 5px;
@@ -2456,7 +2458,8 @@ h5.text-smallest {
   position: relative;
   border: 20px solid #FFF;
   margin-top: 20px;
-  text-align: center; }
+  text-align: center;
+  z-index: 0; }
 
 .slide {
   position: absolute;
