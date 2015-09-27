@@ -134,10 +134,10 @@ if(isMobile) {
         }
     });
 
-    // $('.m-cart--dropdown-close-btn').on('click', function () {
-    //     tl.to(".slide", 1, {'xPercent':0, force3D:true});
-    //     $('.slide').removeClass('is-active');
-    //     displayCart = true;
-    // });
+    $('.m-cart--dropdown-close-btn').on('click', function () {
+        tl.to(".slide", 1, {'xPercent':0, force3D:true});
+        $('.slide').removeClass('is-active');
+        displayCart = true;
+    });
 }
 
