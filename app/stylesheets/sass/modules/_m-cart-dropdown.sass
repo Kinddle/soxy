@@ -28,6 +28,7 @@
   box-shadow: 0 0 7px rgba(0,0,0,0.3)
   background-color: white
   position: absolute
+  height: 400px
   // padding: 30px 40px 0px 40px
   margin-top: 5px
   right: 5px
@@ -39,7 +40,7 @@
     top: 0
     right: 0
     bottom: 0
-    width: 80%
+    width: 85%
     height: 100%
     margin-top: 0
     &:before
@@ -145,3 +146,11 @@
     @extend %brandon-bold-sans
     color: #303032
 
+.m-cart-dropdown--checkout
+  +media($mobile)
+    position: fixed
+    z-index: 1000
+    background-color: white
+    bottom: 0
+    height: 180px
+    border-top: 1px solid #f2f2f2

@@ -1465,14 +1465,18 @@ h5.text-smallest {
   @media screen and (max-width: 30em) {
     .m-counter-down {
       font-size: 1.375em;
-      line-height: 35px; } }
+      line-height: 35px;
+      float: left;
+      height: 85px; } }
 
 .m-counter-down--column {
   padding: 0 10px;
   height: 70px; }
   @media screen and (max-width: 30em) {
     .m-counter-down--column {
-      height: 50px; } }
+      height: 35px;
+      padding: 0;
+      float: right; } }
 
 .m-counter-down--call {
   font-size: 16px; }
@@ -1491,7 +1495,8 @@ h5.text-smallest {
       border-width: 0; } }
   @media screen and (max-width: 30em) {
     .m-counter-down--separator {
-      line-height: 50px; } }
+      line-height: 50px;
+      padding: 0 5px; } }
 
 .m-counter-down--dial-wrapper {
   float: left;
@@ -1584,6 +1589,7 @@ h5.text-smallest {
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
   background-color: white;
   position: absolute;
+  height: 400px;
   margin-top: 5px;
   right: 5px;
   width: 300px;
@@ -1595,7 +1601,7 @@ h5.text-smallest {
       top: 0;
       right: 0;
       bottom: 0;
-      width: 80%;
+      width: 85%;
       height: 100%;
       margin-top: 0; }
       .m-cart--dropdown-box:before {
@@ -1700,6 +1706,15 @@ h5.text-smallest {
   padding: 0 20px; }
   .m-cart--dropdown-promote strong {
     color: #303032; }
+
+@media screen and (max-width: 30em) {
+  .m-cart-dropdown--checkout {
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    bottom: 0;
+    height: 180px;
+    border-top: 1px solid #f2f2f2; } }
 
 .m-badges {
   border-radius: 5px;
@@ -2941,6 +2956,69 @@ h5.text-smallest {
     background-color: #0f92eb;
     color: white; }
 
+#wrapper {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 100%;
+  height: 400px;
+  width: 300px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin-top: 5px; }
+  @media screen and (max-width: 30em) {
+    #wrapper {
+      height: 100%;
+      width: 85%;
+      margin-top: 0; }
+      #wrapper:before, #wrapper:after {
+        display: none; } }
+  #wrapper:before {
+    height: 0;
+    width: 0;
+    border-bottom: 11px solid white;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: 25px; }
+  #wrapper:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 10px; }
+
+#scroller, .scroller {
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  float: left;
+  width: 100%;
+  padding: 0; }
+
+#scroller ul, .scroller ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left; }
+
+#scroller li, .scroller li {
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #fff;
+  background-color: #fafafa;
+  font-size: 14px; }
+
+#scroller li > a, .scroller li > a {
+  display: block; }
+
 @media screen and (max-width: 30em) {
   .menu-btn {
     position: absolute;
@@ -3102,6 +3180,8 @@ input[type="text"].text-serif {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   padding: 7px 10px; }
+  input[type="text"].text-serif.vertical-alligned {
+    margin: 5px 0 !important; }
 
 .ngdialog-overlay {
   background-color: rgba(18, 24, 35, 0.85) !important; }

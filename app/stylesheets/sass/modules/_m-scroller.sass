@@ -1,0 +1,60 @@
+#wrapper
+  position: absolute
+  z-index: 1
+  right: 0
+  width: 100%
+  // background: #555
+  // overflow: auto
+  height: 400px
+  width: 300px
+  box-shadow: 0 0 7px rgba(0,0,0,0.3)
+  background-color: white
+  margin-top: 5px
+  +media($mobile)
+    height: 100%
+    width: 85%
+    margin-top: 0
+    &:before, &:after
+      display: none
+  &:before
+    +triangle(22px, white, up)
+    content: ""
+    position: absolute
+    top: -11px
+    right: 25px
+  &:after
+    content: ""
+    position: absolute
+    top: -10px
+    width: 100%
+    left: 0
+    right: 0
+    height: 10px
+
+#scroller, .scroller
+  position: relative
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  float: left
+  width: 100%
+  padding: 0
+  // height: 200px
+
+#scroller ul, .scroller ul
+  position: relative
+  list-style: none
+  padding: 0
+  margin: 0
+  width: 100%
+  text-align: left
+
+#scroller li, .scroller li
+  padding: 0 10px
+  height: 40px
+  line-height: 40px
+  border-bottom: 1px solid #ccc
+  border-top: 1px solid #fff
+  background-color: #fafafa
+  font-size: 14px
+
+#scroller li > a, .scroller li > a
+  display: block

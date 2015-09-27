@@ -20,7 +20,7 @@
             ];
 
             $scope.scrollToFixedOptions = {
-                marginTop : 10,
+                marginTop : 5,
                 limit : 0,
                 bottom : -1,
                 zIndex : 1000,
@@ -37,6 +37,14 @@
                     function() {
                         $(this).find('#text-trigger').text('Continue Checkout');
                     }
+            };
+
+            $scope.scrollToFixedNavOptions = {
+                marginTop: 0,
+                limit: 0,
+                bottom: -1,
+                zIndex: 1000,
+                baseClassName: 'scroll-to-fixed-fixed'
             };
 
             $scope.direction = 'left';
