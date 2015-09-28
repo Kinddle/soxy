@@ -24,43 +24,45 @@
     right: 0
 
 .m-cart--dropdown-box
-  display: none
-  box-shadow: 0 0 7px rgba(0,0,0,0.3)
-  background-color: white
+  // display: none
+  // box-shadow: 0 0 7px rgba(0,0,0,0.3)
+  // background-color: white
+  // position: absolute
+  // height: 400px
+  // // padding: 30px 40px 0px 40px
+  // margin-top: 5px
+  // right: 5px
+  // width: 300px
+  // z-index: 110
+  // top: 75px
+  // +media($mobile)
+  display: block
+  top: 0
+  right: 0
+  bottom: 0
+  width: 25%
+  height: 100%
+  margin-top: 0
   position: absolute
-  height: 400px
-  // padding: 30px 40px 0px 40px
-  margin-top: 5px
-  right: 5px
-  width: 300px
-  z-index: 110
-  top: 75px
-  +media($mobile)
-    display: block
-    top: 0
-    right: 0
-    bottom: 0
-    width: 85%
-    height: 100%
-    margin-top: 0
-    &:before
-      display: none
-  &.is-active
-    display: block
-  &:before
-    +triangle(22px, white, up)
-    content: ""
-    position: absolute
-    top: -11px
-    right: 25px
-  &:after
-    content: ""
-    position: absolute
-    top: -10px
-    width: 100%
-    left: 0
-    right: 0
-    height: 10px
+  z-index: 0
+  // &:before
+  //   display: none
+  // &.is-active
+  //   display: block
+  // &:before
+  //   +triangle(22px, white, up)
+  //   content: ""
+  //   position: absolute
+  //   top: -11px
+  //   right: 25px
+  // &:after
+  //   content: ""
+  //   position: absolute
+  //   top: -10px
+  //   width: 100%
+  //   left: 0
+  //   right: 0
+  //   height: 10px
 
 .m-cart--dropdown-close-btn
   position: absolute
@@ -77,6 +79,7 @@
       position: relative
     .m-cart--dropdown-item-amount
       position: relative
+      text-align: center
       margin-left: 0
       left: 0
       top: 0

@@ -46,7 +46,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 var displayMenu = false;
 var displayCart = false;
 
-if(isMobile) {
+// if(isMobile) {
 
     var tl = new TimelineMax({});
 
@@ -54,7 +54,7 @@ if(isMobile) {
         if ( displayMenu === false) {
             tl.to(".m-navigation--list", 0, {autoAlpha: 1, display:'block'});
             tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 0, display:'none'});
-            tl.to(".slide", 1, {'xPercent':85, force3D:true});
+            tl.to(".slide", 1, {'xPercent':25, force3D:true});
             $('.slide').addClass('is-active');
             $('.page').css('overflow', 'hidden');
             displayMenu = true;
@@ -81,7 +81,7 @@ if(isMobile) {
         if ( displayCart === false) {
             tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
             tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 1, display:'block'});
-            tl.to(".slide", 1, {'xPercent':-85, force3D:true});
+            tl.to(".slide", 1, {'xPercent':-25, force3D:true});
             $('.slide').addClass('is-active');
             $('.page').css('overflow', 'hidden');
             displayCart = true;
@@ -105,7 +105,7 @@ if(isMobile) {
             if ( displayMenu === false && displayCart === false && this.getDirection("start") == "left" ) {
                 tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
                 tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 1, display:'block'});
-                tl.to(".slide", 1, {'xPercent':-85, force3D:true});
+                tl.to(".slide", 1, {'xPercent':-25, force3D:true});
                 $('.slide').addClass('is-active');
                 $('.page').css('overflow', 'hidden');
                 displayCart = true;
@@ -113,7 +113,7 @@ if(isMobile) {
             } else if ( displayCart === false && displayMenu === false && this.getDirection("start") == "right" ) {
                 tl.to(".m-navigation--list", 0, {autoAlpha: 1, display:'block'});
                 tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 0, display:'none'});
-                tl.to(".slide", 1, {'xPercent':85, force3D:true});
+                tl.to(".slide", 1, {'xPercent':25, force3D:true});
                 $('.slide').addClass('is-active');
                 $('.page').css('overflow', 'hidden');
                 displayMenu = true;
@@ -139,5 +139,5 @@ if(isMobile) {
         $('.slide').removeClass('is-active');
         displayCart = true;
     });
-}
+// }
 
