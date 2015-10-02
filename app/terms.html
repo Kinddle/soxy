@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!------ STYLESHEETS ------>
+
+    <link rel="stylesheet" href="stylesheets/css/main.css" />
+
+</head>
+<body ng-controller="MainCtrl" class="device">
+<section class="page" id="page">
+  <ul class="m-navigation--list visible-mobile fixed">
+    <li class="m-navigation--item"><a href="shop.html">Shop</a></li>
+    <li class="m-navigation--item"><a href="#">Vip Club</a></li>
+    <li class="m-navigation--item"><a href="#">Vip FAQ</a></li>
+    <li class="m-navigation--item"><a href="#">MyAccount</a></li>
+  </ul>
+  <div class="m-cart--dropdown-box">
+    <span class="m-cart--dropdown-close-btn" ng-click="menuCart = !menuCart">Close</span>
+    <div class="m-cart--dropdown-item l-box">
+      <p class="m-cart--dropdown-item-amount">
+        Summer x 2
+      </p>
+      <img src="images/content/product-set-white-1.jpg" />
+      <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+        <input type='button' value='-' class='qtyminus icon-minus' field='quantity' />
+        <input type='text' name='quantity' value='0' class='qty' />
+        <input type='button' value='+' class='qtyplus icon-plus' field='quantity' />
+      </form>
+      <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+    </div>
+    <div class="hr"></div>
+    <div class="m-cart--dropdown-item l-box">
+      <p class="m-cart--dropdown-item-amount">
+        Winter x 3
+      </p>
+      <img src="images/content/product-set-white-1.jpg" />
+      <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+        <input type='button' value='-' class='qtyminus icon-minus' field='quantity' />
+        <input type='text' name='quantity' value='0' class='qty' />
+        <input type='button' value='+' class='qtyplus icon-plus' field='quantity' />
+      </form>
+      <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+    </div>
+    <div class="l-box m-cart-dropdown--checkout">
+      <a href="#" class="m-button red small full-width">Checkout</a>
+      <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+    </div>
+  </div>
+<section class="slide">
+<section class="m-header">
+  <div class="l-single text-center">
+    <div class="m-counter-down ng-cloak">
+      <div class="text-center-tablet left m-counter-down--column">
+        <span>Don't forget your</span>
+        <span class="text-black-sans">&nbsp;10%</span>
+      </div>
+      <div class="left m-counter-down--column">
+        <div class="m-counter-down--separator text-center-tablet">
+          <span class="m-counter-down--call">USE:</span>
+          <span class="text-black-sans">&nbsp;SOXY10</span>
+        </div>
+      </div>
+      <div class="l-single-break-half left m-counter-down--column">
+        <div class="text-center-tablet">
+          <span class="m-counter-down--time-left hidden-tablet-mobile">Time left:&nbsp;</span>
+          <div class="m-counter-down--dial-wrapper">
+            <timer end-time="1451628000000">
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{hours}}</div>
+                <div class="m-counter-down--time-info">hours</div>
+              </div>
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{minutes}}</div>
+                <div class="m-counter-down--time-info">minutes</div>
+              </div>
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{seconds}}</div>
+                <div class="m-counter-down--time-info">seconds</div>
+              </div>
+            </timer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="m-navigation" scroll-to-fixed="scrollToFixedNavOptions">
+    <div class="l-single">
+      <a href="/" class="m-logo">Soxy.com</a>
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="m-navigation--list hidden-mobile">
+        <li class="m-navigation--item menu feed"><a href="#">Shop</a></li>
+        <li class="m-navigation--item menu radio"><a href="#">Vip Club</a></li>
+        <li class="m-navigation--item menu browse"><a href="#">Vip FAQ</a></li>
+        <li class="m-navigation--item hidden-tablet-mobile"><a href="#">MyAccount</a></li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+<section class="l-single text-serif">
+  <div class="l-content l-three-shift text-small">
+    <h5 class="text-serif"><strong>Terms of Use</strong></h5>
+    </br>
+    <p>By visiting <a href="http://Soxy.com">Soxy.com</a> (the "Soxy" or "Website") you agree to the following terms & conditions. Please read these Terms and Conditions carefully before agreeing to be bound by the same. If you do not agree to be bound by the Terms and Conditions, do not access or use this Website.</p>
+    <p><strong>This website is provided by Soxy. By using this Website or by placing any purchase orders using the Website, you agree to abide by the terms and conditions set forth herein. Only upon acceptance of the terms contained herein, you will be entitled to submit electronic orders. Any violation of the terms will result in termination of your account. This website is not intended for persons under 18 years of age.</strong></p>
+    <h5 class="heading uppercase">ACCOUNT TERMS</h5>
+    <p>By registering with the Website you can access or view the prices, product inventories, and submit purchase orders electronically. You are responsible for using the Website in a private and secure manner. We will not be liable for any damage or loss caused from any unauthorized account access resulting from your actions, such as not logging out of the account or sharing your account password. We reserve the right to refuse registration or cancel an account at any time.<p>
+    <h5 class="heading uppercase">ACCEPTABLE USE</h5>
+    <p>You shall not do any of the following or permit any other third parties to do any of the following:</p>
+    <p>(a) Post or transmit any unlawful, threatening, abusive, libelous, defamatory, obscene, pornographic, or profane information of any kind, including without limitation any transmissions constituting or encouraging conduct that would constitute a criminal offense, give rise to civil liability, or otherwise violate any local, provincial, state, national or international law, including without limitation, export control laws and regulations; (b) Post or transmit any information or software that the sender is aware contains a virus, worm, or other harmful component; (c) Upload, post, publish, transmit, reproduce, or distribute in any way, information, software or other material which is protected by copyright or other proprietary right, without obtaining the permission of the copyright owner or right holder; (d) Account sharing, including without limitation, letting third parties use your account and password.</p>
+    <h5 class="heading uppercase">MODIFICATION OF THESE TERMS AND CONDITIONS</h5>
+    <p>Soxy reserves the right to change or modify any of the terms contained in these terms and conditions, at any time. Any such modifications or changes will immediately become effective upon posting of such changes. Your continued access or use of this Website will imply your full acceptance of the same. You are therefore responsible for regularly reviewing these Terms and Conditions and additional terms or notices posted on the Website.</p>
+    <h5 class="heading uppercase">PAYMENT</h5>
+    <p>When you visit the Website or send any emails to us, you will be communicating electronically with us. By such electronic communication you agree to receive such communications from us electronically. You acknowledge that your electronic submissions constitute your agreement and your acceptance to be bound by and to pay for such agreements and transactions. Your agreement and intent to be bound by electronic submissions applies to all transactions you enter into on the Website, and all records including notices of cancellation, policies, contracts, and applications.</p>
+    <h5 class="heading uppercase">ELECTRONIC COMMUNICATIONS</h5>
+    <p>You agree to pay the full price for all Products you purchase from the Website. We reserve the right to charge extra charges for your credit card or PayPal account for any products purchased from the Website. You are responsible for the timely payment of all fees and for providing us with a valid credit card payment of all fees.</p>
+    <h5 class="heading uppercase">COPYRIGHT AND LICENSES</h5>
+    <p>This Website and the entire contents contained on this Website, including but not limited to: text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, are the sole and exclusive property of Soxy. All such contents and materials are protected by domestic and international copyright and trademark laws. You hereby agree not to modify, copy, reproduce, republish, upload, post, transmit, or distribute any portion of the Website or any contents contained on the Website without the prior expressed written consent of Soxy.</p>
+    <h5 class="heading uppercase">LICENSE</h5>
+    <p>Soxy grants you a non-exclusive, non-transferable, limited license to access and make use of the contents or information available on the Website for your personal use and not to download or modify it, or any portion of it, except with the express written consent of Soxy. You may not reproduce, duplicate, adapt, copy, sell, resell, transmit or otherwise exploit for any commercial purpose this Website or any portion of this Website without the express written consent of Soxy. You agree not to interrupt or attempt to interrupt the operation of the Website in any way.</p>
+    <p>Soxy authorizes you to view and download the information and materials available on this Website only for your personal, non-commercial use. This authorization shall not constitute a transfer of title in and to the materials and is subject to the following restrictions: (a) you must retain, on all copies of the materials downloaded, all copyright and other proprietary notices contained in the materials; (b) you may not modify the materials in any way or reproduce or publicly display, perform, or distribute or otherwise use them for any public or commercial purpose; and (c) you must not transfer the materials to any other person unless you give them notice of, and they agree to accept, the obligations arising under these terms and conditions Disclaimer of Warranty/Limitation of Liablility:</p>
+    <p class="uppercase"><strong>THIS WEBSITE AND RELATED INFORMATION IS PROVIDED BY WEBSITE ON AN "AS IS" AND "AS AVAILABLE" BASIS. SOXY MAKES NO EXPRESS OR IMPLIED WARRANTIES, REPRESENTATIONS OR ENDORSEMENTS OF ANY KIND, OR AS TO THE OPERATION OF THIS WEBSITE OR THE INFORMATION, CONTENT, MATERIALS, OR PRODUCTS INCLUDED ON THIS WEBSITE. YOU EXPRESSLY AGREE THAT YOUR USE OF THIS WEBSITE IS AT YOUR SOLE RISK. TO THE FULL EXTENT PERMISSIBLE BY APPLICABLE LAW, SOXY DISCLAIMS ALL WARRANTIES, EXPRESS IMPLIED, INCLUDING WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. SOXY DOES NOT WARRANT THAT THIS WEBSITE, ITS SERVERS, OR EMAIL SENT FROM WEBSITE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. SOXY WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND ARISING FROM THE USE OF THIS SITE, INCLUDING, BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, AND CONSEQUENTIAL DAMAGES. WEBSITE USES REASONABLE EFFORTS TO INCLUDE ACCURATE AND UP-TO-DATE INFORMATION ON THIS WEBSITE. SOXY ASSUMES NO LIABILITY OR RESPONSIBILITY FOR ANY TYPOGRAPHICAL OR OTHER ERRORS OR OMISSIONS IN THE CONTENT OF THIS SITE. IN THE EVENT THAT A PRODUCT IS LISTED AT AN INCORRECT PRICE OR WITH OTHER INCORRECT INFORMATION, SOXY SHALL HAVE THE RIGHT TO REFUSE OR CANCEL ANY ORDERS PLACED FOR THE PRODUCT LISTED INCORRECTLY. CERTAIN STATE LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.</strong></p>
+    <h5 class="heading uppercase">THIRD PARTY LINKS</h5>
+    <p>For your convenience Soxy may provide, links to third party websites operated by other entities on the Website. If you use such third party sites, you will leave this Website. If you decide to visit any linked third party website, you do so at your own risk and it is your responsibility to take all protective measures to guard against viruses or other destructive elements. Soxy does not make any warranty or representation regarding, and does not endorse, any linked websites or the information appearing thereon or any of the products or services described thereon. Any third party links do not imply that Soxy sponsors, endorses, is affiliated or associated with any linked third party websites.</p>
+    <h5 class="heading uppercase">APPLICABLE LAW</h5>
+    <p>By visiting the Website, you agree that the laws of the province of Ontario, without regard to principals of conflict of laws, will govern these Terms and Conditions and any dispute of any sort that might arise between you and Soxy.</p>
+    <h5 class="heading uppercase">DISPUTES</h5>
+    <p>Any dispute relating in any way to your visit or access of the Website or to the products you purchase through the Website shall be submitted to binding arbitration in Canada county, Ontario province.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="m-footer">
+    <div class="l-single">
+      <div class="badge"></div>
+      <div class="m-footer--text-block">
+        <p class="m-footer--title">SOXY GUARANTEE</p>
+        <p class="m-footer--description">Your happiness is our #1priority. Which means we stand by our product 100%, no matter what, no questions asked. If you have a problem, we will solve it. Exchange it for free. Refund it. Send you new socks. Whatever it takes. Simply send us a message, you're family now.<span> We’re always here for you. Happiness.</span> <span class="hide-text">Guaranteed.</span></p>
+      </div>
+      <div class="m-footer--contact-block">
+        <div class="left-tablet-column">
+          <p>E-MAIL</p>
+          <a class="email" href="#">hello@soxy.com</a>
+        </div>
+        <div clas="right-tablet-column">
+          <p>STAY IN TOUCH</p>
+          <div class="m-footer--socials text-center">
+            <a class="" href="#"><img src="images/icons/icon-facebook.png"></a>
+            <a class="" href="#"><img src="images/icons/icon-instagram.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="m-footer--payment-methods text-center">
+      <img src="images/icons/icon-payment-methods.png">
+      <div class="l-content">
+        <p class="copyright">Copyright © 2014. All rights reserved.</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+</section>
+
+<ui-view></ui-view>
+
+
+
+<!------ SCRIPTS ------>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+<script src="bower_components/ngDialog/js/ngDialog.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<!-- <script src="https://s3&#45;us&#45;west&#45;2.amazonaws.com/s.cdpn.io/16327/jquery.ui.touch&#45;punch.js"></script> -->
+<script src="bower_components/momentjs/moment.js"></script>
+<script src="bower_components/angular-timer/dist/angular-timer.min.js"></script>
+<script src="bower_components/humanize-duration/humanize-duration.js"></script>
+<script src="bower_components/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+<script src="bower_components/angular-scrolltofixed/dist/angular-scrolltofixed.min.js"></script>
+<script src="scripts/utils/Draggable.js"></script>
+<script src="bower_components/ftscroller/lib/ftscroller.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/controller.js"></script>
+<script src="scripts/directives/directive.js"></script>
+<script src="scripts/filters/filter.js"></script>
+<script src="scripts/services/service.js"></script>
+<script src="scripts/main.js"></script>
+
+
+
+</body>
+
+</html>
+
+

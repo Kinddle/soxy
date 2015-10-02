@@ -758,6 +758,9 @@ h5.text-smallest {
 .text-shadow {
   text-shadow: 1px 1px 1px black; }
 
+.text-small {
+  font-size: 90%; }
+
 .hashtag {
   color: white; }
 
@@ -1326,6 +1329,12 @@ h5.text-smallest {
   @media screen and (max-width: 48em) {
     .l-one-half-shift {
       margin-left: 0; } }
+
+.l-two-shift {
+  margin-left: 16.66667%; }
+
+.l-three-shift {
+  margin-left: 25.0%; }
 
 .l-content--small {
   padding: 30px 0; }
