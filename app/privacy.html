@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!------ STYLESHEETS ------>
+
+    <link rel="stylesheet" href="stylesheets/css/main.css" />
+
+</head>
+<body ng-controller="MainCtrl" class="device">
+<section class="page" id="page">
+  <ul class="m-navigation--list visible-mobile fixed">
+    <li class="m-navigation--item"><a href="shop.html">Shop</a></li>
+    <li class="m-navigation--item"><a href="#">Vip Club</a></li>
+    <li class="m-navigation--item"><a href="#">Vip FAQ</a></li>
+    <li class="m-navigation--item"><a href="#">MyAccount</a></li>
+  </ul>
+  <div class="m-cart--dropdown-box">
+    <span class="m-cart--dropdown-close-btn" ng-click="menuCart = !menuCart">Close</span>
+    <div class="m-cart--dropdown-item l-box">
+      <p class="m-cart--dropdown-item-amount">
+        Summer x 2
+      </p>
+      <img src="images/content/product-set-white-1.jpg" />
+      <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+        <input type='button' value='-' class='qtyminus icon-minus' field='quantity' />
+        <input type='text' name='quantity' value='0' class='qty' />
+        <input type='button' value='+' class='qtyplus icon-plus' field='quantity' />
+      </form>
+      <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+    </div>
+    <div class="hr"></div>
+    <div class="m-cart--dropdown-item l-box">
+      <p class="m-cart--dropdown-item-amount">
+        Winter x 3
+      </p>
+      <img src="images/content/product-set-white-1.jpg" />
+      <form id='dropdownCartCounter' class="m-counter" method='POST' action='#'>
+        <input type='button' value='-' class='qtyminus icon-minus' field='quantity' />
+        <input type='text' name='quantity' value='0' class='qty' />
+        <input type='button' value='+' class='qtyplus icon-plus' field='quantity' />
+      </form>
+      <span class="m-cart--dropdown-trash-btn icon-trash"></span>
+    </div>
+    <div class="l-box m-cart-dropdown--checkout">
+      <a href="#" class="m-button red small full-width">Checkout</a>
+      <p class="m-cart--dropdown-promote">GET <strong>FREE SHIPPING</strong> WHEN YOU BECOME A VIP TODAY</p>
+    </div>
+  </div>
+<section class="slide">
+<section class="m-header">
+  <div class="l-single text-center">
+    <div class="m-counter-down ng-cloak">
+      <div class="text-center-tablet left m-counter-down--column">
+        <span>Don't forget your</span>
+        <span class="text-black-sans">&nbsp;10%</span>
+      </div>
+      <div class="left m-counter-down--column">
+        <div class="m-counter-down--separator text-center-tablet">
+          <span class="m-counter-down--call">USE:</span>
+          <span class="text-black-sans">&nbsp;SOXY10</span>
+        </div>
+      </div>
+      <div class="l-single-break-half left m-counter-down--column">
+        <div class="text-center-tablet">
+          <span class="m-counter-down--time-left hidden-tablet-mobile">Time left:&nbsp;</span>
+          <div class="m-counter-down--dial-wrapper">
+            <timer end-time="1451628000000">
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{hours}}</div>
+                <div class="m-counter-down--time-info">hours</div>
+              </div>
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{minutes}}</div>
+                <div class="m-counter-down--time-info">minutes</div>
+              </div>
+              <div class="m-counter-down--dial-item">
+                <div class="m-counter-down--time">{{seconds}}</div>
+                <div class="m-counter-down--time-info">seconds</div>
+              </div>
+            </timer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="m-navigation" scroll-to-fixed="scrollToFixedNavOptions">
+    <div class="l-single">
+      <a href="/" class="m-logo">Soxy.com</a>
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="m-navigation--list hidden-mobile">
+        <li class="m-navigation--item menu feed"><a href="#">Shop</a></li>
+        <li class="m-navigation--item menu radio"><a href="#">Vip Club</a></li>
+        <li class="m-navigation--item menu browse"><a href="#">Vip FAQ</a></li>
+        <li class="m-navigation--item hidden-tablet-mobile"><a href="#">MyAccount</a></li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+<section class="l-single text-serif">
+  <div class="l-content l-three-shift text-small">
+    <h5 class="text-serif"><strong>Privacy Policy</strong></h5>
+    </br>
+    <p><a href="http://soxy.com">Soxy.com has</a> developed this privacy policy to let you know how we collect and use the personal information you provide us with while visiting our website (the "Site") If you do not agree with this policy, please do not use this Site. Your continued use of our Site following the posting of changes to these terms will mean you accept those changes. Soyy reserves the right, as its sole discretion, to change, modify, add, or remove portions of this policy at any time.</p>
+    <h5 class="heading uppercase">INFORMATION WE COLLECT</h5>
+    <p>We collect personal identifying information that you provide to us when you register on the site ("Member"). If you make a purchase from us, we request personal identifiable information from you on our order form. You must provide contact information (including name, telephone number, email, and shipping address) and financial information (such as credit card number and its expiration date.)<p>
+    <p>We use this information for billing purposes and to fulfill your orders. If we have trouble processing an order, we will use this information to contact you. For your privacy, we do not store your credit card information.</p>
+    <h5 class="heading uppercase">SECURITY</h5>
+    <p><a href="http://soxy.com">Soxy.com</a> respects your personal privacy and we take all appropriate steps to keep your personal information confidential and secure. We use the Secure Sockets Layer (SSL) protocol to safeguard your information when orders are processed. uses security measures in order to protect customers from the loss, misuse and alteration of any information under our control. We follow the industry standards to protect your personal information during transaction. No method of transmission over the internet is 100% secure, however, we make all the reasonable efforts to use commercially acceptable means to protect your information.</p>
+    <h5 class="heading uppercase">COOKIES</h5>
+    <p>Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information. If your browser is set to allow cookies, we use it to store small amounts of information on your computer in order to improve your shopping experience. For example, cookies are used to process the items in your shopping cart while you shop and remember certain information. Cookies may be used to identify Members so that they don’t have to re-enter their usernames and passwords. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future.</p>
+    <h5 class="heading uppercase">USE OF PERSONAL INFORMATION COLLECTED</h5>
+    <p>We may use the personal information we gather from you when you register, purchase products surf the website, or use other site features. The personal information you provide to us will also be added to our database and used for future communications regarding new products, features, or promotions (you may choose to opt-out of our newsletters). The use of your information is to allow us to better service you with customer service requests, quickly process your transactions, and personalize your site experience. This data is strictly for internal purposes only. We never sell or rent your information to anyone.</p>
+    <p>Soxy reserves the right to disclose information about you as required by law, in response to legal process and law enforcement requests, and as necessary to protect the property, interests and rights of Soxy, its affiliates, and others.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="m-footer">
+    <div class="l-single">
+      <div class="badge"></div>
+      <div class="m-footer--text-block">
+        <p class="m-footer--title">SOXY GUARANTEE</p>
+        <p class="m-footer--description">Your happiness is our #1priority. Which means we stand by our product 100%, no matter what, no questions asked. If you have a problem, we will solve it. Exchange it for free. Refund it. Send you new socks. Whatever it takes. Simply send us a message, you're family now.<span> We’re always here for you. Happiness.</span> <span class="hide-text">Guaranteed.</span></p>
+      </div>
+      <div class="m-footer--contact-block">
+        <div class="left-tablet-column">
+          <p>E-MAIL</p>
+          <a class="email" href="#">hello@soxy.com</a>
+        </div>
+        <div clas="right-tablet-column">
+          <p>STAY IN TOUCH</p>
+          <div class="m-footer--socials text-center">
+            <a class="" href="#"><img src="images/icons/icon-facebook.png"></a>
+            <a class="" href="#"><img src="images/icons/icon-instagram.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="m-footer--payment-methods text-center">
+      <img src="images/icons/icon-payment-methods.png">
+      <div class="l-content">
+        <p class="copyright">Copyright © 2014. All rights reserved.</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+</section>
+
+<ui-view></ui-view>
+
+
+
+<!------ SCRIPTS ------>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+<script src="bower_components/ngDialog/js/ngDialog.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<!-- <script src="https://s3&#45;us&#45;west&#45;2.amazonaws.com/s.cdpn.io/16327/jquery.ui.touch&#45;punch.js"></script> -->
+<script src="bower_components/momentjs/moment.js"></script>
+<script src="bower_components/angular-timer/dist/angular-timer.min.js"></script>
+<script src="bower_components/humanize-duration/humanize-duration.js"></script>
+<script src="bower_components/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+<script src="bower_components/angular-scrolltofixed/dist/angular-scrolltofixed.min.js"></script>
+<script src="scripts/utils/Draggable.js"></script>
+<script src="bower_components/ftscroller/lib/ftscroller.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/controller.js"></script>
+<script src="scripts/directives/directive.js"></script>
+<script src="scripts/filters/filter.js"></script>
+<script src="scripts/services/service.js"></script>
+<script src="scripts/main.js"></script>
+
+
+
+</body>
+
+</html>
+
+
