@@ -9,6 +9,16 @@
   position: relative
   box-shadow: 1px 1px 25px rgba(0,0,0,0.9)
   z-index: 10000
+  &.is-active:after
+    content: ""
+    position: absolute
+    background-color: rgba(0,0,0,0.6)
+    height: 100%
+    width: 100%
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
 
 +media($mobile)
   .device

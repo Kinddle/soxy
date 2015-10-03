@@ -1654,15 +1654,6 @@ h5.text-smallest {
   .m-cart--dropdown-trash-btn:hover {
     background-color: #f1f1f1 !important; }
 
-.m-cart--dropdown-overlay {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center; }
-
 .m-cart--dropdown-item-amount {
   color: #212225;
   text-align: left;
@@ -3020,6 +3011,16 @@ h5.text-smallest {
   position: relative;
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.9);
   z-index: 10000; }
+  .slide-side.is-active:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0; }
 
 @media screen and (max-width: 30em) {
   .device {
