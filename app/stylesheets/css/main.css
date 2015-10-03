@@ -861,7 +861,7 @@ h5.text-smallest {
   padding-bottom: 0 !important; }
 
 .right {
-  float: right; }
+  float: right !important; }
 
 .left {
   float: left; }
@@ -1491,8 +1491,7 @@ h5.text-smallest {
   @media screen and (max-width: 30em) {
     .m-counter-down--column {
       height: 35px;
-      padding: 0;
-      float: right; } }
+      padding: 0; } }
 
 .m-counter-down--call {
   font-size: 16px; }
