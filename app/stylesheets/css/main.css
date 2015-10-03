@@ -1665,11 +1665,12 @@ h5.text-smallest {
 
 .m-cart--dropdown-item-amount {
   color: #212225;
-  text-align: center;
+  text-align: left;
   font-size: 0.9375em;
   line-height: initial;
   border-radius: 3px;
   background-color: white;
+  width: 100%;
   display: inline-block; }
 
 .m-cart--dropdown-promote {
