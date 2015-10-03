@@ -54,7 +54,7 @@ var displayCart = false;
         if ( displayMenu === false) {
             tl.to(".m-navigation--list", 0, {autoAlpha: 1, display:'block'});
             tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 0, display:'none'});
-            tl.to(".slide", 1, {'xPercent':25, force3D:true});
+            tl.to(".slide", 1, {'xPercent':35, force3D:true});
             $('.slide').addClass('is-active');
             $('.page').css('overflow', 'hidden');
             displayMenu = true;
@@ -81,7 +81,7 @@ var displayCart = false;
         if ( displayCart === false) {
             tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
             tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 1, display:'block'});
-            tl.to(".slide", 1, {'xPercent':-25, force3D:true});
+            tl.to(".slide", 1, {'xPercent':-35, force3D:true});
             $('.slide').addClass('is-active');
             $('.page').css('overflow', 'hidden');
             displayCart = true;
@@ -105,7 +105,7 @@ var displayCart = false;
             if ( displayMenu === false && displayCart === false && this.getDirection("start") == "left" ) {
                 tl.to(".m-navigation--list", 0, {autoAlpha: 0, display:'none'});
                 tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 1, display:'block'});
-                tl.to(".slide", 1, {'xPercent':-25, force3D:true});
+                tl.to(".slide", 1, {'xPercent':-35, force3D:true});
                 $('.slide').addClass('is-active');
                 $('.page').css('overflow', 'hidden');
                 displayCart = true;
@@ -113,7 +113,7 @@ var displayCart = false;
             } else if ( displayCart === false && displayMenu === false && this.getDirection("start") == "right" ) {
                 tl.to(".m-navigation--list", 0, {autoAlpha: 1, display:'block'});
                 tl.to(".m-cart--dropdown-box", 0, {autoAlpha: 0, display:'none'});
-                tl.to(".slide", 1, {'xPercent':25, force3D:true});
+                tl.to(".slide", 1, {'xPercent':35, force3D:true});
                 $('.slide').addClass('is-active');
                 $('.page').css('overflow', 'hidden');
                 displayMenu = true;

@@ -1404,6 +1404,13 @@ h5.text-smallest {
     content: "";
     display: table; }
 
+.l-box--tiny {
+  padding: 5px 10px; }
+  .l-box--tiny::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 .m-navigation {
   background-color: white;
   height: 75px;
@@ -1598,11 +1605,12 @@ h5.text-smallest {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 25%;
+  width: 35%;
   height: 100%;
   margin-top: 0;
   position: absolute;
-  z-index: 0; }
+  z-index: 0;
+  background-color: white; }
 
 .m-cart--dropdown-close-btn {
   position: absolute;
@@ -1611,8 +1619,15 @@ h5.text-smallest {
   cursor: pointer;
   z-index: 10; }
 
+.m-cart--dropdown-list {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 100%; }
+
 .m-cart--dropdown-item {
   position: relative; }
+  .m-cart--dropdown-item .m-cart--dropdown-img {
+    padding: 8px 15px 0 0; }
   @media screen and (max-width: 30em) {
     .m-cart--dropdown-item .m-cart--dropdown-trach-btn {
       position: relative; }
@@ -1635,10 +1650,7 @@ h5.text-smallest {
       margin-top: 10px; } }
 
 .m-cart--dropdown-trash-btn {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  display: none; }
+  display: inline-block; }
   .m-cart--dropdown-trash-btn:hover {
     background-color: #f1f1f1 !important; }
 
@@ -1649,16 +1661,7 @@ h5.text-smallest {
   bottom: 0;
   width: 100%;
   height: 100%;
-  text-align: center;
-  position: absolute; }
-  .m-cart--dropdown-overlay:hover {
-    background-color: rgba(255, 255, 255, 0.9); }
-    .m-cart--dropdown-overlay:hover .m-cart--dropdown-item-amount {
-      display: none; }
-    .m-cart--dropdown-overlay:hover .m-cart--dropdown-trash-btn {
-      display: block; }
-    .m-cart--dropdown-overlay:hover #dropdownCartCounter {
-      display: inline-block; }
+  text-align: center; }
 
 .m-cart--dropdown-item-amount {
   color: #212225;
@@ -1667,24 +1670,25 @@ h5.text-smallest {
   line-height: initial;
   border-radius: 3px;
   background-color: white;
-  position: absolute;
-  display: inline-block;
-  left: 50%;
-  top: 40%;
-  width: 100px;
-  margin-left: -50px;
-  padding: 2px 0; }
+  display: inline-block; }
 
 .m-cart--dropdown-promote {
+  position: fixed;
+  top: 0;
   font-size: 0.8125em;
   color: #87888d;
+  background-color: #f3f3f3;
   line-height: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  padding: 0 20px; }
+  z-index: 1000;
+  border-bottom: 1px solid #f2f2f2;
+  width: 35%; }
   .m-cart--dropdown-promote strong {
     color: #303032; }
+  .m-cart--dropdown-promote p {
+    margin-bottom: 0; }
 
 .m-cart-dropdown-wrapper {
   position: relative; }
@@ -1694,8 +1698,8 @@ h5.text-smallest {
   z-index: 1000;
   background-color: white;
   bottom: 0;
-  height: 180px;
-  border-top: 1px solid #f2f2f2; }
+  border-top: 1px solid #f2f2f2;
+  width: 35%; }
 
 .m-badges {
   border-radius: 5px;
@@ -1993,6 +1997,8 @@ h5.text-smallest {
   padding: 16px 60px;
   text-transform: uppercase;
   line-height: initial; }
+  .m-button.square {
+    border-radius: 0; }
   .m-button.red {
     color: white;
     background-color: #f53d3d; }
@@ -3002,7 +3008,24 @@ h5.text-smallest {
 #scroller li > a, .scroller li > a {
   display: block; }
 
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1; }
+
+.slide {
+  background-color: white;
+  position: relative;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.9);
+  z-index: 10000; }
+
 @media screen and (max-width: 30em) {
+  .device {
+    background-image: url("../../images/bg-pattern.gif");
+    background-attachment: fixed;
+    background-position: center; }
+
   .menu-btn {
     position: absolute;
     top: 26px;
@@ -3022,32 +3045,14 @@ h5.text-smallest {
       .menu-btn span:nth-child(2) {
         margin-top: 10px; }
       .menu-btn span:nth-child(3) {
-        margin-top: 20px; }
-
-  .device {
-    background-image: url("../../images/bg-pattern.gif");
-    background-attachment: fixed;
-    background-position: center; }
-
-  .page {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1; }
-
-  .slide {
-    background-color: white;
-    position: relative;
-    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.9);
-    z-index: 10000; } }
+        margin-top: 20px; } }
 .m-counter {
   border: 1px solid #d9edfb;
   text-align: center;
-  margin-top: 73px;
   position: relative;
   z-index: 10;
-  display: none;
-  border-radius: 3px; }
+  border-radius: 3px;
+  display: inline-block; }
   .m-counter::after {
     clear: both;
     content: "";
