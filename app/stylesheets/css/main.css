@@ -3014,7 +3014,7 @@ h5.text-smallest {
   position: relative;
   z-index: 1; }
 
-.slide {
+.slide-side {
   background-color: white;
   position: relative;
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.9);
