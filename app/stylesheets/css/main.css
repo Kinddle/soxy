@@ -2007,9 +2007,7 @@ h5.text-smallest {
     color: #0f92eb;
     text-align: center;
     padding: 5px 10px;
-    letter-spacing: 1px;
-    width: 80%;
-    margin: 0 20px; }
+    letter-spacing: 1px; }
   .m-button.small {
     font-size: 0.875em; }
   .m-button.full-width {
