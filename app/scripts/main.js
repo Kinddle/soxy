@@ -55,16 +55,16 @@ $.jvmobilemenu({
   menuPadding: '0px 0px 0px'
 });
 
-// if(isMobile) {
-    // $.jvmobilemenu({
-    // mainContent: $('.page'),
-    // theMenu: $('.menu-btn'),
-    // slideSpeed: 0.3,
-    // menuWidth: 340,
-    // position: 'left',
-    // menuPadding: '0px 0px 0px'
-    // });
-// }
+if(isMobile) {
+    $.jvmobilemenu({
+    mainContent: $('.page'),
+    theMenu: $('.menu-btn'),
+    slideSpeed: 0.3,
+    menuWidth: 340,
+    position: 'left',
+    menuPadding: '0px 0px 0px'
+    });
+}
 
 // if(isMobile) {
 

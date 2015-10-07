@@ -23,7 +23,7 @@
     
     
     // Insert hamburger button
-    $(this).prepend('<div class="hamburger"><div class="hamburger-inner"><div class="bar bar1 hide"></div><div class="bar bar2 cross"></div><div class="bar bar3 cross hidden"></div><div class="bar bar4 hide"></div></div></div>');
+    $('.m-cart--dropdown-box').prepend('<div class="hamburger"><div class="hamburger-inner"><div class="bar bar1 hide"></div><div class="bar bar2 cross"></div><div class="bar bar3 cross hidden"></div><div class="bar bar4 hide"></div></div></div>');
     
     
     // Menu settings
@@ -175,6 +175,15 @@
   		}
   		e.stopPropagation();
   		return false;
+  	});
+  	$('.m-cart--dropdown').on('click', function(e) {
+  	  if ($('.hamburger').hasClass('open')) {
+  	    menuClose();
+  	  } else {
+  	    menuOpen();
+  	  }
+  	    e.stopPropagation();
+  	    return false;
   	});
   
   
