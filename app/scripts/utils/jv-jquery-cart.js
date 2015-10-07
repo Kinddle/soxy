@@ -108,7 +108,9 @@
   
     // menuOpen function
     function menuOpen() {
-      $('.m-navigation--list').attr('style','display:none !important');
+      if(isMobile) {
+        $('.m-navigation--list').attr('style','display:none !important');
+      }
 
       // Hamburger
       hamburger.addClass('open');
