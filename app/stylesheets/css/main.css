@@ -844,6 +844,12 @@ h5.text-smallest {
     .visible-tablet-mobile {
       display: inline-block !important; } }
 
+.hidden-desktop {
+  display: none; }
+  @media screen and (max-width: 30em) {
+    .hidden-desktop {
+      display: block; } }
+
 .visible-mobile {
   display: none !important; }
   @media screen and (max-width: 30em) {

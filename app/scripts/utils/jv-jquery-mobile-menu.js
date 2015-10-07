@@ -24,7 +24,7 @@
     
     
     // Insert hamburger button
-    $('.m-navigation').prepend('<div class="hamburger-mobile-menu"><div class="hamburger-inner"><div class="bar bar1 hide"></div><div class="bar bar2 cross"></div><div class="bar bar3 cross hidden"></div><div class="bar bar4 hide"></div></div></div>');
+    $('.m-navigation').prepend('<div class="hamburger-mobile-menu visible-mobile"><div class="hamburger-inner"><div class="bar bar1 hide"></div><div class="bar bar2 cross"></div><div class="bar bar3 cross hidden"></div><div class="bar bar4 hide"></div></div></div>');
     
     
     // Menu settings

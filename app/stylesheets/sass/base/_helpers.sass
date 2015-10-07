@@ -157,6 +157,11 @@
   +media($tablet)
     display: inline-block !important
 
+.hidden-desktop
+  display: none
+  +media($mobile)
+    display: block
+
 .visible-mobile
   display: none !important
   +media($mobile)
