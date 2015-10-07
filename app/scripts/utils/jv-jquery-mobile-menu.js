@@ -109,7 +109,7 @@
   
     // menuOpen function
     function menuOpen() {
-      $('.m-cart--dropdown-box').hide();
+      $('.m-cart--dropdown-box').attr('style','display:none !important');
 
       // Hamburger
       hamburger.addClass('open');

@@ -108,7 +108,7 @@
   
     // menuOpen function
     function menuOpen() {
-      $('.m-navigation--list').hide();
+      $('.m-navigation--list').attr('style','display:none !important');
 
       // Hamburger
       hamburger.addClass('open');
