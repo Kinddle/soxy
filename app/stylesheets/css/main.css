@@ -1435,11 +1435,10 @@ h5.text-smallest {
       position: absolute;
       margin-top: 50px;
       border-top: 1px solid black;
-      border-bottom: 1px solid #666; } }
-  .m-navigation--list.fixed {
-    position: fixed;
-    top: 0px;
-    left: 0; }
+      border-bottom: 1px solid #666;
+      position: absolute;
+      top: 0px;
+      left: 0; } }
 
 .m-navigation--item {
   float: left;
@@ -1604,7 +1603,7 @@ h5.text-smallest {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 380px;
+  width: 300px;
   height: 100%;
   margin-top: 0;
   position: absolute;
@@ -1626,14 +1625,12 @@ h5.text-smallest {
 
 .m-cart--dropdown-item {
   position: relative; }
-  .m-cart--dropdown-item .m-cart--dropdown-img {
-    padding: 8px 15px 0 0; }
   @media screen and (max-width: 30em) {
     .m-cart--dropdown-item .m-cart--dropdown-trach-btn {
       position: relative; }
     .m-cart--dropdown-item .m-cart--dropdown-item-amount {
       position: relative;
-      text-align: center;
+      text-align: left;
       margin-left: 0;
       left: 0;
       top: 0; }
@@ -1676,7 +1673,7 @@ h5.text-smallest {
   text-align: center;
   z-index: 1000;
   border-bottom: 1px solid #f2f2f2;
-  width: 380px; }
+  width: 320px; }
   .m-cart--dropdown-promote strong {
     color: #303032; }
   .m-cart--dropdown-promote p {
@@ -1691,7 +1688,7 @@ h5.text-smallest {
   background-color: white;
   bottom: 0;
   border-top: 1px solid #f2f2f2;
-  width: 380px; }
+  width: 320px; }
 
 .m-badges {
   border-radius: 5px;
@@ -3069,37 +3066,106 @@ body {
   .mobile-nav ul li {
     list-style: none; }
 
-.hamburger {
+.hamburger-mobile-menu {
   z-index: 10000;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 8px;
+  margin-left: 10px !important;
   float: right;
   margin: 10px;
   padding: 10px 10px 9px;
   cursor: pointer;
   display: block; }
-  .hamburger .hamburger-inner {
+  .hamburger-mobile-menu .hamburger-inner {
     position: relative;
     height: 21px;
     width: 30px;
     display: block;
     margin: 0;
     padding: 0; }
-  .hamburger .bar {
+    .hamburger-mobile-menu .hamburger-inner .bar {
+      width: 30px;
+      height: 2px;
+      background: #0f92eb;
+      position: absolute;
+      top: 0; }
+      .hamburger-mobile-menu .hamburger-inner .bar.bar2, .hamburger-mobile-menu .hamburger-inner .bar.bar3 {
+        top: 9px; }
+      .hamburger-mobile-menu .hamburger-inner .bar.bar4 {
+        top: 18px; }
+  .hamburger-mobile-menu .hamburger-cart-inner {
+    position: relative;
+    height: 21px;
     width: 30px;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 0; }
-    .hamburger .bar.bar2, .hamburger .bar.bar3 {
-      top: 9px; }
-    .hamburger .bar.bar4 {
-      top: 18px; }
-  .hamburger.open .bar1,
-  .hamburger.open .bar4 {
+    display: block;
+    margin: 0;
+    padding: 0; }
+    .hamburger-mobile-menu .hamburger-cart-inner .bar {
+      width: 30px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      top: 0; }
+      .hamburger-mobile-menu .hamburger-cart-inner .bar.bar2, .hamburger-mobile-menu .hamburger-cart-inner .bar.bar3 {
+        top: 9px; }
+      .hamburger-mobile-menu .hamburger-cart-inner .bar.bar4 {
+        top: 18px; }
+  .hamburger-mobile-menu.open .bar1,
+  .hamburger-mobile-menu.open .bar4 {
     display: none; }
-  .hamburger.open .bar2,
-  .hamburger.open .bar3 {
+  .hamburger-mobile-menu.open .bar2,
+  .hamburger-mobile-menu.open .bar3 {
+    height: 3px; }
+
+.hamburger-cart {
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  margin-left: 10px !important;
+  float: right;
+  margin: 10px;
+  padding: 10px 10px 9px;
+  cursor: pointer;
+  display: block; }
+  .hamburger-cart .hamburger-inner {
+    position: relative;
+    height: 21px;
+    width: 30px;
+    display: block;
+    margin: 0;
+    padding: 0; }
+    .hamburger-cart .hamburger-inner .bar {
+      width: 30px;
+      height: 2px;
+      background: #0f92eb;
+      position: absolute;
+      top: 0; }
+      .hamburger-cart .hamburger-inner .bar.bar2, .hamburger-cart .hamburger-inner .bar.bar3 {
+        top: 9px; }
+      .hamburger-cart .hamburger-inner .bar.bar4 {
+        top: 18px; }
+  .hamburger-cart .hamburger-cart-inner {
+    position: relative;
+    height: 21px;
+    width: 30px;
+    display: block;
+    margin: 0;
+    padding: 0; }
+    .hamburger-cart .hamburger-cart-inner .bar {
+      width: 30px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      top: 0; }
+      .hamburger-cart .hamburger-cart-inner .bar.bar2, .hamburger-cart .hamburger-cart-inner .bar.bar3 {
+        top: 9px; }
+      .hamburger-cart .hamburger-cart-inner .bar.bar4 {
+        top: 18px; }
+  .hamburger-cart.open .bar1,
+  .hamburger-cart.open .bar4 {
+    display: none; }
+  .hamburger-cart.open .bar2,
+  .hamburger-cart.open .bar3 {
     height: 3px; }
 
 .m-counter {

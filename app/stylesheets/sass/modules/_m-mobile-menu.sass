@@ -79,10 +79,11 @@ body
       list-style: none
 
 // Styles for hamburger
-.hamburger
+.hamburger-mobile-menu
   z-index: 10000
-  position: fixed
-  top: 0
+  position: absolute
+  top: 8px
+  margin-left: 10px !important
   float: right
   margin: 10px
   padding: 10px 10px 9px
@@ -95,17 +96,89 @@ body
     display: block
     margin: 0
     padding: 0
-  .bar
+    .bar
+      width: 30px
+      height: 2px
+      background: $brand-color
+      position: absolute
+      top: 0
+      &.bar2,
+      &.bar3
+        top: 9px
+      &.bar4
+        top: 18px
+  .hamburger-cart-inner
+    position: relative
+    height: 21px
     width: 30px
-    height: 2px
-    background: #000
-    position: absolute
-    top: 0
-    &.bar2,
-    &.bar3
-      top: 9px
-    &.bar4
-      top: 18px
+    display: block
+    margin: 0
+    padding: 0
+    .bar
+      width: 30px
+      height: 2px
+      background: #000
+      position: absolute
+      top: 0
+      &.bar2,
+      &.bar3
+        top: 9px
+      &.bar4
+        top: 18px
+  &.open
+    .bar1,
+    .bar4
+      display: none
+    .bar2,
+    .bar3
+      height: 3px
+
+.hamburger-cart
+  z-index: 10000
+  position: absolute
+  top: 0
+  margin-left: 10px !important
+  float: right
+  margin: 10px
+  padding: 10px 10px 9px
+  cursor: pointer
+  display: block
+  .hamburger-inner
+    position: relative
+    height: 21px
+    width: 30px
+    display: block
+    margin: 0
+    padding: 0
+    .bar
+      width: 30px
+      height: 2px
+      background: $brand-color
+      position: absolute
+      top: 0
+      &.bar2,
+      &.bar3
+        top: 9px
+      &.bar4
+        top: 18px
+  .hamburger-cart-inner
+    position: relative
+    height: 21px
+    width: 30px
+    display: block
+    margin: 0
+    padding: 0
+    .bar
+      width: 30px
+      height: 2px
+      background: #000
+      position: absolute
+      top: 0
+      &.bar2,
+      &.bar3
+        top: 9px
+      &.bar4
+        top: 18px
   &.open
     .bar1,
     .bar4
